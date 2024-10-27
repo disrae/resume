@@ -1,16 +1,234 @@
 ---
-
+import "../styles/global.css";
 ---
 
+<!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Daniel Israel - Software Developer</title>
+		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="bg-gray-100 font-sans">
+		<div class="container mx-auto px-4 py-8 max-w-4xl">
+			<header class="mb-6">
+				<h1 class="text-4xl font-bold text-gray-800">Daniel Israel</h1>
+				<h2 class="text-2xl text-gray-600">Software Developer</h2>
+				<div class="mt-2">
+					<p class="text-sm text-gray-600">
+						📧 danny.israel@gmail.com | 🔗 <a
+							href="#"
+							class="text-blue-600 hover:underline">LinkedIn</a
+						>
+					</p>
+				</div>
+			</header>
+
+			<main>
+				<section class="mb-6">
+					<h3 class="text-2xl font-semibold text-gray-800 mb-2">
+						Experience
+					</h3>
+					<div class="space-y-4">
+						<div>
+							<h4 class="text-xl font-semibold">
+								Intermediate Front End Developer - Goose
+								Insurance
+							</h4>
+							<p class="text-sm text-gray-600">
+								React-Native & Astro JS | July 2023 - present
+							</p>
+							<ul class="list-disc list-inside mt-2 text-sm">
+								<li>
+									Re-wrote the website in Astro JS to vastly
+									improve performance, reduce costs, and
+									improve the developer experience.
+								</li>
+								<li>
+									Maintaining and improving the Goose
+									Insurance app using a server driven
+									approach.
+								</li>
+							</ul>
+							<p class="text-sm mt-1">
+								<span class="font-semibold">Tools:</span> React-Native,
+								Astro JS, Typescript, Redux, REST, Tailwind, CSS
+							</p>
+						</div>
+						<div>
+							<h4 class="text-xl font-semibold">
+								React-Native & Next JS Application Developer -
+								University of British Columbia
+							</h4>
+							<p class="text-sm text-gray-600">
+								Social Media Poetry App | May 2020 - present
+							</p>
+							<ul class="list-disc list-inside mt-2 text-sm">
+								<li>
+									Initially worked on a team and developed
+									much of the frontend in React-Native
+								</li>
+								<li>
+									Took ownership of the project and migrated
+									from a Fastify and PostgreSQL backend to
+									Firebase.
+								</li>
+								<li>
+									Re-designed and implemented the project to
+									reduce costs from $200 to nearly $0.
+								</li>
+								<li>
+									Vastly improved performance and enabled the
+									app to scale effectively during events.
+								</li>
+								<li>
+									The app now lives at www.phonemeproject.com
+									and has around 500 users.
+								</li>
+							</ul>
+							<p class="text-sm mt-1">
+								<span class="font-semibold">Tools:</span> React-Native,
+								React, Next JS, Typescript, Firebase, GCP Redux,
+								REST, Node, npm, git, postgresql, Postman, Xcode,
+								Android Studio, Linux, CSS, Tailwind
+							</p>
+						</div>
+						<div>
+							<h4 class="text-xl font-semibold">
+								JS Electron Application Developer - BARK Trading
+							</h4>
+							<p class="text-sm text-gray-600">
+								Electron app | Nov 2022 - PRESENT
+							</p>
+							<p class="text-sm">
+								Various bug fixes, features, and scripts for
+								operating on data.
+							</p>
+							<p class="text-sm mt-1">
+								<span class="font-semibold">Tools:</span> Electron,
+								Javascript, Firebase, GCP, HTML, CSS
+							</p>
+						</div>
+						<div>
+							<h4 class="text-xl font-semibold">
+								Machine Learning Analyst - Earth Rise Media
+							</h4>
+							<p class="text-sm text-gray-600">
+								Python and Jupyter notebooks | May 2021 -
+								February 2022
+							</p>
+							<p class="text-sm">
+								Data validation and model retraining.
+							</p>
+							<p class="text-sm mt-1">
+								<span class="font-semibold">Tools:</span> Python,
+								Sci-kit learn, TensorFlow, NumPy, Earth Observation
+							</p>
+						</div>
+						<div>
+							<h4 class="text-xl font-semibold">
+								React Developer - ehsAI (coop)
+							</h4>
+							<p class="text-sm text-gray-600">
+								React SPA | September 2019 - May 2020
+							</p>
+							<ul class="list-disc list-inside mt-2 text-sm">
+								<li>Built a customer document portal.</li>
+								<li>Various bug fixes.</li>
+								<li>
+									Built a table building interface in a web
+									based pdf editor for correcting machine
+									learning output.
+								</li>
+							</ul>
+							<p class="text-sm mt-1">
+								<span class="font-semibold">Tools:</span> React,
+								Preact, Typescript, SASS, HTML
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="mb-6">
+					<h3 class="text-2xl font-semibold text-gray-800 mb-2">
+						Education
+					</h3>
+					<div class="space-y-2">
+						<div>
+							<h4 class="text-xl font-semibold">
+								University of British Columbia
+							</h4>
+							<p class="text-sm">
+								Bachelor of Computer Science | September 2019 -
+								May 2022
+							</p>
+							<p class="text-sm">
+								Data-Structures, Algorithms, Machine Learning,
+								Computer Vision, Networking.
+							</p>
+						</div>
+						<div>
+							<h4 class="text-xl font-semibold">
+								Concordia University
+							</h4>
+							<p class="text-sm">
+								Bachelor of Applied Human Sciences | September
+								2019 - January 2014
+							</p>
+							<p class="text-sm">
+								Communication skills, Dean's List, Research
+								Assistant, Teaching Assistant.
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<div class="grid md:grid-cols-2 gap-6">
+					<section>
+						<h3 class="text-2xl font-semibold text-gray-800 mb-2">
+							Skills
+						</h3>
+						<ul class="list-disc list-inside text-sm">
+							<li>React</li>
+							<li>React-Native</li>
+							<li>Typescript</li>
+							<li>Redux</li>
+							<li>Git</li>
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>Machine Learning</li>
+							<li>Object Oriented & Functional Programming</li>
+							<li>Data Structures and Algorithms</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="text-2xl font-semibold text-gray-800 mb-2">
+							Awards
+						</h3>
+						<ul class="list-disc list-inside text-sm">
+							<li>3rd Place BC Shackathon 2019</li>
+							<li>Dean's list</li>
+						</ul>
+
+						<h3
+							class="text-2xl font-semibold text-gray-800 mt-4 mb-2"
+						>
+							Languages
+						</h3>
+						<ul class="list-disc list-inside text-sm">
+							<li>Javascript</li>
+							<li>Typescript</li>
+							<li>Python</li>
+							<li>Java</li>
+							<li>C</li>
+							<li>C++</li>
+							<li>SQL</li>
+						</ul>
+					</section>
+				</div>
+			</main>
+		</div>
 	</body>
 </html>
