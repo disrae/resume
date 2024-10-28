@@ -14,7 +14,7 @@ export const resumeData = {
             features: [
                 "Cross-platform mobile and web app built with Expo and React Native",
                 "AI-powered chat summary generation from customer conversations",
-                "Secure authentication with magic links",
+                "Add and invite customers to your project planning chat with magic links",
                 "Push notification system for real-time updates",
                 "Editable AI-generated summaries"
             ],
