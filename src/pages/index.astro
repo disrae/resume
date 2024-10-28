@@ -37,7 +37,7 @@ const { personal, ventures, experience, education, skills, languages } =
 		Download PDF
 	</button>
 
-	<div class="container mx-auto px-4 py-14 max-w-4xl">
+	<div class="container mx-auto p-4 py-16 max-w-4xl">
 		<header class="mb-6 bg-white rounded-lg shadow-sm p-6">
 			<h1 class="text-4xl font-bold">{personal.name}</h1>
 			<p class="text-xl text-gray-600">{personal.title}</p>
@@ -75,15 +75,18 @@ const { personal, ventures, experience, education, skills, languages } =
 
 		<main>
 			<section class="mb-8 bg-white rounded-lg shadow-sm p-6">
-				<details>
+				<details open>
 					<summary
 						class="text-2xl font-semibold text-gray-800 cursor-pointer hover:text-gray-600 transition-colors"
 					>
 						Experience
 					</summary>
 					{
-						experience.map((job) => (
-							<details class="my-6 bg-gray-50 rounded-lg shadow-sm p-4">
+						experience.map((job, index) => (
+							<details
+								class="my-6 bg-gray-50 rounded-lg shadow-sm p-4"
+								open={index === 0}
+							>
 								<summary class="cursor-pointer hover:text-gray-600 transition-colors">
 									<h3 class="text-xl font-semibold inline-block">
 										{job.title}
@@ -94,6 +97,20 @@ const { personal, ventures, experience, education, skills, languages } =
 								</summary>
 								<div class="mt-4">
 									<p>{job.description}</p>
+									{job?.links?.length &&
+										job.links.map((link) => (
+											<p class="mt-2">
+												Demo:{" "}
+												<a
+													href={link.url}
+													target="_blank"
+													rel="noopener noreferrer"
+													class="text-teal-600 hover:text-teal-800 underline"
+												>
+													{link.name}
+												</a>
+											</p>
+										))}
 									<ul class="list-disc list-inside mt-2">
 										{job.achievements.map((achievement) => (
 											<li class="text-gray-700">
@@ -116,15 +133,18 @@ const { personal, ventures, experience, education, skills, languages } =
 			</section>
 
 			<section class="mb-8 bg-white rounded-lg shadow-sm p-6">
-				<details>
+				<details open>
 					<summary
 						class="text-2xl font-semibold text-gray-800 cursor-pointer hover:text-gray-600 transition-colors"
 					>
 						Ventures
 					</summary>
 					{
-						ventures.map((venture) => (
-							<details class="my-6 bg-gray-50 rounded-lg shadow-sm p-4">
+						ventures.map((venture, index) => (
+							<details
+								class="my-6 bg-gray-50 rounded-lg shadow-sm p-4"
+								open={index === 0}
+							>
 								<summary class="cursor-pointer hover:text-gray-600 transition-colors">
 									<h3 class="text-xl font-semibold inline-block">
 										{venture.name}
@@ -135,6 +155,20 @@ const { personal, ventures, experience, education, skills, languages } =
 								</summary>
 								<div class="mt-4">
 									<p>{venture.description}</p>
+
+									{venture?.link && (
+										<p class="mt-2">
+											Demo:{" "}
+											<a
+												href={venture.link.url}
+												target="_blank"
+												rel="noopener noreferrer"
+												class="text-teal-600 hover:text-teal-800 underline"
+											>
+												{venture.link.name}
+											</a>
+										</p>
+									)}
 
 									<h4 class="font-semibold mt-3">
 										Current Features:

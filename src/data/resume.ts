@@ -38,6 +38,18 @@ export const resumeData = {
             company: "Goose Insurance",
             period: "July 2023 - present",
             description: "React-Native & Astro JS",
+            links: [{
+                url: "https://www.gooseinsurance.com",
+                name: "gooseinsurance.com"
+            },
+            {
+                url: "https://www.smartbunny.com",
+                name: "smartbunny-insurance.com"
+            },
+            {
+                url: "https://go.onelink.me/EMjq/fkbg96c1",
+                name: "The Goose Insurance App"
+            }],
             achievements: [
                 "Re-wrote the website in Astro JS to vastly improve performance, reduce costs, and improve the developer experience.",
                 "Maintaining and improving the Goose Insurance app using a server driven approach."
@@ -49,10 +61,11 @@ export const resumeData = {
             company: "University of British Columbia",
             period: "May 2020 - present",
             description: "Social Media Poetry App",
-            link: {
+            links: [{
                 url: "https://www.phonemeproject.com",
                 name: "PhoneMeProject.com"
-            },
+            }
+            ],
             achievements: [
                 "Initially worked on a team and developed much of the frontend in React-Native.",
                 "Took ownership of the project and migrated from a Fastify and PostgreSQL backend to Firebase.",

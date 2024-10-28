@@ -88,19 +88,20 @@ const {
                                 {job.company} | {job.period}
                             </p>
                             <p class="text-sm mb-2">{job.description}</p>
-                            {job.link && (
-                                <p class="text-sm">
-                                    Demo:
-                                    <a
-                                        href={job.link.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="text-sm mb-2 text-teal-700 underline"
-                                    >
-                                        {job.link.name}
-                                    </a>
-                                </p>
-                            )}
+                            {job.links?.length &&
+                                job.links.map((link) => (
+                                    <p class="text-sm">
+                                        Demo:
+                                        <a
+                                            href={link.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="text-sm mb-2 text-teal-700 underline"
+                                        >
+                                            {link.name}
+                                        </a>
+                                    </p>
+                                ))}
                             <ul class="achievement-list">
                                 {job.achievements.map((achievement) => (
                                     <li class="achievement-item text-sm text-gray-700">
@@ -130,19 +131,20 @@ const {
                                 {venture.role} | {venture.period}
                             </p>
                             <p class="text-sm mb-2">{venture.description}</p>
-                            {venture.link && (
-                                <p class="text-sm">
-                                    Check it out at
-                                    <a
-                                        href={venture.link.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="text-sm mb-2 text-teal-700 underline"
-                                    >
-                                        {venture.link.name}
-                                    </a>
-                                </p>
-                            )}
+                            {venture.links?.length &&
+                                venture.links.map((link) => (
+                                    <p class="text-sm">
+                                        Check it out at
+                                        <a
+                                            href={link.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="text-sm mb-2 text-teal-700 underline"
+                                        >
+                                            {link.name}
+                                        </a>
+                                    </p>
+                                ))}
 
                             <h4 class="font-semibold mt-2 text-sm">
                                 Current Features:
