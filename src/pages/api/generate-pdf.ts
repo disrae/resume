@@ -5,7 +5,7 @@ import path from 'node:path';
 export const GET: APIRoute = async () => {
     try {
         // Read the pre-generated PDF from the public directory
-        const pdfPath = path.join(process.cwd(), 'public', 'static', 'resume.pdf');
+        const pdfPath = path.join(process.cwd(), 'public', 'resume.pdf');
         const pdf = await fs.promises.readFile(pdfPath);
 
         return new Response(pdf, {
