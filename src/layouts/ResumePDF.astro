@@ -21,9 +21,9 @@ const {
 <BaseLayout title="Resume PDF">
     <div class="p-8 bg-white text-black">
         <header class="mb-6 page-section">
-            <h1 class="text-2xl font-bold">{personal.name}</h1>
-            <p class="text-lg text-gray-600">{personal.title}</p>
-            <div class="mt-2">
+            <h1 class="text-xl font-bold">{personal.name}</h1>
+            <p class="text-base text-gray-600">{personal.title}</p>
+            <div class="mt-2 text-sm">
                 <p>{personal.email}</p>
                 <a
                     href={`https://linkedin.com/in/${personal.linkedin}`}
@@ -37,29 +37,25 @@ const {
 
         <main>
             <section class="mb-6">
-                <h2
-                    class="text-xl font-semibold mb-4 bg-gray-100 p-4 -mx-4 rounded-lg"
-                >
-                    Experience
-                </h2>
+                <h2 class="text-lg font-semibold mb-4 -4">Experience</h2>
                 {
                     experience.map((job) => (
                         <div class="mb-4 page-section">
-                            <h3 class="text-lg font-semibold bg-gray-100 p-2 -mx-2 rounded-lg">
+                            <h3 class="text-base font-semibold bg-gray-100 p-2 -mx-2 rounded-lg">
                                 {job.title}
                             </h3>
-                            <p class="text-gray-600">
+                            <p class="text-sm text-gray-600">
                                 {job.company} | {job.period}
                             </p>
-                            <p class="mt-2">{job.description}</p>
-                            <ul class="list-disc list-inside mt-2">
+                            <p class="mt-2 text-sm">{job.description}</p>
+                            <ul class="list-disc list-inside mt-2 text-sm">
                                 {job.achievements.map((achievement) => (
                                     <li class="text-gray-700">{achievement}</li>
                                 ))}
                             </ul>
                             <div class="mt-2 flex flex-wrap gap-2">
                                 {job.tools.map((tool) => (
-                                    <span class="bg-gray-50 px-2 py-1 rounded text-sm">
+                                    <span class="bg-gray-50 px-2 py-1 rounded text-xs">
                                         {tool}
                                     </span>
                                 ))}
@@ -70,33 +66,33 @@ const {
             </section>
 
             <section class="mb-6">
-                <h2
-                    class="text-xl font-semibold mb-4 bg-gray-100 p-4 -mx-4 rounded-lg"
-                >
+                <h2 class="text-lg font-semibold mb-4 -4">
                     {ventures.length > 0 ? "Ventures" : ""}
                 </h2>
                 {
                     ventures.map((venture) => (
                         <div class="mb-4 page-section">
-                            <h3 class="text-lg font-semibold bg-gray-100 p-2 -mx-2 rounded-lg">
+                            <h3 class="text-base font-semibold bg-gray-100 p-2 -mx-2 rounded-lg">
                                 {venture.name}
                             </h3>
-                            <p class="text-gray-600">
+                            <p class="text-sm text-gray-600">
                                 {venture.role} | {venture.period}
                             </p>
-                            <p class="mt-2">{venture.description}</p>
+                            <p class="mt-2 text-sm">{venture.description}</p>
 
-                            <h4 class="font-semibold mt-2">
+                            <h4 class="font-semibold mt-2 text-sm">
                                 Current Features:
                             </h4>
-                            <ul class="list-disc list-inside mt-1">
+                            <ul class="list-disc list-inside mt-1 text-sm">
                                 {venture.features.map((feature) => (
                                     <li class="text-gray-700">{feature}</li>
                                 ))}
                             </ul>
 
-                            <h4 class="font-semibold mt-2">Coming Soon:</h4>
-                            <ul class="list-disc list-inside mt-1">
+                            <h4 class="font-semibold mt-2 text-sm">
+                                Coming Soon:
+                            </h4>
+                            <ul class="list-disc list-inside mt-1 text-sm">
                                 {venture.comingSoon.map((feature) => (
                                     <li class="text-gray-700">{feature}</li>
                                 ))}
@@ -104,7 +100,7 @@ const {
 
                             <div class="mt-2 flex flex-wrap gap-2">
                                 {venture.tools.map((tool) => (
-                                    <span class="bg-gray-50 px-2 py-1 rounded text-sm">
+                                    <span class="bg-gray-50 px-2 py-1 rounded text-xs">
                                         {tool}
                                     </span>
                                 ))}
@@ -115,9 +111,7 @@ const {
             </section>
 
             <section class="mb-6 page-section">
-                <h2
-                    class="text-xl font-semibold mb-4 bg-gray-100 p-4 -mx-4 rounded-lg"
-                >
+                <h2 class="text-lg font-semibold mb-4 -4">
                     {education.length > 0 ? "Education" : ""}
                 </h2>
                 {
@@ -126,30 +120,28 @@ const {
                             <h3 class="text-base font-semibold">
                                 {edu.school}
                             </h3>
-                            <p class="text-gray-600">{edu.degree}</p>
-                            <p class="text-sm text-gray-500">{edu.period}</p>
-                            <p class="mt-1">{edu.details}</p>
+                            <p class="text-sm text-gray-600">{edu.degree}</p>
+                            <p class="text-xs text-gray-500">{edu.period}</p>
+                            <p class="mt-1 text-sm">{edu.details}</p>
                         </div>
                     ))
                 }
             </section>
 
             <section class="page-section">
-                <h2
-                    class="text-xl font-semibold mb-4 bg-gray-100 p-4 -mx-4 rounded-lg"
-                >
+                <h2 class="text-lg font-semibold mb-4 -4">
                     Skills & Languages
                 </h2>
                 <div class="grid grid-cols-2 gap-8">
                     <div>
-                        <h3 class="font-semibold mb-2">Skills</h3>
-                        <ul class="list-disc list-inside">
+                        <h3 class="font-semibold mb-2 text-base">Skills</h3>
+                        <ul class="list-disc list-inside text-sm">
                             {skills.map((skill) => <li>{skill}</li>)}
                         </ul>
                     </div>
                     <div>
-                        <h3 class="font-semibold mb-2">Languages</h3>
-                        <ul class="list-disc list-inside">
+                        <h3 class="font-semibold mb-2 text-base">Languages</h3>
+                        <ul class="list-disc list-inside text-sm">
                             {languages.map((language) => <li>{language}</li>)}
                         </ul>
                     </div>
