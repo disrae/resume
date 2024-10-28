@@ -8,6 +8,29 @@ const { personal, experience, education, skills, awards, languages } =
 ---
 
 <BaseLayout title="Daniel Israel - Software Developer" includePDFScript={true}>
+	<style>
+		details > summary {
+			list-style: none;
+			position: relative;
+			padding-left: 1.5rem;
+		}
+		details > summary::-webkit-details-marker {
+			display: none;
+		}
+		details > summary::before {
+			content: "▶";
+			position: absolute;
+			left: 0;
+			transition: transform 0.2s;
+			font-size: 0.8em;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		details[open] > summary::before {
+			transform: translateY(-50%) rotate(90deg);
+		}
+	</style>
+
 	<button
 		id="download-pdf-button"
 		class="no-print fixed top-4 right-4 bg-teal-600 transform hover:-translate-y-0 translate-y-[-2px] transition-all shadow-lg hover:shadow-none hover:bg-teal-800 text-white font-bold py-2 px-4 rounded"
@@ -16,101 +39,154 @@ const { personal, experience, education, skills, awards, languages } =
 	</button>
 
 	<div class="container mx-auto px-4 py-8 max-w-4xl">
-		<header class="mb-6">
+		<header class="mb-6 bg-white rounded-lg shadow-sm p-6">
 			<h1 class="text-4xl font-bold">{personal.name}</h1>
 			<p class="text-xl text-gray-600">{personal.title}</p>
-			<div class="flex gap-4 text-sm text-gray-600 mt-2">
-				<a
-					href={`mailto:${personal.email}`}
-					class="hover:text-teal-600"
+			<div class="flex items-center mt-2">
+				<button
+					onclick="navigator.clipboard.writeText('{personal.email}');
+						const notification = document.getElementById('copy-notification');
+						notification.classList.remove('hidden');
+						setTimeout(() => notification.classList.add('hidden'), 1200)"
+					class="border shadow bg-gray-100 hover:bg-gray-200 px-2 py-1 rounded transition-colors cursor-pointer inline-flex items-center"
+					title="Click to copy email"
 				>
-					<Icon name="email" class="inline w-4 h-4 mr-1" />
-					{personal.email}
-				</a>
+					<Icon name="email" class="w-4 h-4 inline-block" />
+					<div class="w-2"></div>
+					<span>{personal.email}</span>
+				</button>
+				<div class="w-4"></div>
 				<a
+					class="border shadow bg-gray-100 hover:bg-gray-200 px-2 py-1 rounded transition-colors cursor-pointer inline-flex items-center"
+					target="_blank"
+					rel="noopener noreferrer"
 					href={`https://linkedin.com/in/${personal.linkedin}`}
-					class="hover:text-teal-600"
 				>
-					<Icon name="linkedin" class="inline w-4 h-4 mr-1" />
+					<Icon name="linkedin" class="w-4 h-4 inline-block" />
+					<div class="w-2"></div>
 					LinkedIn
 				</a>
+			</div>
+			<div id="copy-notification" class="ml-2 text-teal-600 hidden">
+				Copied email to clipboard!
 			</div>
 		</header>
 
 		<main>
-			<section class="mb-8">
-				<h2 class="text-2xl font-semibold text-gray-800 mb-4">
-					Experience
-				</h2>
-				{
-					experience.map((job) => (
-						<div class="mb-6">
-							<h3 class="text-xl font-semibold">{job.title}</h3>
-							<p class="text-gray-600">
-								{job.company} | {job.period}
-							</p>
-							<p class="mt-2">{job.description}</p>
-							<ul class="list-disc list-inside mt-2">
-								{job.achievements.map((achievement) => (
-									<li class="text-gray-700">{achievement}</li>
-								))}
-							</ul>
-							<div class="mt-2 flex flex-wrap gap-2">
-								{job.tools.map((tool) => (
-									<span class="bg-gray-200 px-2 py-1 rounded text-sm">
-										{tool}
-									</span>
-								))}
-							</div>
-						</div>
-					))
-				}
+			<section class="mb-8 bg-white rounded-lg shadow-sm p-6">
+				<details open>
+					<summary
+						class="text-2xl font-semibold text-gray-800 cursor-pointer hover:text-gray-600 transition-colors"
+					>
+						Experience
+					</summary>
+					{
+						experience.map((job) => (
+							<details class="my-6 bg-gray-50 rounded-lg shadow-sm p-4">
+								<summary class="cursor-pointer hover:text-gray-600 transition-colors">
+									<h3 class="text-xl font-semibold inline-block">
+										{job.title}
+									</h3>
+									<p class="text-gray-600 inline-block ml-2">
+										{job.company} | {job.period}
+									</p>
+								</summary>
+								<div class="mt-4">
+									<p>{job.description}</p>
+									<ul class="list-disc list-inside mt-2">
+										{job.achievements.map((achievement) => (
+											<li class="text-gray-700">
+												{achievement}
+											</li>
+										))}
+									</ul>
+									<div class="mt-2 flex flex-wrap gap-2">
+										{job.tools.map((tool) => (
+											<span class="bg-gray-200 px-2 py-1 rounded text-sm">
+												{tool}
+											</span>
+										))}
+									</div>
+								</div>
+							</details>
+						))
+					}
+				</details>
 			</section>
 
 			<div class="grid md:grid-cols-2 gap-8">
-				<section>
-					<h2 class="text-2xl font-semibold text-gray-800 mb-4">
-						Education
-					</h2>
-					{
-						education.map((edu) => (
-							<div class="mb-4">
-								<h3 class="text-lg font-semibold">
-									{edu.school}
-								</h3>
-								<p class="text-gray-600">{edu.degree}</p>
-								<p class="text-sm text-gray-500">
-									{edu.period}
-								</p>
-								<p class="mt-1">{edu.details}</p>
+				<section class="bg-white rounded-lg shadow-sm p-6">
+					<details>
+						<summary
+							class="text-2xl font-semibold text-gray-800 cursor-pointer hover:text-gray-600 transition-colors"
+						>
+							Education
+						</summary>
+						{
+							education.map((edu) => (
+								<details
+									class="my-6 bg-gray-50 rounded-lg shadow-sm p-4"
+									open
+								>
+									<summary class="cursor-pointer hover:text-gray-600 transition-colors">
+										<h3 class="text-lg font-semibold inline-block">
+											{edu.school}
+										</h3>
+									</summary>
+									<div class="mt-2">
+										<p class="text-gray-600">
+											{edu.degree}
+										</p>
+										<p class="text-sm text-gray-500">
+											{edu.period}
+										</p>
+										<p class="mt-1">{edu.details}</p>
+									</div>
+								</details>
+							))
+						}
+					</details>
+				</section>
+
+				<div class="space-y-8">
+					<section class="bg-white rounded-lg shadow-sm p-6">
+						<details>
+							<summary
+								class="text-2xl font-semibold text-gray-800 cursor-pointer hover:text-gray-600 transition-colors"
+							>
+								Skills
+							</summary>
+							<div
+								class="bg-gray-50 rounded-lg shadow-sm p-4 my-6"
+							>
+								<ul class="list-disc list-inside">
+									{skills.map((skill) => <li>{skill}</li>)}
+								</ul>
 							</div>
-						))
-					}
-				</section>
+						</details>
+					</section>
 
-				<section>
-					<details open>
-						<summary
-							class="text-2xl font-semibold text-gray-800 mb-4 cursor-pointer"
-						>
-							Skills
-						</summary>
-						<ul class="list-disc list-inside">
-							{skills.map((skill) => <li>{skill}</li>)}
-						</ul>
-					</details>
-
-					<details open>
-						<summary
-							class="text-2xl font-semibold text-gray-800 mt-4 mb-2 cursor-pointer"
-						>
-							Languages
-						</summary>
-						<ul class="list-disc list-inside">
-							{languages.map((language) => <li>{language}</li>)}
-						</ul>
-					</details>
-				</section>
+					<section class="bg-white rounded-lg shadow-sm p-6">
+						<details>
+							<summary
+								class="text-2xl font-semibold text-gray-800 cursor-pointer hover:text-gray-600 transition-colors"
+							>
+								Languages
+							</summary>
+							<div
+								class="bg-gray-50 rounded-lg shadow-sm p-4 my-6"
+							>
+								<ul class="list-disc list-inside">
+									{
+										languages.map((language) => (
+											<li>{language}</li>
+										))
+									}
+								</ul>
+							</div>
+						</details>
+					</section>
+				</div>
 			</div>
 		</main>
 	</div>
