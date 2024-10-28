@@ -9,41 +9,12 @@ import { Icon } from "astro-icon/components";
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Daniel Israel - Software Developer</title>
-        <!-- Add html2pdf library -->
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
         ></script>
-        <style>
-            @media print {
-                .no-print {
-                    display: none !important;
-                }
-                body {
-                    background-color: white !important;
-                    padding: 0 !important;
-                    margin: 0 !important;
-                }
-                details {
-                    display: block !important;
-                }
-                details > summary {
-                    display: none;
-                }
-                details > div,
-                details > ul {
-                    display: block !important;
-                }
-            }
-        </style>
     </head>
     <body class="bg-gray-100 font-sans p-4">
         <div class="container mx-auto px-4 py-8 max-w-4xl">
-            <!-- <button
-                id="download-pdf-button"
-                class="no-print fixed top-4 right-4 bg-teal-600 transform hover:-translate-y-0 translate-y-[-2px] transition-all shadow-lg hover:shadow-none hover:bg-teal-800 text-white font-bold py-2 px-4 rounded"
-            >
-                Download PDF
-            </button> -->
             <header class="mb-6">
                 <h1 class="text-4xl font-bold text-gray-800">Daniel Israel</h1>
                 <h2 class="text-2xl text-gray-600">Software Developer</h2>
@@ -331,45 +302,4 @@ import { Icon } from "astro-icon/components";
             </div>
         </main>
     </body>
-
-    <!-- <script>
-        function generatePDF() {
-            const element = document.body;
-            const options = {
-                margin: 0.5, // Adjusted margin for better fit
-                filename: "daniel-israel-resume.pdf",
-                image: { type: "jpeg", quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: {
-                    unit: "in",
-                    format: "letter",
-                    orientation: "portrait",
-                },
-            };
-
-            // Remove the button temporarily for the PDF
-            const button = document.querySelector("#download-pdf-button");
-            button.style.display = "none";
-
-            html2pdf()
-                .set(options)
-                .from(element)
-                .save()
-                .then(() => {
-                    // Restore the button after PDF generation
-                    button.style.display = "block";
-                });
-        }
-
-        document
-            .getElementById("download-pdf-button")
-            .addEventListener("click", generatePDF);
-
-        document.addEventListener("keydown", (e) => {
-            if (e.ctrlKey && e.key === "p") {
-                e.preventDefault();
-                generatePDF();
-            }
-        });
-    </script> -->
 </html>

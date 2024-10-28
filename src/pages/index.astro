@@ -39,11 +39,24 @@ import ResumePDF from "../layouts/ResumePDF.astro";
 				margin: 1,
 				filename: "resume.pdf",
 				image: { type: "jpeg", quality: 0.98 },
-				html2canvas: { scale: 2 },
+				html2canvas: {
+					scale: 2,
+					logging: true,
+					useCORS: true,
+				},
 				jsPDF: {
 					unit: "in",
 					format: "letter",
 					orientation: "portrait",
+					putTotalPages: true,
+					tagged: true, // Enable PDF tagging
+					userUnit: 1.0,
+					hotfixes: ["px_scaling"],
+					accessibility: {
+						createPDFA1: true, // Creates PDF/A-1b compliant PDFs
+						includeStructure: true, // Includes document structure
+						markupLanguage: "HTML", // Specifies the markup language
+					},
 				},
 			};
 
