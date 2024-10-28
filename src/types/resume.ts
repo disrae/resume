@@ -5,6 +5,7 @@ export interface Job {
     description: string;
     achievements: string[];
     tools: string[];
+    link?: { url: string; name: string; };
 }
 
 type Venture = {
@@ -12,6 +13,7 @@ type Venture = {
     role: string;
     period: string;
     description: string;
+    link?: { url: string; name: string; };
     features: string[];
     comingSoon: string[];
     tools: string[];

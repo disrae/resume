@@ -16,48 +16,101 @@ const {
         break-inside: avoid;
         page-break-inside: avoid;
     }
+    .section-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #e5e7eb;
+    }
+    .job-title,
+    .venture-name,
+    .school-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+    }
+    .company-period,
+    .venture-role,
+    .education-degree {
+        font-size: 0.9rem;
+        color: #4b5563;
+        margin-bottom: 0.5rem;
+    }
+    .achievement-list {
+        margin-left: 1.5rem;
+        margin-top: 0.5rem;
+    }
+    .achievement-item {
+        margin-bottom: 0.25rem;
+    }
+    .tool-badge {
+        display: inline-block;
+        background-color: #f3f4f6;
+        padding: 0.25rem 0.5rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .skill-language-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 0.5rem;
+    }
 </style>
 
 <BaseLayout title="Resume PDF">
-    <div class="p-8 bg-white text-black">
-        <header class="mb-6 page-section">
-            <h1 class="text-xl font-bold">{personal.name}</h1>
-            <p class="text-base text-gray-600">{personal.title}</p>
-            <div class="mt-2 text-sm">
+    <div class="p-8 bg-white text-black max-w-4xl mx-auto">
+        <header class="mb-8 page-section text-center">
+            <h1 class="text-3xl font-bold mb-2">{personal.name}</h1>
+            <p class="text-xl text-gray-600 mb-2">{personal.title}</p>
+            <div class="text-sm">
                 <p>{personal.email}</p>
                 <a
                     href={`https://linkedin.com/in/${personal.linkedin}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    class="text-teal-700 hover:underline"
                 >
                     linkedin.com/in/{personal.linkedin}
                 </a>
             </div>
         </header>
-
         <main>
-            <section class="mb-6">
-                <h2 class="text-lg font-semibold mb-4 -4">Experience</h2>
+            <section class="mb-8">
+                <h2 class="section-title">Experience</h2>
                 {
                     experience.map((job) => (
-                        <div class="mb-4 page-section">
-                            <h3 class="text-base font-semibold bg-gray-100 p-2 -mx-2 rounded-lg">
-                                {job.title}
-                            </h3>
-                            <p class="text-sm text-gray-600">
+                        <div class="mb-6 page-section">
+                            <h3 class="job-title">{job.title}</h3>
+                            <p class="company-period">
                                 {job.company} | {job.period}
                             </p>
-                            <p class="mt-2 text-sm">{job.description}</p>
-                            <ul class="list-disc list-inside mt-2 text-sm">
+                            <p class="text-sm mb-2">{job.description}</p>
+                            {job.link && (
+                                <p class="text-sm">
+                                    Demo:
+                                    <a
+                                        href={job.link.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-sm mb-2 text-teal-700 underline"
+                                    >
+                                        {job.link.name}
+                                    </a>
+                                </p>
+                            )}
+                            <ul class="achievement-list">
                                 {job.achievements.map((achievement) => (
-                                    <li class="text-gray-700">{achievement}</li>
+                                    <li class="achievement-item text-sm text-gray-700">
+                                        • {achievement}
+                                    </li>
                                 ))}
                             </ul>
-                            <div class="mt-2 flex flex-wrap gap-2">
+                            <div class="mt-2 flex flex-wrap">
                                 {job.tools.map((tool) => (
-                                    <span class="bg-gray-50 px-2 py-1 rounded text-xs">
-                                        {tool}
-                                    </span>
+                                    <span class="tool-badge">{tool}</span>
                                 ))}
                             </div>
                         </div>
@@ -65,44 +118,57 @@ const {
                 }
             </section>
 
-            <section class="mb-6">
-                <h2 class="text-lg font-semibold mb-4 -4">
+            <section class="mb-8">
+                <h2 class="section-title">
                     {ventures.length > 0 ? "Ventures" : ""}
                 </h2>
                 {
                     ventures.map((venture) => (
-                        <div class="mb-4 page-section">
-                            <h3 class="text-base font-semibold bg-gray-100 p-2 -mx-2 rounded-lg">
-                                {venture.name}
-                            </h3>
-                            <p class="text-sm text-gray-600">
+                        <div class="mb-6 page-section">
+                            <h3 class="venture-name">{venture.name}</h3>
+                            <p class="venture-role">
                                 {venture.role} | {venture.period}
                             </p>
-                            <p class="mt-2 text-sm">{venture.description}</p>
+                            <p class="text-sm mb-2">{venture.description}</p>
+                            {venture.link && (
+                                <p class="text-sm">
+                                    Check it out at
+                                    <a
+                                        href={venture.link.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-sm mb-2 text-teal-700 underline"
+                                    >
+                                        {venture.link.name}
+                                    </a>
+                                </p>
+                            )}
 
                             <h4 class="font-semibold mt-2 text-sm">
                                 Current Features:
                             </h4>
-                            <ul class="list-disc list-inside mt-1 text-sm">
+                            <ul class="achievement-list">
                                 {venture.features.map((feature) => (
-                                    <li class="text-gray-700">{feature}</li>
+                                    <li class="achievement-item text-sm text-gray-700">
+                                        • {feature}
+                                    </li>
                                 ))}
                             </ul>
 
                             <h4 class="font-semibold mt-2 text-sm">
                                 Coming Soon:
                             </h4>
-                            <ul class="list-disc list-inside mt-1 text-sm">
+                            <ul class="achievement-list">
                                 {venture.comingSoon.map((feature) => (
-                                    <li class="text-gray-700">{feature}</li>
+                                    <li class="achievement-item text-sm text-gray-700">
+                                        • {feature}
+                                    </li>
                                 ))}
                             </ul>
 
-                            <div class="mt-2 flex flex-wrap gap-2">
+                            <div class="mt-2 flex flex-wrap">
                                 {venture.tools.map((tool) => (
-                                    <span class="bg-gray-50 px-2 py-1 rounded text-xs">
-                                        {tool}
-                                    </span>
+                                    <span class="tool-badge">{tool}</span>
                                 ))}
                             </div>
                         </div>
@@ -110,40 +176,46 @@ const {
                 }
             </section>
 
-            <section class="mb-6 page-section">
-                <h2 class="text-lg font-semibold mb-4 -4">
+            <section class="mb-8 page-section">
+                <h2 class="section-title">
                     {education.length > 0 ? "Education" : ""}
                 </h2>
                 {
                     education.map((edu) => (
                         <div class="mb-4">
-                            <h3 class="text-base font-semibold">
-                                {edu.school}
-                            </h3>
-                            <p class="text-sm text-gray-600">{edu.degree}</p>
-                            <p class="text-xs text-gray-500">{edu.period}</p>
-                            <p class="mt-1 text-sm">{edu.details}</p>
+                            <h3 class="school-name">{edu.school}</h3>
+                            <p class="education-degree">{edu.degree}</p>
+                            <p class="text-xs text-gray-500 mb-1">
+                                {edu.period}
+                            </p>
+                            <p class="text-sm">{edu.details}</p>
                         </div>
                     ))
                 }
             </section>
 
             <section class="page-section">
-                <h2 class="text-lg font-semibold mb-4 -4">
-                    Skills & Languages
-                </h2>
+                <h2 class="section-title">Skills & Languages</h2>
                 <div class="grid grid-cols-2 gap-8">
                     <div>
                         <h3 class="font-semibold mb-2 text-base">Skills</h3>
-                        <ul class="list-disc list-inside text-sm">
-                            {skills.map((skill) => <li>{skill}</li>)}
-                        </ul>
+                        <div class="skill-language-grid">
+                            {
+                                skills.map((skill) => (
+                                    <span class="tool-badge">{skill}</span>
+                                ))
+                            }
+                        </div>
                     </div>
                     <div>
                         <h3 class="font-semibold mb-2 text-base">Languages</h3>
-                        <ul class="list-disc list-inside text-sm">
-                            {languages.map((language) => <li>{language}</li>)}
-                        </ul>
+                        <div class="skill-language-grid">
+                            {
+                                languages.map((language) => (
+                                    <span class="tool-badge">{language}</span>
+                                ))
+                            }
+                        </div>
                     </div>
                 </div>
             </section>

@@ -10,20 +10,24 @@ export const resumeData = {
             name: "ChatPlanAI",
             role: "Founder",
             period: "2024 - present",
-            description: "Mobile and web application for chat-based planning and collaboration",
+            description: "Mobile and web application for chat-based planning and collaboration.",
+            link: {
+                url: "https://www.chatplanai.com",
+                name: "ChatPlanAI.com"
+            },
             features: [
-                "Cross-platform mobile and web app built with Expo and React Native",
-                "AI-powered chat summary generation from customer conversations",
-                "Add and invite customers to your project planning chat with magic links",
-                "Push notification system for real-time updates",
-                "Editable AI-generated summaries"
+                "Cross-platform mobile and web app built with Expo and React Native.",
+                "AI-powered chat summary generation from customer conversations.",
+                "Add and invite customers to your project planning chat with magic links.",
+                "Push notification system for real-time updates.",
+                "Editable AI-generated summaries."
             ],
             comingSoon: [
-                "Real-time collaborative editing",
-                "Edit notifications and change tracking",
-                "Time machine feature for viewing edit history",
-                "Payment integration",
-                "Customizable summary generation with user-provided prompts"
+                "Real-time collaborative editing.",
+                "Edit notifications and change tracking.",
+                "Time machine feature for viewing edit history.",
+                "Payment integration.",
+                "Customizable summary generation with user-provided prompts."
             ],
             tools: ["Expo", "React Native", "React", "Typescript", "AI/ML", "Push Notifications", "Authentication"]
         }
@@ -45,12 +49,16 @@ export const resumeData = {
             company: "University of British Columbia",
             period: "May 2020 - present",
             description: "Social Media Poetry App",
+            link: {
+                url: "https://www.phonemeproject.com",
+                name: "PhoneMeProject.com"
+            },
             achievements: [
-                "Initially worked on a team and developed much of the frontend in React-Native",
+                "Initially worked on a team and developed much of the frontend in React-Native.",
                 "Took ownership of the project and migrated from a Fastify and PostgreSQL backend to Firebase.",
                 "Re-designed and implemented the project to reduce costs from $200 to nearly $0.",
                 "Vastly improved performance and enabled the app to scale effectively during events.",
-                "The app now lives at www.phonemeproject.com and has around 500 users."
+                "The app now lives at www.phonemeproject.com and has over 800 users."
             ],
             tools: ["React-Native", "React", "Next JS", "Typescript", "Firebase", "GCP", "Redux", "REST", "Node", "npm", "git", "postgresql", "Postman", "Xcode", "Android Studio", "Linux", "CSS", "Tailwind"]
         },
