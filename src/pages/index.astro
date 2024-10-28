@@ -2,9 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Icon } from "astro-icon/components";
 import { resumeData } from "../data/resume";
-import ResumePDF from "../layouts/ResumePDF.astro";
-const { personal, experience, education, skills, awards, languages } =
-	resumeData;
+const { personal, experience, education, skills, languages } = resumeData;
 ---
 
 <BaseLayout title="Daniel Israel - Software Developer" includePDFScript={true}>
