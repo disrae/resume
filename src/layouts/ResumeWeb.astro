@@ -1,0 +1,305 @@
+---
+import "../styles/global.css";
+import { Icon } from "astro-icon/components";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Daniel Israel - Software Developer</title>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        ></script>
+    </head>
+    <body class="bg-gray-100 font-sans p-4">
+        <div class="container mx-auto px-4 py-8 max-w-4xl">
+            <header class="mb-6">
+                <h1 class="text-4xl font-bold text-gray-800">Daniel Israel</h1>
+                <h2 class="text-2xl text-gray-600">Software Developer</h2>
+                <div class="flex items-center mt-2">
+                    <button
+                        onclick="navigator.clipboard.writeText('danny.israel@gmail.com');
+						const notification = document.getElementById('copy-notification');
+						notification.classList.remove('hidden'); 
+						setTimeout(() => notification.classList.add('hidden'), 1200)"
+                        class="border shadow bg-gray-100 hover:bg-gray-200 px-2 py-1 rounded transition-colors cursor-pointer inline-flex items-center"
+                        title="Click to copy email"
+                    >
+                        <Icon name="email" class="w-4 h-4 inline-block" />
+                        <div class="w-2"></div>
+                        <span>danny.israel@gmail.com</span>
+                    </button>
+                    <div class="w-4"></div>
+                    <a
+                        class="border shadow bg-gray-100 hover:bg-gray-200 px-2 py-1 rounded transition-colors cursor-pointer inline-flex items-center"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.linkedin.com/in/daniel-israel-software-dev/"
+                    >
+                        <Icon name="linkedin" class="w-4 h-4 inline-block" />
+                        <div class="w-2"></div>
+                        LinkedIn
+                    </a>
+                </div>
+                <div id="copy-notification" class="ml-2 text-teal-600 hidden">
+                    Copied email to Clipboard!
+                </div>
+            </header>
+        </div>
+
+        <main>
+            <section class="mb-6">
+                <details open>
+                    <summary
+                        class="text-2xl font-semibold text-gray-800 mb-2 cursor-pointer hover:text-gray-600"
+                    >
+                        Experience
+                    </summary>
+                    <div class="space-y-4">
+                        <details class="bg-white rounded-lg shadow-sm p-4" open>
+                            <summary class="cursor-pointer hover:text-gray-600">
+                                <h4 class="text-xl font-semibold inline-block">
+                                    Intermediate Front End Developer - Goose
+                                    Insurance
+                                </h4>
+                            </summary>
+                            <div class="mt-2">
+                                <p class="text-sm text-gray-600">
+                                    React-Native & Astro JS | July 2023 -
+                                    present
+                                </p>
+                                <ul class="list-disc list-inside mt-2 text-sm">
+                                    <li>
+                                        Re-wrote the website in Astro JS to
+                                        vastly improve performance, reduce
+                                        costs, and improve the developer
+                                        experience.
+                                    </li>
+                                    <li>
+                                        Maintaining and improving the Goose
+                                        Insurance app using a server driven
+                                        approach.
+                                    </li>
+                                </ul>
+                                <p class="text-sm mt-1">
+                                    <span class="font-semibold">Tools:</span> React-Native,
+                                    Astro JS, Typescript, Redux, REST, Tailwind,
+                                    CSS
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="bg-white rounded-lg shadow-sm p-4" open>
+                            <summary class="cursor-pointer hover:text-gray-600">
+                                <h4 class="text-xl font-semibold inline-block">
+                                    React-Native & Next JS Application Developer
+                                    - University of British Columbia
+                                </h4>
+                            </summary>
+                            <div class="mt-2">
+                                <p class="text-sm text-gray-600">
+                                    Social Media Poetry App | May 2020 - present
+                                </p>
+                                <ul class="list-disc list-inside mt-2 text-sm">
+                                    <li>
+                                        Initially worked on a team and developed
+                                        much of the frontend in React-Native
+                                    </li>
+                                    <li>
+                                        Took ownership of the project and
+                                        migrated from a Fastify and PostgreSQL
+                                        backend to Firebase.
+                                    </li>
+                                    <li>
+                                        Re-designed and implemented the project
+                                        to reduce costs from $200 to nearly $0.
+                                    </li>
+                                    <li>
+                                        Vastly improved performance and enabled
+                                        the app to scale effectively during
+                                        events.
+                                    </li>
+                                    <li>
+                                        The app now lives at
+                                        www.phonemeproject.com and has around
+                                        500 users.
+                                    </li>
+                                </ul>
+                                <p class="text-sm mt-1">
+                                    <span class="font-semibold">Tools:</span> React-Native,
+                                    React, Next JS, Typescript, Firebase, GCP Redux,
+                                    REST, Node, npm, git, postgresql, Postman, Xcode,
+                                    Android Studio, Linux, CSS, Tailwind
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="bg-white rounded-lg shadow-sm p-4" open>
+                            <summary class="cursor-pointer hover:text-gray-600">
+                                <h4 class="text-xl font-semibold inline-block">
+                                    JS Electron Application Developer - BARK
+                                    Trading
+                                </h4>
+                            </summary>
+                            <div class="mt-2">
+                                <p class="text-sm text-gray-600">
+                                    Electron app | Nov 2022 - PRESENT
+                                </p>
+                                <p class="text-sm">
+                                    Various bug fixes, features, and scripts for
+                                    operating on data.
+                                </p>
+                                <p class="text-sm mt-1">
+                                    <span class="font-semibold">Tools:</span> Electron,
+                                    Javascript, Firebase, GCP, HTML, CSS
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="bg-white rounded-lg shadow-sm p-4" open>
+                            <summary class="cursor-pointer hover:text-gray-600">
+                                <h4 class="text-xl font-semibold inline-block">
+                                    Machine Learning Analyst - Earth Rise Media
+                                </h4>
+                            </summary>
+                            <div class="mt-2">
+                                <p class="text-sm text-gray-600">
+                                    Python and Jupyter notebooks | May 2021 -
+                                    February 2022
+                                </p>
+                                <p class="text-sm">
+                                    Data validation and model retraining.
+                                </p>
+                                <p class="text-sm mt-1">
+                                    <span class="font-semibold">Tools:</span> Python,
+                                    Sci-kit learn, TensorFlow, NumPy, Earth Observation
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="bg-white rounded-lg shadow-sm p-4" open>
+                            <summary class="cursor-pointer hover:text-gray-600">
+                                <h4 class="text-xl font-semibold inline-block">
+                                    React Developer - ehsAI (coop)
+                                </h4>
+                            </summary>
+                            <div class="mt-2">
+                                <p class="text-sm text-gray-600">
+                                    React SPA | September 2019 - May 2020
+                                </p>
+                                <ul class="list-disc list-inside mt-2 text-sm">
+                                    <li>Built a customer document portal.</li>
+                                    <li>Various bug fixes.</li>
+                                    <li>
+                                        Built a table building interface in a
+                                        web based pdf editor for correcting
+                                        machine learning output.
+                                    </li>
+                                </ul>
+                                <p class="text-sm mt-1">
+                                    <span class="font-semibold">Tools:</span> React,
+                                    Preact, Typescript, SASS, HTML
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </details>
+            </section>
+
+            <section class="mb-6">
+                <details open>
+                    <summary
+                        class="text-2xl font-semibold text-gray-800 mb-2 cursor-pointer hover:text-gray-600"
+                    >
+                        Education
+                    </summary>
+                    <div class="space-y-2">
+                        <div>
+                            <h4 class="text-xl font-semibold">
+                                University of British Columbia
+                            </h4>
+                            <p class="text-sm">
+                                Bachelor of Computer Science | September 2019 -
+                                May 2022
+                            </p>
+                            <p class="text-sm">
+                                Data-Structures, Algorithms, Machine Learning,
+                                Computer Vision, Networking.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold">
+                                Concordia University
+                            </h4>
+                            <p class="text-sm">
+                                Bachelor of Applied Human Sciences | September
+                                2019 - January 2014
+                            </p>
+                            <p class="text-sm">
+                                Communication skills, Dean's List, Research
+                                Assistant, Teaching Assistant.
+                            </p>
+                        </div>
+                    </div>
+                </details>
+            </section>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <section>
+                    <details open>
+                        <summary
+                            class="text-2xl font-semibold text-gray-800 mb-2 cursor-pointer hover:text-gray-600"
+                        >
+                            Skills
+                        </summary>
+                        <ul class="list-disc list-inside text-sm">
+                            <li>React</li>
+                            <li>React-Native</li>
+                            <li>Typescript</li>
+                            <li>Redux</li>
+                            <li>Git</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Machine Learning</li>
+                            <li>Object Oriented & Functional Programming</li>
+                            <li>Data Structures and Algorithms</li>
+                        </ul>
+                    </details>
+                </section>
+
+                <section>
+                    <details open>
+                        <summary
+                            class="text-2xl font-semibold text-gray-800 mb-2 cursor-pointer hover:text-gray-600"
+                        >
+                            Awards
+                        </summary>
+                        <ul class="list-disc list-inside text-sm">
+                            <li>3rd Place BC Shackathon 2019</li>
+                            <li>Dean's list</li>
+                        </ul>
+                    </details>
+
+                    <details open>
+                        <summary
+                            class="text-2xl font-semibold text-gray-800 mt-4 mb-2 cursor-pointer hover:text-gray-600"
+                        >
+                            Languages
+                        </summary>
+                        <ul class="list-disc list-inside text-sm">
+                            <li>Javascript</li>
+                            <li>Typescript</li>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>C</li>
+                            <li>C++</li>
+                            <li>SQL</li>
+                        </ul>
+                    </details>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>
