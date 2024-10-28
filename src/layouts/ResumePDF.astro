@@ -6,11 +6,85 @@ interface Props {
     data: ResumeData;
 }
 
-const { data } = Astro.props;
+const {
+    data: { personal, experience, education, skills, languages },
+} = Astro.props;
 ---
 
 <BaseLayout title="Resume PDF">
     <div class="p-8 bg-white text-black">
-        <!-- PDF content -->
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold">{personal.name}</h1>
+            <p class="text-xl text-gray-600">{personal.title}</p>
+            <div class="mt-2">
+                <p>{personal.email}</p>
+                <p>linkedin.com/in/{personal.linkedin}</p>
+            </div>
+        </header>
+
+        <main>
+            <section class="mb-6">
+                <h2 class="text-2xl font-semibold mb-4">Experience</h2>
+                {
+                    experience.map((job) => (
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold">{job.title}</h3>
+                            <p class="text-gray-600">
+                                {job.company} | {job.period}
+                            </p>
+                            <p class="mt-2">{job.description}</p>
+                            <ul class="list-disc list-inside mt-2">
+                                {job.achievements.map((achievement) => (
+                                    <li class="text-gray-700">{achievement}</li>
+                                ))}
+                            </ul>
+                            <div class="mt-2 flex flex-wrap gap-2">
+                                {job.tools.map((tool) => (
+                                    <span class="bg-gray-200 px-2 py-1 rounded text-sm">
+                                        {tool}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    ))
+                }
+            </section>
+
+            <div class="grid grid-cols-2 gap-8">
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4">Education</h2>
+                    {
+                        education.map((edu) => (
+                            <div class="mb-4">
+                                <h3 class="text-lg font-semibold">
+                                    {edu.school}
+                                </h3>
+                                <p class="text-gray-600">{edu.degree}</p>
+                                <p class="text-sm text-gray-500">
+                                    {edu.period}
+                                </p>
+                                <p class="mt-1">{edu.details}</p>
+                            </div>
+                        ))
+                    }
+                </section>
+
+                <div>
+                    <section class="mb-6">
+                        <h2 class="text-2xl font-semibold mb-4">Skills</h2>
+                        <ul class="list-disc list-inside">
+                            {skills.map((skill) => <li>{skill}</li>)}
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-semibold mb-4">Languages</h2>
+                        <ul class="list-disc list-inside">
+                            {languages.map((language) => <li>{language}</li>)}
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </main>
     </div>
 </BaseLayout>
