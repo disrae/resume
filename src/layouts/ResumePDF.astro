@@ -7,7 +7,7 @@ interface Props {
 }
 
 const {
-    data: { personal, experience, education, skills, languages },
+    data: { personal, ventures, experience, education, skills, languages },
 } = Astro.props;
 ---
 
@@ -18,7 +18,13 @@ const {
             <p class="text-xl text-gray-600">{personal.title}</p>
             <div class="mt-2">
                 <p>{personal.email}</p>
-                <p>linkedin.com/in/{personal.linkedin}</p>
+                <a
+                    href={`https://linkedin.com/in/${personal.linkedin}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    linkedin.com/in/{personal.linkedin}
+                </a>
             </div>
         </header>
 
@@ -40,6 +46,47 @@ const {
                             </ul>
                             <div class="mt-2 flex flex-wrap gap-2">
                                 {job.tools.map((tool) => (
+                                    <span class="bg-gray-200 px-2 py-1 rounded text-sm">
+                                        {tool}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    ))
+                }
+            </section>
+
+            <section class="mb-6">
+                <h2 class="text-2xl font-semibold mb-4">Ventures</h2>
+                {
+                    ventures.map((venture) => (
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold">
+                                {venture.name}
+                            </h3>
+                            <p class="text-gray-600">
+                                {venture.role} | {venture.period}
+                            </p>
+                            <p class="mt-2">{venture.description}</p>
+
+                            <h4 class="font-semibold mt-2">
+                                Current Features:
+                            </h4>
+                            <ul class="list-disc list-inside mt-1">
+                                {venture.features.map((feature) => (
+                                    <li class="text-gray-700">{feature}</li>
+                                ))}
+                            </ul>
+
+                            <h4 class="font-semibold mt-2">Coming Soon:</h4>
+                            <ul class="list-disc list-inside mt-1">
+                                {venture.comingSoon.map((feature) => (
+                                    <li class="text-gray-700">{feature}</li>
+                                ))}
+                            </ul>
+
+                            <div class="mt-2 flex flex-wrap gap-2">
+                                {venture.tools.map((tool) => (
                                     <span class="bg-gray-200 px-2 py-1 rounded text-sm">
                                         {tool}
                                     </span>

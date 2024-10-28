@@ -7,6 +7,16 @@ export interface Job {
     tools: string[];
 }
 
+type Venture = {
+    name: string;
+    role: string;
+    period: string;
+    description: string;
+    features: string[];
+    comingSoon: string[];
+    tools: string[];
+};
+
 export interface ResumeData {
     personal: {
         name: string;
@@ -14,6 +24,7 @@ export interface ResumeData {
         email: string;
         linkedin: string;
     };
+    ventures: Venture[];
     experience: Job[];
     education: {
         school: string;
