@@ -1,4 +1,29 @@
 ---
+interface Job {
+    title: string;
+    company: string;
+    period: string;
+    description: string;
+    achievements: string[];
+    tools: string[];
+}
+
+interface Props {
+    data: {
+        personal: {
+            name: string;
+            title: string;
+            email: string;
+            linkedin: string;
+        };
+        experience: Job[];
+        education: any[]; // Define this interface too if needed
+        skills: string[];
+        awards: string[];
+        languages: string[];
+    };
+}
+
 const { data } = Astro.props;
 const { personal, experience, education, skills, awards, languages } = data;
 ---

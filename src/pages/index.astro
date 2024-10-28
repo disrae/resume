@@ -1,12 +1,10 @@
 ---
 import "../styles/global.css";
-import { Icon } from "astro-icon/components";
 import { resumeData } from "../data/resume";
 import ResumeWeb from "../layouts/ResumeWeb.astro";
 import ResumePDF from "../layouts/ResumePDF.astro";
 ---
 
-<!-- Web version -->
 <button
 	onclick="generatePDF()"
 	id="download-pdf-button"
@@ -16,7 +14,6 @@ import ResumePDF from "../layouts/ResumePDF.astro";
 </button>
 <ResumeWeb data={resumeData} />
 
-<!-- Hidden PDF version -->
 <div id="pdf-content" class="hidden">
 	<ResumePDF data={resumeData} />
 </div>
@@ -27,6 +24,13 @@ import ResumePDF from "../layouts/ResumePDF.astro";
 ></script>
 
 <script>
+	declare global {
+		interface Window {
+			generatePDF: () => void;
+		}
+	}
+	declare const html2pdf: any;
+
 	document.addEventListener("DOMContentLoaded", () => {
 		window.generatePDF = function () {
 			const element = document.getElementById("pdf-content");
