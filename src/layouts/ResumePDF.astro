@@ -11,9 +11,16 @@ const {
 } = Astro.props;
 ---
 
+<style>
+    .page-section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+</style>
+
 <BaseLayout title="Resume PDF">
     <div class="p-8 bg-white text-black">
-        <header class="mb-6">
+        <header class="mb-6 page-section">
             <h1 class="text-2xl font-bold">{personal.name}</h1>
             <p class="text-lg text-gray-600">{personal.title}</p>
             <div class="mt-2">
@@ -30,11 +37,17 @@ const {
 
         <main>
             <section class="mb-6">
-                <h2 class="text-xl font-semibold mb-4">Experience</h2>
+                <h2
+                    class="text-xl font-semibold mb-4 bg-gray-50 p-4 -mx-4 rounded-lg"
+                >
+                    {experience.length > 0 ? "Experience" : ""}
+                </h2>
                 {
                     experience.map((job) => (
-                        <div class="mb-4">
-                            <h3 class="text-lg font-semibold">{job.title}</h3>
+                        <div class="mb-4 page-section">
+                            <h3 class="text-lg font-semibold bg-gray-50 p-2 -mx-2 rounded-lg">
+                                {job.title}
+                            </h3>
                             <p class="text-gray-600">
                                 {job.company} | {job.period}
                             </p>
@@ -57,11 +70,15 @@ const {
             </section>
 
             <section class="mb-6">
-                <h2 class="text-xl font-semibold mb-4">Ventures</h2>
+                <h2
+                    class="text-xl font-semibold mb-4 bg-gray-50 p-4 -mx-4 rounded-lg"
+                >
+                    {ventures.length > 0 ? "Ventures" : ""}
+                </h2>
                 {
                     ventures.map((venture) => (
-                        <div class="mb-4">
-                            <h3 class="text-lg font-semibold">
+                        <div class="mb-4 page-section">
+                            <h3 class="text-lg font-semibold bg-gray-50 p-2 -mx-2 rounded-lg">
                                 {venture.name}
                             </h3>
                             <p class="text-gray-600">
@@ -97,41 +114,47 @@ const {
                 }
             </section>
 
-            <div class="grid grid-cols-2 gap-8">
-                <section>
-                    <h2 class="text-xl font-semibold mb-4">Education</h2>
-                    {
-                        education.map((edu) => (
-                            <div class="mb-4">
-                                <h3 class="text-base font-semibold">
-                                    {edu.school}
-                                </h3>
-                                <p class="text-gray-600">{edu.degree}</p>
-                                <p class="text-sm text-gray-500">
-                                    {edu.period}
-                                </p>
-                                <p class="mt-1">{edu.details}</p>
-                            </div>
-                        ))
-                    }
-                </section>
+            <section class="mb-6 page-section">
+                <h2
+                    class="text-xl font-semibold mb-4 bg-gray-50 p-4 -mx-4 rounded-lg"
+                >
+                    {education.length > 0 ? "Education" : ""}
+                </h2>
+                {
+                    education.map((edu) => (
+                        <div class="mb-4">
+                            <h3 class="text-base font-semibold">
+                                {edu.school}
+                            </h3>
+                            <p class="text-gray-600">{edu.degree}</p>
+                            <p class="text-sm text-gray-500">{edu.period}</p>
+                            <p class="mt-1">{edu.details}</p>
+                        </div>
+                    ))
+                }
+            </section>
 
-                <div>
-                    <section class="mb-6">
-                        <h2 class="text-xl font-semibold mb-4">Skills</h2>
+            <section class="page-section">
+                <h2
+                    class="text-xl font-semibold mb-4 bg-gray-50 p-4 -mx-4 rounded-lg"
+                >
+                    Skills & Languages
+                </h2>
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="font-semibold mb-2">Skills</h3>
                         <ul class="list-disc list-inside">
                             {skills.map((skill) => <li>{skill}</li>)}
                         </ul>
-                    </section>
-
-                    <section>
-                        <h2 class="text-xl font-semibold mb-4">Languages</h2>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Languages</h3>
                         <ul class="list-disc list-inside">
                             {languages.map((language) => <li>{language}</li>)}
                         </ul>
-                    </section>
+                    </div>
                 </div>
-            </div>
+            </section>
         </main>
     </div>
 </BaseLayout>
