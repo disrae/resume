@@ -1,0 +1,25 @@
+---
+interface Props {
+    title: string;
+    includePDFScript?: boolean;
+}
+
+const { title, includePDFScript = false } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        {
+            includePDFScript && (
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" />
+            )
+        }
+    </head>
+    <body class="bg-gray-100 font-sans p-4">
+        <slot />
+    </body>
+</html>

@@ -1,126 +1,16 @@
 ---
-interface Job {
-    title: string;
-    company: string;
-    period: string;
-    description: string;
-    achievements: string[];
-    tools: string[];
-}
+import BaseLayout from "./BaseLayout.astro";
+import type { ResumeData } from "../types/resume";
 
 interface Props {
-    data: {
-        personal: {
-            name: string;
-            title: string;
-            email: string;
-            linkedin: string;
-        };
-        experience: Job[];
-        education: any[]; // Define this interface too if needed
-        skills: string[];
-        awards: string[];
-        languages: string[];
-    };
+    data: ResumeData;
 }
 
 const { data } = Astro.props;
-const { personal, experience, education, skills, awards, languages } = data;
 ---
 
-<div class="p-8 bg-white text-black">
-    <!-- Header -->
-    <header class="mb-6">
-        <h1 class="text-2xl font-bold">{personal.name}</h1>
-        <p class="text-lg">{personal.title}</p>
-        <div class="text-sm flex gap-4">
-            <p>{personal.email}</p>
-            <p>linkedin.com/in/{personal.linkedin}</p>
-        </div>
-    </header>
-
-    <!-- Experience -->
-    <section class="mb-6">
-        <h2 class="text-xl font-bold mb-3 border-b border-gray-300">
-            Experience
-        </h2>
-        {
-            experience.map((job) => (
-                <div class="mb-4">
-                    <div class="flex justify-between items-baseline">
-                        <h3 class="font-semibold">
-                            {job.title} - {job.company}
-                        </h3>
-                        <span class="text-sm text-gray-600">{job.period}</span>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-1">{job.description}</p>
-                    <ul class="list-disc ml-4 text-sm">
-                        {job.achievements.map((achievement) => (
-                            <li>{achievement}</li>
-                        ))}
-                    </ul>
-                    <p class="text-sm mt-1">
-                        <span class="font-semibold">Tools:</span>{" "}
-                        {job.tools.join(", ")}
-                    </p>
-                </div>
-            ))
-        }
-    </section>
-
-    <!-- Education -->
-    <section class="mb-6">
-        <h2 class="text-xl font-bold mb-3 border-b border-gray-300">
-            Education
-        </h2>
-        {
-            education.map((edu) => (
-                <div class="mb-4">
-                    <div class="flex justify-between items-baseline">
-                        <h3 class="font-semibold">{edu.school}</h3>
-                        <span class="text-sm text-gray-600">{edu.period}</span>
-                    </div>
-                    <p class="text-sm font-medium">{edu.degree}</p>
-                    <p class="text-sm text-gray-600">{edu.details}</p>
-                </div>
-            ))
-        }
-    </section>
-
-    <!-- Skills, Awards, and Languages in a two-column layout -->
-    <div class="grid grid-cols-2 gap-6">
-        <div>
-            <!-- Skills -->
-            <section class="mb-6">
-                <h2 class="text-xl font-bold mb-2 border-b border-gray-300">
-                    Skills
-                </h2>
-                <ul class="list-disc ml-4 text-sm">
-                    {skills.map((skill) => <li>{skill}</li>)}
-                </ul>
-            </section>
-        </div>
-
-        <div>
-            <!-- Awards -->
-            <section class="mb-6">
-                <h2 class="text-xl font-bold mb-2 border-b border-gray-300">
-                    Awards
-                </h2>
-                <ul class="list-disc ml-4 text-sm">
-                    {awards.map((award) => <li>{award}</li>)}
-                </ul>
-            </section>
-
-            <!-- Languages -->
-            <section>
-                <h2 class="text-xl font-bold mb-2 border-b border-gray-300">
-                    Languages
-                </h2>
-                <ul class="list-disc ml-4 text-sm">
-                    {languages.map((language) => <li>{language}</li>)}
-                </ul>
-            </section>
-        </div>
+<BaseLayout title="Resume PDF">
+    <div class="p-8 bg-white text-black">
+        <!-- PDF content -->
     </div>
-</div>
+</BaseLayout>

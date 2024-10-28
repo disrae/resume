@@ -1,76 +1,138 @@
 ---
-import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Icon } from "astro-icon/components";
 import { resumeData } from "../data/resume";
-import ResumeWeb from "../layouts/ResumeWeb.astro";
 import ResumePDF from "../layouts/ResumePDF.astro";
+const { personal, experience, education, skills, awards, languages } =
+	resumeData;
 ---
 
-<button
-	id="download-pdf-button"
-	class="no-print fixed top-4 right-4 bg-teal-600 transform hover:-translate-y-0 translate-y-[-2px] transition-all shadow-lg hover:shadow-none hover:bg-teal-800 text-white font-bold py-2 px-4 rounded"
->
-	Download PDF
-</button>
-<ResumeWeb data={resumeData} />
+<BaseLayout title="Daniel Israel - Software Developer" includePDFScript={true}>
+	<button
+		id="download-pdf-button"
+		class="no-print fixed top-4 right-4 bg-teal-600 transform hover:-translate-y-0 translate-y-[-2px] transition-all shadow-lg hover:shadow-none hover:bg-teal-800 text-white font-bold py-2 px-4 rounded"
+	>
+		Download PDF
+	</button>
 
-<div id="pdf-content" class="hidden">
-	<ResumePDF data={resumeData} />
-</div>
+	<div class="container mx-auto px-4 py-8 max-w-4xl">
+		<header class="mb-6">
+			<h1 class="text-4xl font-bold">{personal.name}</h1>
+			<p class="text-xl text-gray-600">{personal.title}</p>
+			<div class="flex gap-4 text-sm text-gray-600 mt-2">
+				<a
+					href={`mailto:${personal.email}`}
+					class="hover:text-teal-600"
+				>
+					<Icon name="email" class="inline w-4 h-4 mr-1" />
+					{personal.email}
+				</a>
+				<a
+					href={`https://linkedin.com/in/${personal.linkedin}`}
+					class="hover:text-teal-600"
+				>
+					<Icon name="linkedin" class="inline w-4 h-4 mr-1" />
+					LinkedIn
+				</a>
+			</div>
+		</header>
 
-<script
-	is:inline
-	src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
-></script>
+		<main>
+			<section class="mb-8">
+				<h2 class="text-2xl font-semibold text-gray-800 mb-4">
+					Experience
+				</h2>
+				{
+					experience.map((job) => (
+						<div class="mb-6">
+							<h3 class="text-xl font-semibold">{job.title}</h3>
+							<p class="text-gray-600">
+								{job.company} | {job.period}
+							</p>
+							<p class="mt-2">{job.description}</p>
+							<ul class="list-disc list-inside mt-2">
+								{job.achievements.map((achievement) => (
+									<li class="text-gray-700">{achievement}</li>
+								))}
+							</ul>
+							<div class="mt-2 flex flex-wrap gap-2">
+								{job.tools.map((tool) => (
+									<span class="bg-gray-200 px-2 py-1 rounded text-sm">
+										{tool}
+									</span>
+								))}
+							</div>
+						</div>
+					))
+				}
+			</section>
 
-<script>
-	declare global {
-		interface Window {
-			generatePDF: () => void;
-		}
-	}
-	declare const html2pdf: any;
+			<div class="grid md:grid-cols-2 gap-8">
+				<section>
+					<h2 class="text-2xl font-semibold text-gray-800 mb-4">
+						Education
+					</h2>
+					{
+						education.map((edu) => (
+							<div class="mb-4">
+								<h3 class="text-lg font-semibold">
+									{edu.school}
+								</h3>
+								<p class="text-gray-600">{edu.degree}</p>
+								<p class="text-sm text-gray-500">
+									{edu.period}
+								</p>
+								<p class="mt-1">{edu.details}</p>
+							</div>
+						))
+					}
+				</section>
 
-	document.addEventListener("DOMContentLoaded", () => {
-		window.generatePDF = function () {
-			const element = document.getElementById("pdf-content");
-			element?.classList.remove("hidden");
+				<section>
+					<details open>
+						<summary
+							class="text-2xl font-semibold text-gray-800 mb-4 cursor-pointer"
+						>
+							Skills
+						</summary>
+						<ul class="list-disc list-inside">
+							{skills.map((skill) => <li>{skill}</li>)}
+						</ul>
+					</details>
 
-			const opt = {
-				margin: 1,
-				filename: "resume.pdf",
-				image: { type: "jpeg", quality: 0.98 },
-				html2canvas: {
-					scale: 2,
-					logging: true,
-					useCORS: true,
-				},
-				jsPDF: {
-					unit: "in",
-					format: "letter",
-					orientation: "portrait",
-					putTotalPages: true,
-					tagged: true, // Enable PDF tagging
-					userUnit: 1.0,
-					hotfixes: ["px_scaling"],
-					accessibility: {
-						createPDFA1: true, // Creates PDF/A-1b compliant PDFs
-						includeStructure: true, // Includes document structure
-						markupLanguage: "HTML", // Specifies the markup language
-					},
-				},
-			};
+					<details open>
+						<summary
+							class="text-2xl font-semibold text-gray-800 mt-4 mb-2 cursor-pointer"
+						>
+							Languages
+						</summary>
+						<ul class="list-disc list-inside">
+							{languages.map((language) => <li>{language}</li>)}
+						</ul>
+					</details>
+				</section>
+			</div>
+		</main>
+	</div>
 
-			html2pdf()
-				.set(opt)
-				.from(element)
-				.save()
-				.then(() => {
-					element?.classList.add("hidden");
-				});
-		};
+	<div id="pdf-content" class="hidden">
+		<ResumePDF data={resumeData} />
+	</div>
 
+	<script>
 		document
 			.getElementById("download-pdf-button")
-			?.addEventListener("click", () => window.generatePDF());
-	});
-</script>
+			?.addEventListener("click", async () => {
+				const response = await fetch("/api/generate-pdf");
+				const blob = await response.blob();
+				const url = window.URL.createObjectURL(blob);
+				const a = document.createElement("a");
+				a.href = url;
+				a.download = "daniel-israel-resume.pdf";
+				document.body.appendChild(a);
+				a.click();
+				document.body.removeChild(a);
+				window.URL.revokeObjectURL(url);
+			});
+	</script>
+</BaseLayout>
