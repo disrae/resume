@@ -6,7 +6,6 @@ import ResumePDF from "../layouts/ResumePDF.astro";
 ---
 
 <button
-	onclick="generatePDF()"
 	id="download-pdf-button"
 	class="no-print fixed top-4 right-4 bg-teal-600 transform hover:-translate-y-0 translate-y-[-2px] transition-all shadow-lg hover:shadow-none hover:bg-teal-800 text-white font-bold py-2 px-4 rounded"
 >
@@ -56,5 +55,9 @@ import ResumePDF from "../layouts/ResumePDF.astro";
 					element?.classList.add("hidden");
 				});
 		};
+
+		document
+			.getElementById("download-pdf-button")
+			?.addEventListener("click", () => window.generatePDF());
 	});
 </script>
