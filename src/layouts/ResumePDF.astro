@@ -38,14 +38,14 @@ const {
         <main>
             <section class="mb-6">
                 <h2
-                    class="text-xl font-semibold mb-4 bg-gray-50 p-4 -mx-4 rounded-lg"
+                    class="text-xl font-semibold mb-4 bg-gray-100 p-4 -mx-4 rounded-lg"
                 >
-                    {experience.length > 0 ? "Experience" : ""}
+                    Experience
                 </h2>
                 {
                     experience.map((job) => (
                         <div class="mb-4 page-section">
-                            <h3 class="text-lg font-semibold bg-gray-50 p-2 -mx-2 rounded-lg">
+                            <h3 class="text-lg font-semibold bg-gray-100 p-2 -mx-2 rounded-lg">
                                 {job.title}
                             </h3>
                             <p class="text-gray-600">
@@ -59,7 +59,7 @@ const {
                             </ul>
                             <div class="mt-2 flex flex-wrap gap-2">
                                 {job.tools.map((tool) => (
-                                    <span class="bg-gray-200 px-2 py-1 rounded text-sm">
+                                    <span class="bg-gray-50 px-2 py-1 rounded text-sm">
                                         {tool}
                                     </span>
                                 ))}
@@ -71,14 +71,14 @@ const {
 
             <section class="mb-6">
                 <h2
-                    class="text-xl font-semibold mb-4 bg-gray-50 p-4 -mx-4 rounded-lg"
+                    class="text-xl font-semibold mb-4 bg-gray-100 p-4 -mx-4 rounded-lg"
                 >
                     {ventures.length > 0 ? "Ventures" : ""}
                 </h2>
                 {
                     ventures.map((venture) => (
                         <div class="mb-4 page-section">
-                            <h3 class="text-lg font-semibold bg-gray-50 p-2 -mx-2 rounded-lg">
+                            <h3 class="text-lg font-semibold bg-gray-100 p-2 -mx-2 rounded-lg">
                                 {venture.name}
                             </h3>
                             <p class="text-gray-600">
@@ -104,7 +104,7 @@ const {
 
                             <div class="mt-2 flex flex-wrap gap-2">
                                 {venture.tools.map((tool) => (
-                                    <span class="bg-gray-200 px-2 py-1 rounded text-sm">
+                                    <span class="bg-gray-50 px-2 py-1 rounded text-sm">
                                         {tool}
                                     </span>
                                 ))}
@@ -116,7 +116,7 @@ const {
 
             <section class="mb-6 page-section">
                 <h2
-                    class="text-xl font-semibold mb-4 bg-gray-50 p-4 -mx-4 rounded-lg"
+                    class="text-xl font-semibold mb-4 bg-gray-100 p-4 -mx-4 rounded-lg"
                 >
                     {education.length > 0 ? "Education" : ""}
                 </h2>
@@ -136,7 +136,7 @@ const {
 
             <section class="page-section">
                 <h2
-                    class="text-xl font-semibold mb-4 bg-gray-50 p-4 -mx-4 rounded-lg"
+                    class="text-xl font-semibold mb-4 bg-gray-100 p-4 -mx-4 rounded-lg"
                 >
                     Skills & Languages
                 </h2>
