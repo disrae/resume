@@ -5,6 +5,29 @@ export const resumeData = {
         email: "danny.israel@gmail.com",
         linkedin: "daniel-israel-software-dev"
     },
+    ventures: [
+        {
+            name: "ChatPlanAI",
+            role: "Founder",
+            period: "2024 - present",
+            description: "Mobile and web application for chat-based planning and collaboration",
+            features: [
+                "Cross-platform mobile and web app built with Expo and React Native",
+                "AI-powered chat summary generation from customer conversations",
+                "Secure authentication with magic links",
+                "Push notification system for real-time updates",
+                "Editable AI-generated summaries"
+            ],
+            comingSoon: [
+                "Real-time collaborative editing",
+                "Edit notifications and change tracking",
+                "Time machine feature for viewing edit history",
+                "Payment integration",
+                "Customizable summary generation with user-provided prompts"
+            ],
+            tools: ["Expo", "React Native", "React", "Typescript", "AI/ML", "Push Notifications", "Authentication"]
+        }
+    ],
     experience: [
         {
             title: "Intermediate Front End Developer",
