@@ -16,20 +16,21 @@ export const resumeData = {
                 name: "ChatPlanAI.com"
             },
             features: [
-                "Cross-platform mobile and web app built with Expo and React Native.",
-                "AI-powered chat summary generation from customer conversations.",
+                "Cross-platform mobile and web app built with Expo, Convex, and tailwind.",
+                "Chat with your customers and generate a plan from it via a Large Language Model (LLM).",
                 "Add and invite customers to your project planning chat with magic links.",
                 "Push notification system for real-time updates.",
-                "Editable AI-generated summaries."
+                "Editable AI-generated plans and summaries."
             ],
             comingSoon: [
+                "Coming to app stores.",
                 "Real-time collaborative editing.",
-                "Edit notifications and change tracking.",
                 "Time machine feature for viewing edit history.",
                 "Payment integration.",
-                "Customizable summary generation with user-provided prompts."
+                "Customizable summary generation with user-provided prompts.",
+                "AI-powered assistance for planning."
             ],
-            tools: ["Expo", "React Native", "React", "Typescript", "AI/ML", "Push Notifications", "Authentication"]
+            tools: ["Expo", "React Native", "React", "Typescript", "OpenAI", "Convex", "Tailwind", "Push Notifications", "Authentication"]
         }
     ],
     experience: [
@@ -114,7 +115,7 @@ export const resumeData = {
         {
             school: "Concordia University",
             degree: "Bachelor of Applied Human Sciences",
-            period: "September 2019 - January 2014",
+            period: "January 2009 - January 2014",
             details: "Communication skills, Dean's List, Research Assistant, Teaching Assistant."
         }
     ],
