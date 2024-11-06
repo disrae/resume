@@ -10,13 +10,13 @@ export const resumeData = {
             name: "ChatPlanAI",
             role: "Founder",
             period: "2024 - present",
-            description: "Mobile and web application for chat-based planning and collaboration.",
+            description: "React Native Expo App for Mobile and web for chat-based planning and collaboration.",
             link: {
                 url: "https://www.chatplanai.com",
                 name: "ChatPlanAI.com"
             },
             features: [
-                "Cross-platform mobile and web app built with Expo, Convex, and tailwind.",
+                "Cross-platform mobile and web app built with ReactExpo, Convex, and tailwind.",
                 "Chat with your customers and generate a plan from it via a Large Language Model (LLM).",
                 "Add and invite customers to your project planning chat with magic links.",
                 "Push notification system for real-time updates.",

@@ -7,7 +7,7 @@ async function generatePDF() {
     const page = await browser.newPage();
 
     // You might need to start the dev server first or use a static HTML file
-    await page.goto('http://localhost:4321/pdf-template', {
+    await page.goto('http://localhost:4321/pdf', {
         waitUntil: 'networkidle0'
     });
 
