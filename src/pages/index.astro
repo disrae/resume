@@ -85,7 +85,7 @@ const { personal, ventures, experience, education, skills, languages } =
 					{
 						experience.map((job, index) => (
 							<details
-								class="my-6 bg-gray-50 rounded-lg shadow-sm p-4"
+								class={`${index === experience.length - 1 ? "" : "my-6"} bg-gray-50 rounded-lg shadow-sm p-4`}
 								open={index === 0}
 							>
 								<summary class="cursor-pointer hover:text-gray-600 transition-colors">
