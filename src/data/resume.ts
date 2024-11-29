@@ -9,16 +9,28 @@ export const resumeData = {
         {
             title: "Intermediate Front End Developer",
             company: "Goose Insurance",
-            period: "July 2023 - present",
+            period: "July 2023 - Nov 2024",
             description: "Developer on React-Native App and Built AstroJS Website",
-            links: [{
-                url: "https://www.gooseinsurance.com",
-                name: "gooseinsurance.com"
-            }],
+            links: [
+                {
+                    url: "https://www.gooseinsurance.com",
+                    name: "gooseinsurance.com"
+                },
+                {
+                    url: "https://www.smartbunny.com",
+                    name: "smartbunny.com"
+                },
+                {
+                    url: "https://apps.apple.com/ca/app/goose-insurance/id1382976076",
+                    name: "The Goose App"
+                },
+            ],
             achievements: [
-                "Built server-driven React Native app with dynamic UI updates",
+                "Worked on server-driven React Native app with dynamic UI updates",
+                "Implemented a recursive layout for backend-driven data rendering",
                 "Developed SEO-optimized website using Astro",
-                "Created testing dashboard with Firebase and Next.js"
+                "Created testing dashboard with Firebase and Next.js",
+                "Connected to the Zendesk API to scrape data and used GPT to transcribe and analyze it",
             ],
             tools: ["React-Native", "Astro JS", "Typescript", "Redux"]
         },
