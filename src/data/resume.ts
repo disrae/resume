@@ -38,7 +38,7 @@ export const resumeData = {
             title: "Intermediate Front End Developer",
             company: "Goose Insurance",
             period: "July 2023 - present",
-            description: "React-Native & Astro JS",
+            description: "Developed performant React-Native and Astro JS applications for insurance products.",
             links: [{
                 url: "https://www.gooseinsurance.com",
                 name: "gooseinsurance.com"
@@ -52,8 +52,13 @@ export const resumeData = {
                 name: "The Goose Insurance App"
             }],
             achievements: [
-                "Re-wrote the website in Astro JS to vastly improve performance, reduce costs, and improve the developer experience.",
-                "Maintaining and improving the Goose Insurance app using a server driven approach."
+                "Contributed to a server-driven architecture for a React Native app, enabling dynamic UI updates from backend configurations.",
+                "Built a performance-optimized website using Astro, focusing on SEO and load speed.",
+                "Developed a testing dashboard with Firebase and Next.js, leveraging TypeScript for robust typing.",
+                "Implemented a recursive data structure to support dynamically nested backend data for flexible UI rendering.",
+                "Managed push notifications for timely and reliable user engagement.",
+                "Wrote comprehensive tests to ensure app reliability and maintainability.",
+                "Fixed critical bugs, improving app stability and user experience."
             ],
             tools: ["React-Native", "Astro JS", "Typescript", "Redux", "REST", "Tailwind", "CSS"]
         },
@@ -61,18 +66,18 @@ export const resumeData = {
             title: "React-Native & Next JS Application Developer",
             company: "University of British Columbia",
             period: "May 2020 - present",
-            description: "Social Media Poetry App",
+            description: "Developed a Social Media Poetry App",
             links: [{
                 url: "https://www.phonemeproject.com",
                 name: "PhoneMeProject.com"
             }
             ],
             achievements: [
-                "Initially worked on a team and developed much of the frontend in React-Native.",
-                "Took ownership of the project and migrated from a Fastify and PostgreSQL backend to Firebase.",
-                "Re-designed and implemented the project to reduce costs from $200 to nearly $0.",
-                "Vastly improved performance and enabled the app to scale effectively during events.",
-                "The app now lives at www.phonemeproject.com and has over 800 users."
+                "Transformed the user experience by designing and implementing a seamless poem creation flow, featuring image upload, offline support, and audio upload capabilities.",
+                "Developed a robust search functionality, enabling users to easily discover and engage with poems through lists or interactive maps.",
+                "Successfully migrated the app to a serverless architecture using Firebase, reducing costs by 97% ($200 to $6 per month) and ensuring scalability during high-traffic events.",
+                "Rewrote the app for web using Next JS 12, addressing teacher concerns and increasing accessibility by eliminating the need for mobile app downloads.",
+                "Streamlined the app's user interface, simplifying the sign-up process and resolving a major pain point, resulting in a more intuitive and user-friendly experience."
             ],
             tools: ["React-Native", "React", "Next JS", "Typescript", "Firebase", "GCP", "Redux", "REST", "Node", "npm", "git", "postgresql", "Postman", "Xcode", "Android Studio", "Linux", "CSS", "Tailwind"]
         },
@@ -80,30 +85,48 @@ export const resumeData = {
             title: "JS Electron Application Developer",
             company: "BARK Trading",
             period: "Nov 2022 - PRESENT",
-            description: "Electron app",
-            achievements: ["Various bug fixes, features, and scripts for operating on data."],
-            tools: ["Electron", "Javascript", "Firebase", "GCP", "HTML", "CSS"]
+            description: "Maintained a trading application for lumber commodities using Electron, Firebase and TradingView.",
+            achievements: [
+                "Maintained the trading application for 1.5 years, ensuring stability and performance.",
+                "Resolved 15+ critical bugs, including calculation errors in trading data and incorrect email alerts, resulting in improved accuracy and reliability for users."
+            ],
+            tools: ["Electron", "Javascript", "Firebase", "GCP", "HTML", "CSS", "TradingView"]
         },
         {
             title: "Machine Learning Analyst",
             company: "Earth Rise Media",
             period: "May 2021 - February 2022",
-            description: "Python and Jupyter notebooks",
-            achievements: ["Data validation and model retraining."],
+            description: "Assisted with satellite imagery analysis project focused on ocean plastic detection using machine learning models",
+            achievements: [
+                "Created additional training datasets to address model validation findings",
+                "Performed iterative model validation and retraining to improve detection accuracy",
+                "Executed and analyzed Python-based ML models for satellite imagery processing"
+            ],
             tools: ["Python", "Sci-kit learn", "TensorFlow", "NumPy", "Earth Observation"]
         },
         {
             title: "React Developer",
-            company: "ehsAI",
-            period: "September 2019 - May 2020",
-            description: "React SPA",
+            company: "Intellex (ehsAI)",
+            period: "Jan 2021 - Apr 2021",
+            description: "Developed custom table editor interface for ML model training feedback",
             achievements: [
-                "Built a customer document portal.",
-                "Various bug fixes.",
-                "Built a table building interface in a web based pdf editor for correcting machine learning output."
+                "Built a custom table builder for correcting ML model output",
+                "Wrote a comprehensive test suite",
+                "Implemented key bindings for table editing"
             ],
-            tools: ["React", "Preact", "Typescript", "SASS", "HTML"]
-        }
+            tools: ["Preact", "Typescript", "HTML5 Canvas", "SASS", "Jest"]
+        },
+        {
+            title: "React Developer",
+            company: "ehsAI",
+            period: "Sept 2019 - Dec 2019",
+            description: "Developed document management portal and improved user experience for ML-powered document analysis platform",
+            achievements: [
+                "Built a customer document upload portal from scratch to streamline onboarding process",
+                "Implemented timeout notification system with refresh functionality to prevent work loss after session expiration",
+            ],
+            tools: ["React", "Typescript", "CSS"]
+        },
     ],
     education: [
         {
