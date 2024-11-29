@@ -1,17 +1,18 @@
 ---
+import type { ResumeData } from "../data/resume";
 import BaseLayout from "./BaseLayout.astro";
-import type { ResumeData } from "../types/resume";
 
-interface Props {
-    data: ResumeData;
-}
-
+type Props = { data: ResumeData };
 const {
     data: { personal, ventures, experience, education, skills, languages },
 } = Astro.props;
 ---
 
 <style>
+    @page {
+        size: letter;
+        margin: 0.5in;
+    }
     .page-section {
         break-inside: avoid;
         page-break-inside: avoid;
@@ -19,8 +20,8 @@ const {
     .section-title {
         font-size: 1.25rem;
         font-weight: 600;
-        margin-bottom: 1rem;
-        padding-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.25rem;
         border-bottom: 2px solid #e5e7eb;
     }
     .job-title,
@@ -35,11 +36,11 @@ const {
     .education-degree {
         font-size: 0.9rem;
         color: #4b5563;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.25rem;
     }
     .achievement-list {
         margin-left: 1.5rem;
-        margin-top: 0.5rem;
+        margin-top: 0.25rem;
     }
     .achievement-item {
         margin-bottom: 0.25rem;
@@ -61,23 +62,26 @@ const {
 </style>
 
 <BaseLayout title="Resume PDF">
-    <div class="p-8 bg-white text-black max-w-4xl mx-auto">
-        <header class="mb-8 page-section text-center">
-            <h1 class="text-3xl font-bold mb-2">{personal.name}</h1>
-            <p class="text-xl text-gray-600 mb-2">{personal.title}</p>
+    <div
+        class="p-6 bg-white text-black max-w-4xl mx-auto"
+        style="max-height: 11in;"
+    >
+        <header class="mb-6 page-section text-center">
+            <h1 class="text-3xl font-bold mb-1">{personal.name}</h1>
+            <p class="text-xl text-gray-600 mb-1">{personal.title}</p>
             <div class="text-sm">
-                <p>{personal.email}</p>
-                <a
-                    href={`https://linkedin.com/in/${personal.linkedin}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-teal-700 hover:underline"
-                >
-                    linkedin.com/in/{personal.linkedin}
-                </a>
                 <p>
-                    View resume:
-                    <a
+                    {personal.email} • <a
+                        href={`https://linkedin.com/in/${personal.linkedin}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-teal-700 hover:underline"
+                    >
+                        linkedin.com/in/{personal.linkedin}
+                    </a>
+                </p>
+                <p>
+                    Full Resume: <a
                         href="https://www.danielisrael.dev"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -88,38 +92,25 @@ const {
             </div>
         </header>
         <main>
-            <section class="mb-8">
+            <section class="mb-6">
                 <h2 class="section-title">Experience</h2>
                 {
-                    experience.map((job) => (
-                        <div class="mb-6 page-section">
+                    experience.slice(0, 2).map((job) => (
+                        <div class="mb-4 page-section">
                             <h3 class="job-title">{job.title}</h3>
                             <p class="company-period">
                                 {job.company} | {job.period}
                             </p>
-                            <p class="text-sm mb-2">{job.description}</p>
-                            {job.links?.length &&
-                                job.links.map((link) => (
-                                    <p class="text-sm">
-                                        Demo:
-                                        <a
-                                            href={link.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            class="text-sm mb-2 text-teal-700 underline"
-                                        >
-                                            {link.name}
-                                        </a>
-                                    </p>
-                                ))}
                             <ul class="achievement-list">
-                                {job.achievements.map((achievement) => (
-                                    <li class="achievement-item text-sm text-gray-700">
-                                        • {achievement}
-                                    </li>
-                                ))}
+                                {job.achievements
+                                    .slice(0, 2)
+                                    .map((achievement) => (
+                                        <li class="achievement-item text-sm text-gray-700">
+                                            • {achievement}
+                                        </li>
+                                    ))}
                             </ul>
-                            <div class="mt-2 flex flex-wrap">
+                            <div class="mt-1 flex flex-wrap">
                                 {job.tools.map((tool) => (
                                     <span class="tool-badge">{tool}</span>
                                 ))}
@@ -129,45 +120,25 @@ const {
                 }
             </section>
 
-            <section class="mb-8">
+            <section class="mb-6">
                 <h2 class="section-title">
                     {ventures.length > 0 ? "Ventures" : ""}
                 </h2>
                 {
-                    ventures.map((venture) => (
-                        <div class="mb-6 page-section">
+                    ventures.slice(0, 1).map((venture) => (
+                        <div class="mb-4 page-section">
                             <h3 class="venture-name">{venture.name}</h3>
                             <p class="venture-role">
                                 {venture.role} | {venture.period}
                             </p>
-                            <p class="text-sm mb-2">{venture.description}</p>
-                            {venture.links?.length &&
-                                venture.links.map((link) => (
-                                    <p class="text-sm">
-                                        Check it out at
-                                        <a
-                                            href={link.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            class="text-sm mb-2 text-teal-700 underline"
-                                        >
-                                            {link.name}
-                                        </a>
-                                    </p>
-                                ))}
-
-                            <h4 class="font-semibold mt-2 text-sm">
-                                Features:
-                            </h4>
                             <ul class="achievement-list">
-                                {venture.features.map((feature) => (
+                                {venture.features.slice(0, 2).map((feature) => (
                                     <li class="achievement-item text-sm text-gray-700">
                                         • {feature}
                                     </li>
                                 ))}
                             </ul>
-
-                            <div class="mt-2 flex flex-wrap">
+                            <div class="mt-1 flex flex-wrap">
                                 {venture.tools.map((tool) => (
                                     <span class="tool-badge">{tool}</span>
                                 ))}
@@ -177,19 +148,14 @@ const {
                 }
             </section>
 
-            <section class="mb-8 page-section">
-                <h2 class="section-title">
-                    {education.length > 0 ? "Education" : ""}
-                </h2>
+            <section class="mb-6 page-section">
+                <h2 class="section-title">Education</h2>
                 {
-                    education.map((edu) => (
-                        <div class="mb-4">
+                    education.slice(0, 1).map((edu) => (
+                        <div class="mb-3">
                             <h3 class="school-name">{edu.school}</h3>
                             <p class="education-degree">{edu.degree}</p>
-                            <p class="text-xs text-gray-500 mb-1">
-                                {edu.period}
-                            </p>
-                            <p class="text-sm">{edu.details}</p>
+                            <p class="text-xs text-gray-500">{edu.period}</p>
                         </div>
                     ))
                 }
@@ -197,14 +163,16 @@ const {
 
             <section class="page-section">
                 <h2 class="section-title">Skills & Languages</h2>
-                <div class="grid grid-cols-2 gap-8">
+                <div class="grid grid-cols-2 gap-4">
                     <div>
                         <h3 class="font-semibold mb-2 text-base">Skills</h3>
                         <div class="skill-language-grid">
                             {
-                                skills.map((skill) => (
-                                    <span class="tool-badge">{skill}</span>
-                                ))
+                                skills
+                                    .slice(0, 5)
+                                    .map((skill) => (
+                                        <span class="tool-badge">{skill}</span>
+                                    ))
                             }
                         </div>
                     </div>
@@ -212,9 +180,13 @@ const {
                         <h3 class="font-semibold mb-2 text-base">Languages</h3>
                         <div class="skill-language-grid">
                             {
-                                languages.map((language) => (
-                                    <span class="tool-badge">{language}</span>
-                                ))
+                                languages
+                                    .slice(0, 4)
+                                    .map((language) => (
+                                        <span class="tool-badge">
+                                            {language}
+                                        </span>
+                                    ))
                             }
                         </div>
                     </div>

@@ -5,30 +5,12 @@ export const resumeData = {
         email: "danny.israel@gmail.com",
         linkedin: "daniel-israel-software-dev"
     },
-    ventures: [
-        {
-            name: "ChatPlanAI",
-            role: "Founder",
-            period: "2024 - present",
-            description: "React Native Expo App for chat-based planning and collaboration.",
-            link: {
-                url: "https://www.chatplanai.com",
-                name: "ChatPlanAI.com"
-            },
-            features: [
-                "Cross-platform mobile and web app with ReactExpo and Convex",
-                "AI-powered chat planning with LLM integration",
-                "Real-time collaboration with push notifications"
-            ],
-            tools: ["React Native", "Typescript", "OpenAI", "Convex", "Tailwind"]
-        }
-    ],
     experience: [
         {
             title: "Intermediate Front End Developer",
             company: "Goose Insurance",
             period: "July 2023 - present",
-            description: "Lead React-Native and Astro JS development for insurance products.",
+            description: "Developer on React-Native App and Built AstroJS Website",
             links: [{
                 url: "https://www.gooseinsurance.com",
                 name: "gooseinsurance.com"
@@ -61,11 +43,30 @@ export const resumeData = {
             company: "BARK Trading",
             period: "Nov 2022 - present",
             description: "Maintained trading application for lumber commodities",
+            links: [],
             achievements: [
                 "Ensured platform stability for critical trading operations",
                 "Resolved calculation and alert system bugs"
             ],
             tools: ["Electron", "Javascript", "Firebase"]
+        }
+    ],
+    ventures: [
+        {
+            name: "ChatPlanAI",
+            role: "Founder",
+            period: "2024 - present",
+            description: "React Native Expo App for chat-based planning and collaboration.",
+            links: [{
+                url: "https://www.chatplanai.com",
+                name: "ChatPlanAI.com"
+            }],
+            features: [
+                "Cross-platform mobile and web app with ReactExpo and Convex",
+                "AI-powered chat planning with LLM integration",
+                "Real-time collaboration with push notifications"
+            ],
+            tools: ["React Native", "Typescript", "OpenAI", "Convex", "Tailwind"]
         }
     ],
     education: [
@@ -101,4 +102,6 @@ export const resumeData = {
         "Java",
         "SQL"
     ]
-};
+} as const;
+
+export type ResumeData = typeof resumeData;

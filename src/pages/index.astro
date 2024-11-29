@@ -4,7 +4,6 @@ import { Icon } from "astro-icon/components";
 import { resumeData } from "../data/resume";
 const { personal, ventures, experience, education, skills, languages } =
 	resumeData;
-// commit
 ---
 
 <BaseLayout title="Daniel Israel - Software Developer" includePDFScript={true}>
@@ -98,7 +97,7 @@ const { personal, ventures, experience, education, skills, languages } =
 								</summary>
 								<div class="mt-4">
 									<p>{job.description}</p>
-									{job?.links?.length &&
+									{job.links.length &&
 										job.links.map((link) => (
 											<p class="mt-2">
 												Demo:{" "}
@@ -157,19 +156,20 @@ const { personal, ventures, experience, education, skills, languages } =
 								<div class="mt-4">
 									<p>{venture.description}</p>
 
-									{venture?.link && (
-										<p class="mt-2">
-											Demo:{" "}
-											<a
-												href={venture.link.url}
-												target="_blank"
-												rel="noopener noreferrer"
-												class="text-teal-600 hover:text-teal-800 underline"
-											>
-												{venture.link.name}
-											</a>
-										</p>
-									)}
+									{venture?.links?.length &&
+										venture.links.map((link) => (
+											<p class="mt-2">
+												Demo:{" "}
+												<a
+													href={link.url}
+													target="_blank"
+													rel="noopener noreferrer"
+													class="text-teal-600 hover:text-teal-800 underline"
+												>
+													{link.name}
+												</a>
+											</p>
+										))}
 
 									<h4 class="font-semibold mt-3">
 										Features:
