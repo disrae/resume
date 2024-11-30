@@ -1,10 +1,6 @@
 ---
-interface Props {
-    title: string;
-    includePDFScript?: boolean;
-}
-
-const { title, includePDFScript = false } = Astro.props;
+type Props = { title: string; includePDFScript?: boolean; style?: string };
+const { title, includePDFScript = false, style = "" } = Astro.props;
 ---
 
 <!doctype html>
@@ -23,7 +19,7 @@ const { title, includePDFScript = false } = Astro.props;
             href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><path d='M16 18l6-6-6-6M8 6l-6 6 6 6'/></svg>"
         />
     </head>
-    <body class="bg-gray-100 font-sans">
+    <body class={`font-sans ${style}`}>
         <slot />
     </body>
 </html>

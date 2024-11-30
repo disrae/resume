@@ -41,7 +41,7 @@ export const resumeData = {
             description: "Contributed, migrated, and then developed a social media poetry app",
             links: [{
                 url: "https://www.phonemeproject.com",
-                name: "PhoneMeProject.com"
+                name: "phonemeproject.com"
             }],
             achievements: [
                 "Implemented offline-capable poem creation with media uploads",
@@ -86,33 +86,43 @@ export const resumeData = {
             school: "University of British Columbia",
             degree: "Bachelor of Computer Science",
             period: "September 2019 - May 2022",
-            details: "Focus: Data Structures, Algorithms, Machine Learning"
+            details: "Data Structures, Algorithms, Machine Learning, Networking, Statistics, Computer Vision",
+            awards: ["Third Place BCS hackathon 2019"]
         },
         {
             school: "Concordia University",
             degree: "Bachelor of Applied Human Sciences",
             period: "January 2009 - January 2014",
-            details: "Dean's List"
+            details: "Psychology, Sociology, Statistics, Research Methods",
+            awards: ["Dean's List, Research Assistant, Teaching Assistant"]
         }
     ],
     skills: [
-        "React/React-Native",
+        "React",
+        "React Native",
+        "Expo",
         "Typescript",
         "Redux",
         "Git",
         "HTML/CSS",
         "Machine Learning",
-        "Data Structures"
+        "Data Structures",
+        "Algorithms",
+        "Next JS",
+        "Astro JS",
+        "Tailwind",
+        "Convex",
     ],
     awards: [
         "3rd Place BC Shackathon 2019",
         "Dean's list"
     ],
     languages: [
-        "Javascript/Typescript",
+        "Javascript",
+        "Typescript",
         "Python",
         "Java",
-        "SQL"
+        "C"
     ]
 } as const;
 

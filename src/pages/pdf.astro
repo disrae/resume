@@ -22,7 +22,7 @@ const { personal, ventures, experience, education, skills, languages } =
             class="mb-3 text-center break-inside-avoid page-break-inside-avoid"
         >
             <h1 class="text-3xl font-bold mb-1">{personal.name}</h1>
-            <p class="text-xl text-gray-600 mb-1">{personal.title}</p>
+            <p class="text-xl text-gray-800 mb-1">{personal.title}</p>
 
             <!-- Contact -->
             <div class="text-sm">
@@ -51,13 +51,13 @@ const { personal, ventures, experience, education, skills, languages } =
 
         <main>
             <!-- Experience -->
-            <section class="mb-2">
+            <section class="">
                 <h2
                     class="text-xl font-semibold pb-1 border-b-2 border-gray-300"
                 >
                     Experience
                 </h2>
-                <div class="flex flex-wrap pb-2">
+                <div class="flex flex-wrap">
                     {
                         experience.slice(0, 2).map((job, index) => (
                             <div
@@ -69,7 +69,7 @@ const { personal, ventures, experience, education, skills, languages } =
                                     <h3 class="text-lg font-semibold mb-1">
                                         {job.title}
                                     </h3>
-                                    <p class="text-base text-gray-600 mb-1">
+                                    <p class="text-base text-gray-800 mb-1">
                                         <span class="font-medium">
                                             {job.company}
                                         </span>{" "}
@@ -99,8 +99,8 @@ const { personal, ventures, experience, education, skills, languages } =
             </section>
 
             <!-- Venture and Education -->
-            <div class="flex flex-wrap mb-3">
-                <section class="w-full md:w-1/2 md:mb-0">
+            <div class="flex flex-wrap pt-4">
+                <section class="w-full md:w-1/2">
                     <h2
                         class="text-xl font-semibold pb-1 border-b-2 border-gray-300"
                     >
@@ -113,7 +113,7 @@ const { personal, ventures, experience, education, skills, languages } =
                                     <h3 class="text-lg font-semibold mb-1">
                                         {venture.name}
                                     </h3>
-                                    <p class="text-base text-gray-600 mb-1">
+                                    <p class="text-base text-gray-800 mb-1">
                                         {venture.role} | {venture.period}
                                     </p>
                                     <ul class="ml-6 mt-1">
@@ -125,7 +125,7 @@ const { personal, ventures, experience, education, skills, languages } =
                                                 </li>
                                             ))}
                                     </ul>
-                                    <div class="mt-1 flex flex-wrap">
+                                    <div class="pt-2 flex flex-wrap">
                                         {venture.tools.map((tool) => (
                                             <span class="inline-block bg-gray-100 px-2 py-1 rounded-full text-xs mr-2 mb-2">
                                                 {tool}
@@ -140,7 +140,7 @@ const { personal, ventures, experience, education, skills, languages } =
 
                 <section class="w-full md:w-1/2">
                     <h2
-                        class="text-xl font-semibold pb-1 border-b-2 border-gray-300"
+                        class="text-xl font-semibold pb-1 pl-1 border-b-2 border-gray-300"
                     >
                         Education
                     </h2>
@@ -151,12 +151,24 @@ const { personal, ventures, experience, education, skills, languages } =
                                     <h3 class="text-lg font-semibold mb-1">
                                         {edu.school}
                                     </h3>
-                                    <p class="text-base text-gray-600 mb-1">
+                                    <p class="text-base text-gray-800 mb-1">
                                         {edu.degree}
                                     </p>
                                     <p class="text-xs text-gray-500">
                                         {edu.period}
                                     </p>
+                                    <p class="text-sm text-gray-700 mt-1">
+                                        {edu.details}
+                                    </p>
+                                    {!!edu.awards.length && (
+                                        <div class="mt-2">
+                                            <ul class="list-disc list-inside text-xs text-gray-700">
+                                                {edu.awards.map((award) => (
+                                                    <li>{award}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
                                 </div>
                             ))
                         }
@@ -167,40 +179,36 @@ const { personal, ventures, experience, education, skills, languages } =
             <!-- Skills & Languages -->
             <section class="">
                 <h2
-                    class="text-xl font-semibold mb-3 pb-1 border-b-2 border-gray-300"
+                    class="text-xl font-semibold pb-1 border-b-2 border-gray-300"
                 >
                     Skills & Languages
                 </h2>
-                <div class="grid grid-cols-2 gap-4">
-                    <div>
+                <div class="grid grid-cols-4 gap-4 p-2">
+                    <div class="col-span-3">
                         <h3 class="font-semibold mb-2 text-base">Skills</h3>
                         <div
-                            class="grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-2"
+                            class="grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-2 justify-center items-center text-center"
                         >
                             {
-                                skills
-                                    .slice(0, 5)
-                                    .map((skill) => (
-                                        <span class="inline-block bg-gray-100 px-2 py-1 rounded-full text-xs mr-2 mb-2">
-                                            {skill}
-                                        </span>
-                                    ))
+                                skills.map((skill) => (
+                                    <span class="inline-block justify-center items-center bg-gray-100 px-2 py-1 rounded-full text-xs mr-2 mb-2">
+                                        {skill}
+                                    </span>
+                                ))
                             }
                         </div>
                     </div>
-                    <div>
+                    <div class="col-span-1">
                         <h3 class="font-semibold mb-2 text-base">Languages</h3>
                         <div
-                            class="grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-2"
+                            class="grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-2 justify-center items-center text-center"
                         >
                             {
-                                languages
-                                    .slice(0, 4)
-                                    .map((language) => (
-                                        <span class="inline-block bg-gray-100 px-2 py-1 rounded-full text-xs mr-2 mb-2">
-                                            {language}
-                                        </span>
-                                    ))
+                                languages.map((language) => (
+                                    <span class="inline-block bg-gray-100 px-2 py-1 rounded-full text-xs mr-2 mb-2">
+                                        {language}
+                                    </span>
+                                ))
                             }
                         </div>
                     </div>

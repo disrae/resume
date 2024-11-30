@@ -6,27 +6,14 @@ const { personal, ventures, experience, education, skills, languages } =
 	resumeData;
 ---
 
-<BaseLayout title="Daniel Israel - Software Developer" includePDFScript={true}>
+<BaseLayout
+	title="Daniel Israel - Software Developer"
+	includePDFScript={true}
+	style="bg-gray-100"
+>
 	<style>
-		details > summary {
-			list-style: none;
-			position: relative;
-			padding-left: 1.5rem;
-		}
 		details > summary::-webkit-details-marker {
 			display: none;
-		}
-		details > summary::before {
-			content: "▶";
-			position: absolute;
-			left: 0;
-			transition: transform 0.2s;
-			font-size: 0.8em;
-			top: 50%;
-			transform: translateY(-50%);
-		}
-		details[open] > summary::before {
-			transform: translateY(-50%) rotate(90deg);
 		}
 	</style>
 
@@ -77,8 +64,13 @@ const { personal, ventures, experience, education, skills, languages } =
 			<section class="mb-8 bg-white rounded-lg shadow-sm p-6">
 				<details open>
 					<summary
-						class="text-2xl font-semibold text-gray-800 cursor-pointer hover:text-gray-600 transition-colors"
+						class="text-2xl font-semibold text-gray-800 cursor-pointer hover:text-gray-600 transition-colors list-none relative pl-6"
 					>
+						<span
+							class="absolute left-0 top-1/2 transform -translate-y-1/2 transition-transform duration-200 text-sm"
+						>
+							▶
+						</span>
 						Experience
 					</summary>
 					{
@@ -87,7 +79,10 @@ const { personal, ventures, experience, education, skills, languages } =
 								class={`${index === experience.length - 1 ? "" : "my-6"} bg-gray-50 rounded-lg shadow-sm p-4`}
 								open={index === 0}
 							>
-								<summary class="cursor-pointer hover:text-gray-600 transition-colors">
+								<summary class="cursor-pointer hover:text-gray-600 transition-colors list-none relative pl-6">
+									<span class="absolute left-0 top-1/2 transform -translate-y-1/2 transition-transform duration-200 text-sm">
+										▶
+									</span>
 									<h3 class="text-xl font-semibold inline-block">
 										{job.title}
 									</h3>
@@ -135,8 +130,13 @@ const { personal, ventures, experience, education, skills, languages } =
 			<section class="mb-8 bg-white rounded-lg shadow-sm p-6">
 				<details open>
 					<summary
-						class="text-2xl font-semibold text-gray-800 cursor-pointer hover:text-gray-600 transition-colors"
+						class="text-2xl font-semibold text-gray-800 cursor-pointer hover:text-gray-600 transition-colors list-none relative pl-6"
 					>
+						<span
+							class="absolute left-0 top-1/2 transform -translate-y-1/2 transition-transform duration-200 text-sm"
+						>
+							▶
+						</span>
 						Ventures
 					</summary>
 					{
@@ -145,7 +145,10 @@ const { personal, ventures, experience, education, skills, languages } =
 								class="my-6 bg-gray-50 rounded-lg shadow-sm p-4"
 								open={index === 0}
 							>
-								<summary class="cursor-pointer hover:text-gray-600 transition-colors">
+								<summary class="cursor-pointer hover:text-gray-600 transition-colors list-none relative pl-6">
+									<span class="absolute left-0 top-1/2 transform -translate-y-1/2 transition-transform duration-200 text-sm">
+										▶
+									</span>
 									<h3 class="text-xl font-semibold inline-block">
 										{venture.name}
 									</h3>
@@ -200,8 +203,13 @@ const { personal, ventures, experience, education, skills, languages } =
 				<section class="bg-white rounded-lg shadow-sm p-6">
 					<details>
 						<summary
-							class="text-2xl font-semibold text-gray-800 cursor-pointer hover:text-gray-600 transition-colors"
+							class="text-2xl font-semibold text-gray-800 cursor-pointer hover:text-gray-600 transition-colors list-none relative pl-6"
 						>
+							<span
+								class="absolute left-0 top-1/2 transform -translate-y-1/2 transition-transform duration-200 text-sm"
+							>
+								▶
+							</span>
 							Education
 						</summary>
 						{
@@ -210,7 +218,10 @@ const { personal, ventures, experience, education, skills, languages } =
 									class="my-6 bg-gray-50 rounded-lg shadow-sm p-4"
 									open
 								>
-									<summary class="cursor-pointer hover:text-gray-600 transition-colors">
+									<summary class="cursor-pointer hover:text-gray-600 transition-colors list-none relative pl-6">
+										<span class="absolute left-0 top-1/2 transform -translate-y-1/2 transition-transform duration-200 text-sm">
+											▶
+										</span>
 										<h3 class="text-lg font-semibold inline-block">
 											{edu.school}
 										</h3>
@@ -223,6 +234,23 @@ const { personal, ventures, experience, education, skills, languages } =
 											{edu.period}
 										</p>
 										<p class="mt-1">{edu.details}</p>
+										{edu.awards &&
+											edu.awards.length > 0 && (
+												<div class="mt-2">
+													<h4 class="font-semibold">
+														Awards:
+													</h4>
+													<ul class="list-disc list-inside">
+														{edu.awards.map(
+															(award) => (
+																<li class="text-gray-700">
+																	{award}
+																</li>
+															),
+														)}
+													</ul>
+												</div>
+											)}
 									</div>
 								</details>
 							))
@@ -234,8 +262,13 @@ const { personal, ventures, experience, education, skills, languages } =
 					<section class="bg-white rounded-lg shadow-sm p-6">
 						<details>
 							<summary
-								class="text-2xl font-semibold text-gray-800 cursor-pointer hover:text-gray-600 transition-colors"
+								class="text-2xl font-semibold text-gray-800 cursor-pointer hover:text-gray-600 transition-colors list-none relative pl-6"
 							>
+								<span
+									class="absolute left-0 top-1/2 transform -translate-y-1/2 transition-transform duration-200 text-sm"
+								>
+									▶
+								</span>
 								Skills
 							</summary>
 							<div
@@ -251,8 +284,13 @@ const { personal, ventures, experience, education, skills, languages } =
 					<section class="bg-white rounded-lg shadow-sm p-6">
 						<details>
 							<summary
-								class="text-2xl font-semibold text-gray-800 cursor-pointer hover:text-gray-600 transition-colors"
+								class="text-2xl font-semibold text-gray-800 cursor-pointer hover:text-gray-600 transition-colors list-none relative pl-6"
 							>
+								<span
+									class="absolute left-0 top-1/2 transform -translate-y-1/2 transition-transform duration-200 text-sm"
+								>
+									▶
+								</span>
 								Languages
 							</summary>
 							<div
