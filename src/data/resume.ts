@@ -27,7 +27,7 @@ export const resumeData = {
             ],
             achievements: [
                 "Worked on server-driven React Native app with dynamic UI updates",
-                "Implemented a recursive layout for backend-driven data rendering",
+                "Designed and implemented a recursive layout for backend-driven data rendering",
                 "Developed SEO-optimized website using Astro",
                 "Created testing dashboard with Firebase and Next.js",
                 "Connected to the Zendesk API to scrape data and used GPT to transcribe and analyze it",
@@ -38,7 +38,7 @@ export const resumeData = {
             title: "React-Native & Next JS Developer",
             company: "University of British Columbia",
             period: "May 2020 - present",
-            description: "Led development of social media poetry app",
+            description: "Contributed, migrated, and then developed a social media poetry app",
             links: [{
                 url: "https://www.phonemeproject.com",
                 name: "PhoneMeProject.com"

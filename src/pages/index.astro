@@ -97,7 +97,7 @@ const { personal, ventures, experience, education, skills, languages } =
 								</summary>
 								<div class="mt-4">
 									<p>{job.description}</p>
-									{job.links.length &&
+									{!!job.links.length &&
 										job.links.map((link) => (
 											<p class="mt-2">
 												Demo:{" "}

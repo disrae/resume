@@ -9,7 +9,10 @@ const { personal, ventures, experience, education, skills, languages } =
 <style>
     @page {
         size: letter;
-        margin: 0.5in;
+        margin: 0;
+    }
+    body {
+        margin: 0;
     }
     .page-section {
         break-inside: avoid;
@@ -61,14 +64,14 @@ const { personal, ventures, experience, education, skills, languages } =
 
 <BaseLayout title="Resume PDF">
     <div
-        class="p-6 bg-white text-black max-w-4xl mx-auto"
+        class="p-6 pt-0 bg-white text-black max-w-4xl mx-auto"
         style="max-height: 10.5in;"
     >
         <header class="mb-6 page-section text-center">
             <h1 class="text-3xl font-bold mb-1">{personal.name}</h1>
             <p class="text-xl text-gray-600 mb-1">{personal.title}</p>
             <div class="text-sm">
-                <p>
+                <p class="pl-28">
                     {personal.email} • <a
                         href={`https://linkedin.com/in/${personal.linkedin}`}
                         target="_blank"
@@ -78,8 +81,9 @@ const { personal, ventures, experience, education, skills, languages } =
                         linkedin.com/in/{personal.linkedin}
                     </a>
                 </p>
-                <p>
-                    Full Resume: <a
+                <p class="pl-[53px]">
+                    Full Resume •
+                    <a
                         href="https://www.danielisrael.dev"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -101,7 +105,7 @@ const { personal, ventures, experience, education, skills, languages } =
                             </p>
                             <ul class="achievement-list">
                                 {job.achievements
-                                    .slice(0, 2)
+                                    .slice(0, 4)
                                     .map((achievement) => (
                                         <li class="achievement-item text-sm text-gray-700">
                                             • {achievement}
