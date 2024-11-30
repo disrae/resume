@@ -55,92 +55,108 @@ const { personal, ventures, experience, education, skills, languages } =
                 >
                     Experience
                 </h2>
-                {
-                    experience.slice(0, 2).map((job) => (
-                        <div class="">
-                            <h3 class="text-lg font-semibold mb-1">
-                                {job.title}
-                            </h3>
-                            <p class="text-base text-gray-600 mb-1">
-                                {job.company} | {job.period}
-                            </p>
-                            <ul class="ml-6 mt-1">
-                                {job.achievements
-                                    .slice(0, 4)
-                                    .map((achievement) => (
-                                        <li class="mb-1 text-sm text-gray-700">
-                                            • {achievement}
-                                        </li>
+                <div class="flex flex-wrap">
+                    {
+                        experience.slice(0, 2).map((job, index) => (
+                            <div
+                                class={`md:w-1/2 p-1 
+                                    ${index === 0 ? "border-r pr-2" : "border-l pl-2"}
+
+                                    `}
+                            >
+                                <h3 class="text-lg font-semibold mb-1">
+                                    {job.title}
+                                </h3>
+                                <p class="text-base text-gray-600 mb-1">
+                                    <span class="font-medium">
+                                        {job.company}
+                                    </span>{" "}
+                                    | {job.period}
+                                </p>
+                                <ul class="ml-6 mt-1">
+                                    {job.achievements
+                                        .slice(0, 4)
+                                        .map((achievement) => (
+                                            <li class="mb-1 text-sm text-gray-700">
+                                                • {achievement}
+                                            </li>
+                                        ))}
+                                </ul>
+                                <div class="mt-1 flex flex-wrap">
+                                    {job.tools.map((tool) => (
+                                        <span class="inline-block bg-gray-100 px-2 py-1 rounded-full text-xs mr-2 mb-2">
+                                            {tool}
+                                        </span>
                                     ))}
-                            </ul>
-                            <div class="mt-1 flex flex-wrap">
-                                {job.tools.map((tool) => (
-                                    <span class="inline-block bg-gray-100 px-2 py-1 rounded-full text-xs mr-2 mb-2">
-                                        {tool}
-                                    </span>
-                                ))}
+                                </div>
                             </div>
-                        </div>
-                    ))
-                }
+                        ))
+                    }
+                </div>
             </section>
 
-            <section class="mb-2">
-                <h2
-                    class="text-xl font-semibold mb-3 pb-1 border-b-2 border-gray-300"
-                >
-                    {!!ventures.length ? "Ventures" : ""}
-                </h2>
-                {
-                    ventures.map((venture) => (
-                        <div class="break-inside-avoid page-break-inside-avoid">
-                            <h3 class="text-lg font-semibold mb-1">
-                                {venture.name}
-                            </h3>
-                            <p class="text-base text-gray-600 mb-1">
-                                {venture.role} | {venture.period}
-                            </p>
-                            <ul class="ml-6 mt-1">
-                                {venture.features.slice(0, 2).map((feature) => (
-                                    <li class="mb-1 text-sm text-gray-700">
-                                        • {feature}
-                                    </li>
-                                ))}
-                            </ul>
-                            <div class="mt-1 flex flex-wrap">
-                                {venture.tools.map((tool) => (
-                                    <span class="inline-block bg-gray-100 px-2 py-1 rounded-full text-xs mr-2 mb-2">
-                                        {tool}
-                                    </span>
-                                ))}
+            <div class="flex flex-wrap mb-3">
+                <section class="w-full md:w-1/2 mb-2 md:mb-0">
+                    <h2
+                        class="text-xl font-semibold mb-3 pb-1 border-b-2 border-gray-300"
+                    >
+                        Venture
+                    </h2>
+                    {
+                        ventures.map((venture) => (
+                            <div class="">
+                                <h3 class="text-lg font-semibold mb-1">
+                                    {venture.name}
+                                </h3>
+                                <p class="text-base text-gray-600 mb-1">
+                                    {venture.role} | {venture.period}
+                                </p>
+                                <ul class="ml-6 mt-1">
+                                    {venture.features
+                                        .slice(0, 2)
+                                        .map((feature) => (
+                                            <li class="mb-1 text-sm text-gray-700">
+                                                • {feature}
+                                            </li>
+                                        ))}
+                                </ul>
+                                <div class="mt-1 flex flex-wrap">
+                                    {venture.tools.map((tool) => (
+                                        <span class="inline-block bg-gray-100 px-2 py-1 rounded-full text-xs mr-2 mb-2">
+                                            {tool}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    ))
-                }
-            </section>
+                        ))
+                    }
+                </section>
 
-            <section class="mb-3 break-inside-avoid page-break-inside-avoid">
-                <h2
-                    class="text-xl font-semibold mb-3 pb-1 border-b-2 border-gray-300"
-                >
-                    Education
-                </h2>
-                {
-                    education.slice(0, 1).map((edu) => (
-                        <div class="mb-3">
-                            <h3 class="text-lg font-semibold mb-1">
-                                {edu.school}
-                            </h3>
-                            <p class="text-base text-gray-600 mb-1">
-                                {edu.degree}
-                            </p>
-                            <p class="text-xs text-gray-500">{edu.period}</p>
-                        </div>
-                    ))
-                }
-            </section>
+                <section class="w-full md:w-1/2">
+                    <h2
+                        class="text-xl font-semibold mb-3 pb-1 border-b-2 border-gray-300"
+                    >
+                        Education
+                    </h2>
+                    {
+                        education.map((edu) => (
+                            <div class="mb-3">
+                                <h3 class="text-lg font-semibold mb-1">
+                                    {edu.school}
+                                </h3>
+                                <p class="text-base text-gray-600 mb-1">
+                                    {edu.degree}
+                                </p>
+                                <p class="text-xs text-gray-500">
+                                    {edu.period}
+                                </p>
+                            </div>
+                        ))
+                    }
+                </section>
+            </div>
 
-            <section class="break-inside-avoid page-break-inside-avoid">
+            <section class="">
                 <h2
                     class="text-xl font-semibold mb-3 pb-1 border-b-2 border-gray-300"
                 >
