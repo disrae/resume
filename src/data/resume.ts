@@ -74,11 +74,11 @@ export const resumeData = {
                 name: "ChatPlanAI.com"
             }],
             features: [
-                "Cross-platform mobile and web app with ReactExpo and Convex",
+                "Cross-platform mobile and web app with React-Native (Expo) and Convex",
                 "AI-powered chat planning with LLM integration",
-                "Real-time collaboration with push notifications"
+                "Real-time collaboration with push notifications",
             ],
-            tools: ["React Native", "Typescript", "OpenAI", "Convex", "Tailwind"]
+            tools: ["React Native", "Expo", "Typescript", "OpenAI", "Convex", "Tailwind"]
         }
     ],
     education: [
