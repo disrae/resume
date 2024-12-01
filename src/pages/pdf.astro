@@ -73,7 +73,7 @@ const { personal, ventures, experience, education, skills, languages } =
                             experience.slice(0, 2).map((job, index) => (
                                 <div
                                     class={`md:w-1/2 p-2 flex flex-col justify-between
-                                        ${index === 0 ? "border-r" : "border-l pl-4"}
+                                        ${index === 0 ? "md:border-r" : "md:border-l md:pl-4"}
                                         `}
                                 >
                                     <div>
@@ -184,7 +184,7 @@ const { personal, ventures, experience, education, skills, languages } =
                         >
                             Education
                         </h2>
-                        <div class="border-l-2 p-2 pl-4">
+                        <div class="md:border-l-2 p-2 md:pl-4">
                             {
                                 education.map((edu) => (
                                     <div class="mb-3">
