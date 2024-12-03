@@ -15,6 +15,9 @@ const { personal, ventures, experience, education, skills, languages } =
 		details > summary::-webkit-details-marker {
 			display: none;
 		}
+		details[open] > summary > span {
+			transform: translate(0, -50%) rotate(90deg);
+		}
 	</style>
 
 	<button
