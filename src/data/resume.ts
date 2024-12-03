@@ -7,7 +7,7 @@ export const resumeData = {
     },
     experience: [
         {
-            title: "Intermediate Front End Developer",
+            title: "Front End Developer",
             company: "Goose Insurance",
             period: "July 2023 - Nov 2024",
             description: "Developer on React-Native App and Built AstroJS Website",
