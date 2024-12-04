@@ -54,7 +54,7 @@ export const resumeData = {
             tools: ["React-Native", "Next JS", "Firebase", "Typescript"]
         },
         {
-            title: "JS Electron Application Developer",
+            title: "Full Stack Developer",
             company: "BARK Trading",
             period: "2022 - 2023",
             description: "Maintained trading application for lumber commodities",
@@ -71,10 +71,11 @@ export const resumeData = {
             period: "2020 - 2021",
             description: "Contributed to the development of a web-based pdf editor for correcting LLM output.",
             links: [],
-            achievements: ["Ground up development of table building interface for correcting LLM output in a web based PDF editor",
+            achievements: [
+                "Ground up development of table building interface for correcting LLM output in a web based PDF editor",
                 "Complex debugging with Chrome Dev Tools"
             ],
-            tools: ["Peact", "Typescript", "SCSS", "CSS"]
+            tools: ["Preact", "Typescript", "SCSS", "CSS"]
         }
     ],
     ventures: [
