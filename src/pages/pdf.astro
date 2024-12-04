@@ -1,6 +1,7 @@
 ---
 import { resumeData } from "../data/resume";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ExperienceSectionPDF from "../components/ExperienceSectionPDF.astro";
 
 const { personal, ventures, experience, education, skills, languages } =
     resumeData;
@@ -19,6 +20,10 @@ const { personal, ventures, experience, education, skills, languages } =
             box-shadow: none !important;
         }
     }
+    .custom-bullet {
+        padding-left: 1rem;
+        text-indent: -0.6rem;
+    }
 </style>
 
 <BaseLayout
@@ -28,7 +33,7 @@ const { personal, ventures, experience, education, skills, languages } =
     <div
         class="bg-white text-black max-w-[8.5in] mx-auto shadow-lg md:min-h-[11in] resume-container"
     >
-        <div class="px-6 py-3">
+        <div class="px-6 py-">
             <header
                 class="mb-3 text-center break-inside-avoid page-break-inside-avoid"
             >
@@ -37,16 +42,6 @@ const { personal, ventures, experience, education, skills, languages } =
 
                 <!-- Contact -->
                 <div class="text-sm">
-                    <p class="md:pl-28">
-                        {personal.email} • <a
-                            href={`https://linkedin.com/in/${personal.linkedin}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-teal-700 hover:underline"
-                        >
-                            linkedin.com/in/{personal.linkedin}
-                        </a>
-                    </p>
                     <p class="md:pl-[53px]">
                         Full Resume •
                         <a
@@ -56,6 +51,16 @@ const { personal, ventures, experience, education, skills, languages } =
                             class="text-teal-700 hover:underline"
                             >www.danielisrael.dev</a
                         >
+                    </p>
+                    <p class="md:pl-28">
+                        {personal.email} • <a
+                            href={`https://linkedin.com/in/${personal.linkedin}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-teal-700 hover:underline"
+                        >
+                            linkedin.com/in/{personal.linkedin}
+                        </a>
                     </p>
                 </div>
             </header>
@@ -73,14 +78,14 @@ const { personal, ventures, experience, education, skills, languages } =
                             experience.slice(0, 2).map((job, index) => (
                                 <div
                                     class={`md:w-1/2 p-2 flex flex-col justify-between
-                                        ${index === 0 ? "md:border-r" : "md:border-l md:pl-4"}
-                                        `}
+                        ${index === 0 ? "md:border-r" : "md:border-l md:pl-4"}
+                    `}
                                 >
                                     <div>
-                                        <h3 class="text-lg font-semibold mb-1">
+                                        <h3 class="text-lg font-semibold">
                                             {job.title}
                                         </h3>
-                                        <p class="text-base text-gray-800 mb-1">
+                                        <p class="text-sm font-medium text-gray-800 mb-1">
                                             <span class="font-medium">
                                                 {job.company}
                                             </span>{" "}
@@ -98,19 +103,19 @@ const { personal, ventures, experience, education, skills, languages } =
                                                 </a>
                                             ))}
                                         </div>
-                                        <ul class="ml-6 mt-1">
+                                        <ul class="ml-1 mt-1">
                                             {job.achievements
-                                                .slice(0, 4)
+                                                // .slice(0, 5)
                                                 .map((achievement) => (
-                                                    <li class="mb-1 text-sm text-gray-700">
+                                                    <li class="mb-1 text-xs text-gray-700 custom-bullet">
                                                         • {achievement}
                                                     </li>
                                                 ))}
                                         </ul>
                                     </div>
-                                    <div class="py-2 flex flex-wrap">
+                                    <div class="pt-2 flex flex-wrap">
                                         {job.tools.map((tool) => (
-                                            <span class="inline-block bg-gray-100 px-2 rounded-full text-xs mr-2">
+                                            <span class="inline-block bg-gray-100 px-2 py-1 rounded-full text-xs mr-2 mb-2">
                                                 {tool}
                                             </span>
                                         ))}
@@ -122,7 +127,7 @@ const { personal, ventures, experience, education, skills, languages } =
                 </section>
 
                 <!-- Venture and Education -->
-                <div class="flex flex-wrap pt-4">
+                <div class="flex flex-wrap">
                     <section class="w-full md:w-1/2">
                         <h2
                             class="text-xl font-semibold pb-1 border-b-2 border-gray-300"
@@ -134,10 +139,10 @@ const { personal, ventures, experience, education, skills, languages } =
                                 ventures.map((venture) => (
                                     <div class="flex flex-col justify-between h-full">
                                         <div>
-                                            <h3 class="text-lg font-semibold mb-1">
+                                            <h3 class="text-lg font-semibold">
                                                 {venture.name}
                                             </h3>
-                                            <p class="text-base text-gray-800 mb-1">
+                                            <p class="text-sm font-medium text-gray-800">
                                                 {venture.role} |{" "}
                                                 {venture.period}
                                             </p>
@@ -155,10 +160,10 @@ const { personal, ventures, experience, education, skills, languages } =
                                                         .join(", ")}
                                                 </a>
                                             </p>
-                                            <ul class="ml-6 mt-1">
+                                            <ul class="ml-1 mt-1">
                                                 {venture.features.map(
                                                     (feature) => (
-                                                        <li class="mb-1 text-sm text-gray-700">
+                                                        <li class="mb-1 text-xs text-gray-700 custom-bullet">
                                                             • {feature}
                                                         </li>
                                                     ),
@@ -188,23 +193,22 @@ const { personal, ventures, experience, education, skills, languages } =
                             {
                                 education.map((edu) => (
                                     <div class="mb-3">
-                                        <h3 class="text-lg font-semibold mb-1">
+                                        <h3 class="text-lg font-semibold">
                                             {edu.school}
                                         </h3>
-                                        <p class="text-base text-gray-800 mb-1">
-                                            {edu.degree}
-                                        </p>
-                                        <p class="text-xs text-gray-500">
-                                            {edu.period}
+                                        <p class="text-sm font-medium text-gray-800 mb-1">
+                                            {edu.degree} | {edu.period}
                                         </p>
                                         <p class="text-sm text-gray-700 mt-1">
                                             {edu.details}
                                         </p>
                                         {!!edu.awards.length && (
                                             <div class="mt-2">
-                                                <ul class="list-disc list-inside text-xs text-gray-700">
+                                                <ul class="ml-1">
                                                     {edu.awards.map((award) => (
-                                                        <li>{award}</li>
+                                                        <li class="mb-1 text-xs text-gray-700 custom-bullet">
+                                                            • {award}
+                                                        </li>
                                                     ))}
                                                 </ul>
                                             </div>

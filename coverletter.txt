@@ -1,0 +1,10 @@
+Daniel Israel
+Software Developer
+danny.israel@gmail.com
+linkedin.com/in/daniel-israel-software-dev
+
+Dear Hiring Manager,
+
+I am a highly motivated full-stack developer with extensive experience in cloud-native applications and TypeScript/JavaScript development. At Goose Insurance, I architected and developed scalable server-driven solutions using React Native and Node.js. My expertise directly aligns with KPMG's tech stack requirements - I have deep experience with React.js, Node.js API development, and modern cloud architectures, complemented by strong TypeScript skills and proficiency with Tailwind CSS.
+
+What excites me about the Cloud Centre of Excellence role is the opportunity to help shape cloud service platforms while maintaining operational excellence. My experience collaborating with cross-functional teams and documenting technical solutions would enable me to effectively guide business teams in platform adoption. I have a proven track record of innovating within constraints - at Goose Insurance, I designed and implemented a recursive layout system for backend-driven UI rendering that significantly improved maintainability. With my background in cloud-native development, combined with a passion for operational excellence and security best practices, I am confident I would be a valuable addition to KPMG's cloud services team.

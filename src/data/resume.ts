@@ -28,16 +28,17 @@ export const resumeData = {
             achievements: [
                 "Worked on server-driven React Native app with dynamic UI updates",
                 "Designed and implemented a recursive layout for backend-driven data rendering",
-                "Developed SEO-optimized website using Astro",
-                "Created testing dashboard with Firebase and Next.js",
+                "Developed SEO-optimized website using Astro, Tailwind, and CDN/Edge Network",
+                "Created testing dashboard with Firebase and Next.js to parallelize testing",
                 "Connected to the Zendesk API to scrape data and used GPT to transcribe and analyze it",
+                "Created a video management dashboard for the marketing team to upload and manage videos"
             ],
-            tools: ["React-Native", "Astro JS", "Typescript", "Redux"]
+            tools: ["React-Native", "Astro JS", "Typescript", "Redux", "Tailwind", "NextJS", "Firebase", "Push Notifications"]
         },
         {
-            title: "React-Native & Next JS Developer",
+            title: "Full Stack Developer",
             company: "University of British Columbia",
-            period: "May 2020 - present",
+            period: "2020 - present",
             description: "Contributed, migrated, and then developed a social media poetry app",
             links: [{
                 url: "https://www.phonemeproject.com",
@@ -46,14 +47,16 @@ export const resumeData = {
             achievements: [
                 "Implemented offline-capable poem creation with media uploads",
                 "Migrated to serverless architecture, reducing costs by 97%",
-                "Built responsive web version using Next.js"
+                "Created 3D search by rating poems on 5 axes and letting users select up to 3",
+                "Built responsive web version using Next.js",
+                "Complex debugging with Chrome Dev Tools"
             ],
             tools: ["React-Native", "Next JS", "Firebase", "Typescript"]
         },
         {
             title: "JS Electron Application Developer",
             company: "BARK Trading",
-            period: "Nov 2022 - present",
+            period: "2022 - 2023",
             description: "Maintained trading application for lumber commodities",
             links: [],
             achievements: [
@@ -61,6 +64,17 @@ export const resumeData = {
                 "Resolved calculation and alert system bugs"
             ],
             tools: ["Electron", "Javascript", "Firebase"]
+        },
+        {
+            title: "Front End Developer",
+            company: "ehsAI",
+            period: "2020 - 2021",
+            description: "Contributed to the development of a web-based pdf editor for correcting LLM output.",
+            links: [],
+            achievements: ["Ground up development of table building interface for correcting LLM output in a web based PDF editor",
+                "Complex debugging with Chrome Dev Tools"
+            ],
+            tools: ["Peact", "Typescript", "SCSS", "CSS"]
         }
     ],
     ventures: [
@@ -78,21 +92,21 @@ export const resumeData = {
                 "AI-powered chat planning with LLM integration",
                 "Real-time collaboration with push notifications",
             ],
-            tools: ["React Native", "Expo", "Typescript", "OpenAI", "Convex", "Tailwind"]
+            tools: ["React Native", "Expo", "Convex", "Typescript", "Tailwind", "OpenAI", "Grok"]
         }
     ],
     education: [
         {
             school: "University of British Columbia",
             degree: "Bachelor of Computer Science",
-            period: "September 2019 - May 2022",
+            period: "2019 - 2022",
             details: "Data Structures, Algorithms, Machine Learning, Networking, Statistics, Computer Vision",
             awards: ["Third Place BCS hackathon 2019"]
         },
         {
             school: "Concordia University",
             degree: "Bachelor of Applied Human Sciences",
-            period: "January 2009 - January 2014",
+            period: "2009 - 2014",
             details: "Psychology, Sociology, Statistics, Research Methods",
             awards: ["Dean's List, Research Assistant, Teaching Assistant"]
         }
