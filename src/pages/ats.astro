@@ -1,0 +1,138 @@
+---
+import { resumeData } from "../data/resume";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const { personal, ventures, experience, education, skills, languages } =
+    resumeData;
+---
+
+<style>
+    @page {
+        size: letter;
+        margin: -0.4in 0;
+    }
+    @media print {
+        body {
+            background-color: white !important;
+        }
+        .resume-container {
+            box-shadow: none !important;
+        }
+    }
+</style>
+
+<BaseLayout title={`${personal.name} - Resume`}>
+    <div
+        class="bg-white text-black max-w-[8.5in] mx-auto shadow-lg md:min-h-[11in] resume-container"
+    >
+        <div class="p-6">
+            <!-- Header - More compact -->
+            <header class="mb-4">
+                <h1 class="text-2xl font-bold mb-1">{personal.name}</h1>
+                <p class="text-base mb-1">{personal.title}</p>
+                <div class="text-sm">
+                    <p>
+                        {personal.email} • linkedin.com/in/{personal.linkedin} •
+                        www.danielisrael.dev
+                    </p>
+                </div>
+            </header>
+
+            <!-- Professional Summary - Shorter -->
+            <section class="mb-4">
+                <h2 class="text-lg font-bold mb-1">Professional Summary</h2>
+                <p class="text-sm">
+                    Experienced Software Developer specializing in React Native,
+                    TypeScript, and modern web technologies. Proven track record
+                    in developing cross-platform applications and implementing
+                    serverless architectures.
+                </p>
+            </section>
+
+            <!-- Experience -->
+            <section class="mb-4">
+                <h2 class="text-lg font-bold mb-3">Professional Experience</h2>
+                {
+                    experience.map((job) => (
+                        <div class="mb-4">
+                            <h3 class="font-bold">
+                                {job.title} | {job.company}
+                            </h3>
+                            <p class="mb-2">{job.period}</p>
+                            <ul class="list-disc ml-6">
+                                {job.achievements.map((achievement) => (
+                                    <li class="mb-1">{achievement}</li>
+                                ))}
+                            </ul>
+                            <p class="mt-2">
+                                <strong>Technologies:</strong>{" "}
+                                {job.tools.join(", ")}
+                            </p>
+                        </div>
+                    ))
+                }
+            </section>
+
+            <!-- Entrepreneurial Experience -->
+            <section class="mb-4">
+                <h2 class="text-lg font-bold mb-3">
+                    Entrepreneurial Experience
+                </h2>
+                {
+                    ventures.map((venture) => (
+                        <div class="mb-4">
+                            <h3 class="font-bold">
+                                {venture.name} | {venture.role}
+                            </h3>
+                            <p class="mb-2">{venture.period}</p>
+                            <ul class="list-disc ml-6">
+                                {venture.features.map((feature) => (
+                                    <li class="mb-1">{feature}</li>
+                                ))}
+                            </ul>
+                            <p class="mt-2">
+                                <strong>Technologies:</strong>{" "}
+                                {venture.tools.join(", ")}
+                            </p>
+                        </div>
+                    ))
+                }
+            </section>
+
+            <!-- Education -->
+            <section class="mb-4">
+                <h2 class="text-lg font-bold mb-3">Education</h2>
+                {
+                    education.map((edu) => (
+                        <div class="mb-4">
+                            <h3 class="font-bold">{edu.degree}</h3>
+                            <p>
+                                {edu.school} | {edu.period}
+                            </p>
+                            <p>Coursework: {edu.details}</p>
+                            {edu.awards.length > 0 && (
+                                <p>
+                                    <strong>Awards:</strong>{" "}
+                                    {edu.awards.join(", ")}
+                                </p>
+                            )}
+                        </div>
+                    ))
+                }
+            </section>
+
+            <!-- Skills & Languages -->
+            <section>
+                <h2 class="text-lg font-bold mb-3">Technical Skills</h2>
+                <p>
+                    <strong>Skills:</strong>
+                    {skills.join(", ")}
+                </p>
+                <p class="mt-2">
+                    <strong>Programming Languages:</strong>
+                    {languages.join(", ")}
+                </p>
+            </section>
+        </div>
+    </div>
+</BaseLayout>

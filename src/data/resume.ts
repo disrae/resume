@@ -46,7 +46,7 @@ export const resumeData = {
             }],
             achievements: [
                 "Implemented offline-capable poem creation with media uploads",
-                "Migrated to serverless architecture, reducing costs by 97%",
+                "Migrated to serverless architecture, reducing costs by 97%, implemented as Progressive Web App (PWA)",
                 "Created 3D search by rating poems on 5 axes and letting users select up to 3",
                 "Built responsive web version using Next.js",
                 "Complex debugging with Chrome Dev Tools"
@@ -113,7 +113,7 @@ export const resumeData = {
         }
     ],
     skills: [
-        "React",
+        "React.js",
         "React Native",
         "Expo",
         "Typescript",
@@ -127,6 +127,8 @@ export const resumeData = {
         "Astro JS",
         "Tailwind",
         "Convex",
+        "Dynamic and Versatile",
+        "Problem Solving"
     ],
     awards: [
         "3rd Place BC Shackathon 2019",
