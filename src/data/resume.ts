@@ -39,19 +39,19 @@ export const resumeData = {
             title: "Full Stack Developer",
             company: "University of British Columbia",
             period: "2020 - present",
-            description: "Contributed, migrated, and then developed a social media poetry app",
+            description: "Contributed to, then migrated and developed a place based social media poetry app",
             links: [{
                 url: "https://www.phonemeproject.com",
                 name: "phonemeproject.com"
             }],
             achievements: [
-                "Implemented offline-capable poem creation with media uploads",
-                "Migrated to serverless architecture, reducing costs by 97%, implemented as Progressive Web App (PWA)",
-                "Created 3D search by rating poems on 5 axes and letting users select up to 3",
-                "Built responsive web version using Next.js",
-                "Complex debugging with Chrome Dev Tools"
+                "Developed offline-capable poem creation with media uploads, improving accessibility and user experience.",
+                "Migrated the app to a serverless architecture, reducing operational costs by 97% and enhancing scalability.",
+                "Introduced a unique 3D search feature, allowing users to discover poems by rating them across 5 axes and selecting multiple criteria.",
+                "Built a responsive web version using Next.js, optimizing for mobile and desktop experiences.",
+                "Performed complex debugging using Chrome Dev Tools, significantly improving app stability and performance."
             ],
-            tools: ["React-Native", "Next JS", "Firebase", "Typescript"]
+            tools: ["React Native", "Next.js", "Firebase", "TypeScript"]
         },
         {
             title: "Full Stack Developer",
@@ -61,7 +61,8 @@ export const resumeData = {
             links: [],
             achievements: [
                 "Ensured platform stability for critical trading operations",
-                "Resolved calculation and alert system bugs"
+                "Resolved calculation and alert system bugs",
+                "Implemented automated backup system"
             ],
             tools: ["Electron", "Javascript", "Firebase"]
         },
