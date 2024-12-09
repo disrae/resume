@@ -1,3 +1,4 @@
+//
 export const resumeData = {
     personal: {
         name: "Daniel Israel",
