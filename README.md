@@ -21,7 +21,7 @@ npm run dev # to iterate just on the content of the pdf, but won't show true lay
 ---
 
 **Examples:**
-- Copy-paste your current to the LLM to update my resume and turn it into yours.
+- Copy-paste your current resume to the LLM to update my resume and turn it into yours.
 - Copy-paste a job description: *"Optimize this resume for this job posting"*
 - Add work experience: *"Use my exported jira tickets to populate my work"*
 - Generate from notes: *"Turn these work notes into resume bullets"*
