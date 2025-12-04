@@ -1,4 +1,4 @@
-# ATS-Friendly Resume Generator
+# AI Resume Generator
 
 Create resumes that pass ATS systems by chatting with your AI assistant. Open `index.html` in Cursor, tell your AI what to change, and export a clean PDF.
 
