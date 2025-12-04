@@ -1,0 +1,106 @@
+# Resume Version Management System
+
+## Core Principle
+**NEVER modify `index.html` for company-specific customizations.**
+
+## File Structure
+
+- `index.html` - **BASELINE MASTER** resume (general, always keep clean)
+- `index-{CompanyName}.html` - Company-specific customizations
+- `generate-pdf.js` - PDF generator with version support
+
+## Workflow for AI Assistants
+
+### When User Says: "Customize my resume for [Company]" or pastes a job description
+
+1. **Check if baseline needs updating first**
+   - If user mentions general improvements → update `index.html`
+   - If company-specific → proceed to step 2
+
+2. **Create company-specific version**
+   ```bash
+   # Copy baseline to new version
+   cp index.html index-CompanyName.html
+   ```
+
+3. **Modify the copy** (NOT index.html)
+   - Tailor professional summary for the role
+   - Emphasize relevant skills/experience
+   - Adjust bullet points to match job description
+   - Use company name in appropriate places
+
+4. **Generate PDF**
+   ```bash
+   node generate-pdf.js CompanyName
+   ```
+   This creates: `Daniel Israel - CompanyName Resume.pdf`
+
+### When User Says: "Update my resume" (general improvements)
+
+1. **Modify `index.html` directly**
+   - This is the baseline, safe to update
+   - Add new skills, experience, or accomplishments
+   - Improve formatting or content
+
+2. **Generate baseline PDF**
+   ```bash
+   npm run gen
+   ```
+
+## Naming Convention
+
+| File | PDF Output |
+|------|------------|
+| `index.html` | `Daniel Israel Resume.pdf` |
+| `index-Google.html` | `Daniel Israel - Google Resume.pdf` |
+| `index-PolicyMe.html` | `Daniel Israel - PolicyMe Resume.pdf` |
+
+## Benefits
+
+✅ Baseline stays clean and general-purpose
+✅ Easy to track company-specific changes in git
+✅ No version drift - always start from clean baseline
+✅ Can iterate on baseline without affecting custom versions
+
+## Common Scenarios
+
+**Scenario 1: First job application**
+```
+User: "Customize this for a Google SWE role"
+AI: Creates index-Google.html, tailors it, generates PDF
+```
+
+**Scenario 2: Update baseline with new skill**
+```
+User: "Add Python to my skills"
+AI: Updates index.html (baseline) directly
+```
+
+**Scenario 3: Create second application**
+```
+User: "Now customize for Meta"
+AI: Creates index-Meta.html from fresh index.html copy
+```
+
+**Scenario 4: Restore from baseline**
+```
+User: "Reset my PolicyMe version"
+AI: cp index.html index-PolicyMe.html (overwrites)
+```
+
+## Red Flags - DON'T DO THIS
+
+❌ Modifying `index.html` with company-specific content
+❌ Creating `index-CompanyA-CompanyB.html` (one company per file)
+❌ Keeping only company versions without a clean baseline
+❌ Forgetting to copy from baseline when creating new version
+
+## Implementation Checklist
+
+When user requests company customization:
+- [ ] Copy `index.html` → `index-{CompanyName}.html`
+- [ ] Only modify the copy, not the original
+- [ ] Use PascalCase or kebab-case for company names (no spaces)
+- [ ] Run `node generate-pdf.js CompanyName` to generate PDF
+- [ ] Confirm PDF was created successfully
+

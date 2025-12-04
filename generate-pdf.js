@@ -1,12 +1,64 @@
+/*
+ * ╔═══════════════════════════════════════════════════════════════════════╗
+ * ║           RESUME PDF GENERATOR - VERSION MANAGEMENT SYSTEM            ║
+ * ╚═══════════════════════════════════════════════════════════════════════╝
+ * 
+ * 📋 USAGE:
+ * 
+ * Generate baseline resume:
+ *   node generate-pdf.js
+ *   → Reads: index.html
+ *   → Creates: Daniel Israel Resume.pdf
+ * 
+ * Generate company-specific resume:
+ *   node generate-pdf.js PolicyMe
+ *   → Reads: index-PolicyMe.html
+ *   → Creates: Daniel Israel - PolicyMe Resume.pdf
+ * 
+ * 🎯 FOR AI ASSISTANTS:
+ * When user asks to customize resume for a company:
+ *   1. Copy index.html to index-{CompanyName}.html
+ *   2. Modify the copy (NOT index.html)
+ *   3. User runs: node generate-pdf.js CompanyName
+ * 
+ * This keeps the baseline resume (index.html) clean!
+ */
+
 const puppeteer = require('puppeteer');
 const path = require('path');
 const { exec } = require('child_process');
+const fs = require('fs');
 
 async function generateResumePDF() {
+  // Get company name from command line argument
+  const companyName = process.argv[2];
+  
   console.log('🚀 Starting PDF generation...');
+  
+  // Determine which HTML file to use
+  let htmlFile, pdfFile;
+  
+  if (companyName) {
+    htmlFile = `index-${companyName}.html`;
+    pdfFile = `Daniel Israel - ${companyName} Resume.pdf`;
+    
+    // Check if the company-specific file exists
+    const htmlPath = path.join(__dirname, htmlFile);
+    if (!fs.existsSync(htmlPath)) {
+      console.error(`❌ Error: ${htmlFile} does not exist!`);
+      console.log(`💡 Tip: Create ${htmlFile} by copying index.html first.`);
+      process.exit(1);
+    }
+    
+    console.log(`📄 Generating custom resume for: ${companyName}`);
+  } else {
+    htmlFile = 'index.html';
+    pdfFile = 'Daniel Israel Resume.pdf';
+    console.log('📄 Generating baseline resume');
+  }
 
-  const htmlPath = path.join(__dirname, 'index.html');
-  const pdfPath = path.join(__dirname, 'Daniel Israel Resume.pdf');
+  const htmlPath = path.join(__dirname, htmlFile);
+  const pdfPath = path.join(__dirname, pdfFile);
 
   let browser;
   try {
@@ -41,8 +93,13 @@ async function generateResumePDF() {
       preferCSSPageSize: false
     });
 
-    console.log(`✅ PDF generated successfully: ${pdfPath}`);
-    console.log('📄 Your resume is now ATS-ready!');
+    console.log(`✅ PDF generated successfully: ${pdfFile}`);
+    console.log(`📍 Location: ${pdfPath}`);
+    if (companyName) {
+      console.log(`🎯 Custom version for: ${companyName}`);
+    } else {
+      console.log('📄 Baseline resume - ATS-ready!');
+    }
 
     await browser.close();
 

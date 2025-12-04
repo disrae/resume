@@ -5,9 +5,11 @@
   "main": "generate-pdf.js",
   "scripts": {
     "gen": "node generate-pdf.js",
+    "gen:custom": "node generate-pdf.js",
     "dev": "npx http-server -p 3001",
     "preview": "open index.html"
   },
+  "//": "Generate baseline: npm run gen | Generate custom: node generate-pdf.js CompanyName",
   "dependencies": {
     "puppeteer": "^22.0.0"
   },
