@@ -11,144 +11,173 @@
   <style>
     body { font-family: 'Inter', system-ui, sans-serif; }
     @media print {
-      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        font-size: 11px !important;
+        line-height: 1.2 !important;
+      }
+      .page-break { page-break-before: always; }
+      h1 { font-size: 24px !important; }
+      h2 { font-size: 16px !important; }
+      h3 { font-size: 13px !important; }
+      p, li { font-size: 11px !important; line-height: 1.1 !important; }
+      .text-xs { font-size: 9px !important; }
+      .text-sm { font-size: 10px !important; }
+      .text-base { font-size: 12px !important; }
+      .text-lg { font-size: 14px !important; }
+      .mb-4 { margin-bottom: 0.75rem !important; }
+      .mb-3 { margin-bottom: 0.5rem !important; }
+      .mb-2 { margin-bottom: 0.375rem !important; }
+      .mb-1 { margin-bottom: 0.25rem !important; }
     }
   </style>
 </head>
 
-<body class="max-w-4xl mx-auto p-10 bg-white text-gray-900 leading-relaxed">
+<body class="max-w-3xl mx-auto p-4 bg-white text-gray-900 leading-tight">
 
   <!-- HEADER -->
-  <header class="text-center mb-10 border-b-4 border-gray-800 pb-6">
-    <h1 class="text-5xl font-bold">Your Name</h1>
-    <p class="text-xl mt-2">Senior Full-Stack Engineer</p>
-    <p class="mt-3 text-lg">
-      your.email@gmail.com | (555) 123-4567 | linkedin.com/in/yourprofile | github.com/yourprofile | City, State
+  <header class="text-center mb-2 border-b-2 border-gray-800 pb-2">
+    <h1 class="text-3xl font-bold">Daniel Israel</h1>
+    <p class="text-base mt-1">Software Developer</p>
+    <p class="mt-0.5 text-sm">
+      danny.israel@gmail.com | linkedin.com/in/daniel-israel-software-dev | Vancouver, BC, Canada
     </p>
   </header>
 
   <!-- PROFESSIONAL SUMMARY (ATS-friendly) -->
-  <section class="mb-10">
-    <h2 class="text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-1">Professional Summary</h2>
-    <p class="text-base leading-relaxed">
-      Experienced full-stack engineer with 5+ years of expertise in modern web technologies.
-      Proven track record of leading complex projects, optimizing performance, and mentoring junior developers.
-      Passionate about building scalable, user-centric applications.
+  <section class="mb-2">
+    <h2 class="text-lg font-bold mb-1 border-b-2 border-gray-300 pb-1">Professional Summary</h2>
+    <p class="text-xs leading-snug">
+      Full-stack developer skilled in React Native (Expo), TypeScript, and modern web technologies. Experienced in AI integration,
+      performance and cost optimization, and building responsive applications. Strong background in mobile development
+      and enhancing user experiences across web and mobile platforms.
     </p>
   </section>
 
   <!-- EXPERIENCE -->
-  <section class="mb-10">
-    <h2 class="text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-1">Professional Experience</h2>
+  <section class="mb-4">
+    <h2 class="text-lg font-bold mb-2 border-b-2 border-gray-300 pb-1">Professional Experience</h2>
 
-    <div class="mb-8">
-      <div class="flex justify-between items-start mb-2">
-        <h3 class="text-xl font-semibold">Senior Software Engineer</h3>
-        <span class="text-gray-600 text-sm">Jan 2022 – Present</span>
+    <div class="mb-3">
+      <div class="flex justify-between items-start mb-0.5">
+        <p class="text-base font-semibold">Senior Full Stack Developer</p>
+        <span class="text-gray-600 text-xs">Nov 2025 – Present</span>
       </div>
-      <p class="font-medium text-gray-700 mb-3">Tech Company Inc. – San Francisco, CA</p>
-      <ul class="list-disc ml-6 space-y-1">
-        <li>Led migration from Angular to React + TypeScript for 50k-user SaaS product, improving development velocity by 40%</li>
-        <li>Reduced API latency by 60% through Redis caching implementation and database query optimization</li>
-        <li>Mentored 4 junior engineers and established comprehensive code review standards</li>
-        <li>Designed and implemented CI/CD pipelines using GitHub Actions and Docker</li>
+      <p class="font-medium text-gray-700 mb-1 text-xs">InsightLabs</p>
+      <ul class="list-disc ml-3 space-y-0.5 text-xs leading-tight">
+        <li>Developed Zendesk integration with OAuth authentication, webhook handling, and automated ticket data processing</li>
+        <li>Built pipeline automation framework for scheduled LLM-powered qualitative analysis with flexible recurring schedules</li>
+        <li>Implemented multi-format file upload system with drag-and-drop UI, real-time progress tracking, and document parsing</li>
+        <li>Optimized cloud infrastructure using Firebase/Cloud Functions, resolved storage leaks, and improved system reliability</li>
+        <li>Enhanced dashboard with standardized UI components, modal navigation, and comprehensive design system</li>
       </ul>
     </div>
 
-    <div class="mb-8">
-      <div class="flex justify-between items-start mb-2">
-        <h3 class="text-xl font-semibold">Software Engineer</h3>
-        <span class="text-gray-600 text-sm">Jun 2019 – Dec 2021</span>
+    <div class="mb-3">
+      <div class="flex justify-between items-start mb-0.5">
+        <h3 class="text-base font-semibold">Mobile Developer</h3>
+        <span class="text-gray-600 text-xs">Jan 2025 – Oct 2025</span>
       </div>
-      <p class="font-medium text-gray-700 mb-3">StartupXYZ – Austin, TX</p>
-      <ul class="list-disc ml-6 space-y-1">
-        <li>Developed full-stack features using React, Node.js, and PostgreSQL</li>
-        <li>Collaborated with cross-functional teams to deliver MVPs ahead of schedule</li>
-        <li>Implemented automated testing suites, increasing code coverage to 85%</li>
-        <li>Contributed to system architecture decisions and technical documentation</li>
+      <p class="font-medium text-gray-700 mb-1 text-xs">Secrets AI</p>
+      <ul class="list-disc ml-3 space-y-0.5 text-xs leading-tight">
+        <li>Built AI companion app from scratch with React Native, Expo for pixel-perfect UX</li>
+        <li>Integrated in-app purchases and backend systems for monetization</li>
+        <li>Utilized Expo deployment tools for efficient version management</li>
       </ul>
     </div>
 
-    <!-- Add more experience blocks as needed -->
+    <div class="mb-3">
+      <div class="flex justify-between items-start mb-0.5">
+        <h3 class="text-base font-semibold">Mobile Front End Developer</h3>
+        <span class="text-gray-600 text-xs">Jul 2023 – Dec 2024</span>
+      </div>
+      <p class="font-medium text-gray-700 mb-1 text-xs">Goose Insurance Services</p>
+      <ul class="list-disc ml-3 space-y-0.5 text-xs leading-tight">
+        <li>Fixed push notifications and contributed to open-source package</li>
+        <li>Rebuilt website with Astro JS, reducing load times from 8s to milliseconds, cutting costs 90%</li>
+        <li>Rewrote React Native components following senior patterns for maintainable code</li>
+        <li>Designed Redux-controlled UI components and flexible backend solutions</li>
+      </ul>
+    </div>
 
+  </section>
+
+  <!-- ADDITIONAL EXPERIENCE -->
+  <section class="mb-4">
+    <div class="mb-3">
+      <div class="flex justify-between items-start mb-0.5">
+        <h3 class="text-base font-semibold">Full Stack Developer</h3>
+        <span class="text-gray-600 text-xs">May 2020 – Sep 2023</span>
+      </div>
+      <p class="font-medium text-gray-700 mb-1 text-xs">PhoneMe Project UBC</p>
+      <ul class="list-disc ml-3 space-y-0.5 text-xs leading-tight">
+        <li>Migrated to Firebase serverless architecture, reducing costs by 97%</li>
+        <li>Built offline-capable poem creation with media upload and 3D search</li>
+        <li>Developed responsive UI with Next.js and Tailwind for cross-device compatibility</li>
+      </ul>
+    </div>
   </section>
 
   <!-- EDUCATION -->
-  <section class="mb-10">
-    <h2 class="text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-1">Education</h2>
-    <div class="flex justify-between items-start mb-2">
-      <h3 class="text-xl font-semibold">Bachelor of Science in Computer Science</h3>
-      <span class="text-gray-600 text-sm">2015 – 2019</span>
+  <section class="mb-3">
+    <h2 class="text-lg font-bold mb-2 border-b-2 border-gray-300 pb-1">Education</h2>
+
+    <div class="mb-2">
+      <div class="flex justify-between items-start mb-0.5">
+        <h3 class="text-sm font-semibold">Bachelor of Computer Science</h3>
+        <span class="text-gray-600 text-xs">2018 – 2022</span>
+      </div>
+      <p class="font-medium text-gray-700 text-xs">University of British Columbia</p>
+      <p class="text-xs leading-tight">Algorithms, ML, computer vision. Java, C/C++, Python, Haskell, TypeScript. 3rd place hackathon 2019.</p>
     </div>
-    <p class="font-medium text-gray-700">University of Technology – College Station, TX</p>
-    <p class="mt-1 text-sm">Relevant Coursework: Data Structures, Algorithms, Operating Systems, Database Systems</p>
-    <p class="mt-1 text-sm">GPA: 3.8/4.0 • Magna Cum Laude</p>
+
+    <div class="mb-2">
+      <div class="flex justify-between items-start mb-0.5">
+        <h3 class="text-sm font-semibold">Bachelor of Applied Human Sciences</h3>
+        <span class="text-gray-600 text-xs">2009 – 2014</span>
+      </div>
+      <p class="font-medium text-gray-700 text-xs">Concordia University – Montreal, QC</p>
+      <p class="text-xs leading-tight">Dean's List. Research Assistant, Teaching Assistant. Presented at SSHRC conference.</p>
+    </div>
   </section>
 
   <!-- TECHNICAL SKILLS -->
-  <section class="mb-10">
-    <h2 class="text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-1">Technical Skills</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <section class="mb-2">
+    <h2 class="text-lg font-bold mb-1 border-b-2 border-gray-300 pb-1">Technical Skills</h2>
+    <div class="grid grid-cols-2 gap-1">
       <div>
-        <p class="font-semibold mb-2">Programming Languages</p>
-        <p class="text-sm">JavaScript, TypeScript, Python, Go, SQL</p>
+        <p class="font-semibold mb-0.5 text-xs">Languages</p>
+        <p class="text-xs leading-tight">TypeScript, JavaScript, Python, Java, C/C++</p>
       </div>
       <div>
-        <p class="font-semibold mb-2">Frontend Technologies</p>
-        <p class="text-sm">React, Next.js, HTML5, CSS3, Tailwind CSS</p>
+        <p class="font-semibold mb-0.5 text-xs">Mobile & Frontend</p>
+        <p class="text-xs leading-tight">React Native, Expo, Next.js, Tailwind, Redux, AstroJS</p>
       </div>
       <div>
-        <p class="font-semibold mb-2">Backend Technologies</p>
-        <p class="text-sm">Node.js, Express, Django, PostgreSQL, Redis</p>
+        <p class="font-semibold mb-0.5 text-xs">Backend & Tools</p>
+        <p class="text-xs leading-tight">Firebase, GCP, Flask, Node.js, Git, ML</p>
       </div>
       <div>
-        <p class="font-semibold mb-2">Tools & Platforms</p>
-        <p class="text-sm">Docker, Kubernetes, AWS, Git, GitHub Actions, Linux</p>
+        <p class="font-semibold mb-0.5 text-xs">Platforms</p>
+        <p class="text-xs leading-tight">EAS, Convex, Push Notifications, In-App Purchases, AppStore, PlayStore</p>
       </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section class="mb-10">
-    <h2 class="text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-1">Notable Projects</h2>
-
-    <div class="mb-6">
-      <h3 class="text-xl font-semibold mb-1">Real-Time Analytics Dashboard</h3>
-      <p class="text-gray-600 text-sm mb-2">github.com/yourname/analytics-dashboard</p>
-      <ul class="list-disc ml-6 space-y-1 text-sm">
-        <li>Full-stack application built with React, Node.js, and PostgreSQL</li>
-        <li>Real-time data visualization with WebSocket integration</li>
-        <li>Deployed on Vercel with Railway database, serving 10k+ monthly users</li>
-        <li>Open-source project with 1.2k GitHub stars</li>
-      </ul>
-    </div>
-
-    <div class="mb-6">
-      <h3 class="text-xl font-semibold mb-1">E-commerce Microservices</h3>
-      <p class="text-gray-600 text-sm mb-2">github.com/yourname/ecommerce-microservices</p>
-      <ul class="list-disc ml-6 space-y-1 text-sm">
-        <li>Microservices architecture using Go and gRPC</li>
-        <li>Docker containerization with Kubernetes orchestration</li>
-        <li>Implemented event-driven architecture with RabbitMQ</li>
-        <li>Reduced deployment time by 70% through automated CI/CD</li>
-      </ul>
+  <section class="mb-2">
+    <h2 class="text-lg font-bold mb-1 border-b-2 border-gray-300 pb-1">Projects</h2>
+    <div class="text-xs space-y-0.5 leading-tight">
+      <p><strong><a href="https://apps.apple.com/us/app/wepickle/id6754783496?platform=vision" class="text-blue-600 hover:text-blue-800">WePickle</a>:</strong> Mobile/web app for pickleball community with court check-ins, scheduling, skills tracking</p>
+      <p><strong><a href="https://falcontopo.com" class="text-blue-600 hover:text-blue-800">FalconTopo</a>:</strong> 3D climbing cliff visualization to replace traditional guidebooks</p>
+      <p><strong><a href="https://chat-plan-ai.vercel.app/en-ca" class="text-blue-600 hover:text-blue-800">ChatPlanAI</a>:</strong> LLM-integrated chat application for document generation and editing</p>
+      <p><strong><a href="https://www.gooseinsurance.com/en-ca/" class="text-blue-600 hover:text-blue-800">Goose Insurance</a>:</strong> High-performance insurance website rebuilt with Astro JS, reducing load times by 99%</p>
+      <p><strong><a href="https://perrilo.com" class="text-blue-600 hover:text-blue-800">Perrilo</a>:</strong> Professional portfolio website for concert pianist showcasing performances and media</p>
+      <p><strong>SOS Alert System:</strong> Reverse-engineered expensive medical alert device network protocol using Python, created free alternative with Twilio SMS notifications</p>
     </div>
   </section>
 
-  <!-- CERTIFICATIONS (optional) -->
-  <section>
-    <h2 class="text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-1">Certifications</h2>
-    <ul class="space-y-2">
-      <li class="flex justify-between">
-        <span class="font-medium">AWS Certified Solutions Architect</span>
-        <span class="text-gray-600 text-sm">2023</span>
-      </li>
-      <li class="flex justify-between">
-        <span class="font-medium">Certified Kubernetes Administrator (CKA)</span>
-        <span class="text-gray-600 text-sm">2022</span>
-      </li>
-    </ul>
-  </section>
 
 </body>
 </html>
