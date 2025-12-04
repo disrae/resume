@@ -21,10 +21,9 @@ npm run dev # to iterate just on the content of the pdf, but won't show true lay
 ---
 
 **Ideas**
-- Resume follows an ATS friendly template.
-- Copy-paste your current resume to the LLM to turn my resume and into yours.
-- Copy-paste a job description: *"Optimize the resume for this job posting"*
+- Resume follows an ATS friendly template (Single column, simple, etc).
+- Copy-paste your current resume to the LLM (Cursor/Windsurf) to turn my resume into yours.
+- Copy-paste a job description: *"Optimize the resume for this job posting"*. Change the output file name in the JS file to make it bespoke.
 - Add work experience: *"Use my exported jira tickets to populate my work"*
 - Generate from notes: *"Turn these work notes into resume bullets"*
-- Change the name of the output file to create bespoke resumes for the company.
 - Run your resume through an ATS system like [Jobscan](https://www.jobscan.co) to iterate.
