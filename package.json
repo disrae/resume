@@ -1,0 +1,18 @@
+{
+  "name": "resume-pdf-generator",
+  "version": "1.0.0",
+  "description": "Generate ATS-friendly PDF resumes from HTML",
+  "main": "generate-pdf.js",
+  "scripts": {
+    "generate-pdf": "node generate-pdf.js",
+    "dev": "npx http-server -p 3000",
+    "preview": "open index.html"
+  },
+  "dependencies": {
+    "html-pdf": "^3.0.1",
+    "phantomjs-prebuilt": "^2.1.16"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

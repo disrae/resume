@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Résumé</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+
+<body class="max-w-4xl mx-auto p-10 bg-white text-gray-900 leading-relaxed">
+
+  <!-- HEADER -->
+  <header class="text-center mb-10 border-b-4 border-gray-800 pb-6">
+    <h1 class="text-5xl font-bold">Your Name</h1>
+    <p class="text-xl mt-2">Senior Full-Stack Engineer</p>
+    <p class="mt-3 text-lg">
+      your.email@gmail.com | (555) 123-4567 | linkedin.com/in/yourprofile | github.com/yourprofile | City, State
+    </p>
+  </header>
+
+  <!-- PROFESSIONAL SUMMARY (ATS-friendly) -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-1">Professional Summary</h2>
+    <p class="text-base leading-relaxed">
+      Experienced full-stack engineer with 5+ years of expertise in modern web technologies.
+      Proven track record of leading complex projects, optimizing performance, and mentoring junior developers.
+      Passionate about building scalable, user-centric applications.
+    </p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-1">Professional Experience</h2>
+
+    <div class="mb-8">
+      <div class="flex justify-between items-start mb-2">
+        <h3 class="text-xl font-semibold">Senior Software Engineer</h3>
+        <span class="text-gray-600 text-sm">Jan 2022 – Present</span>
+      </div>
+      <p class="font-medium text-gray-700 mb-3">Tech Company Inc. – San Francisco, CA</p>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Led migration from Angular to React + TypeScript for 50k-user SaaS product, improving development velocity by 40%</li>
+        <li>Reduced API latency by 60% through Redis caching implementation and database query optimization</li>
+        <li>Mentored 4 junior engineers and established comprehensive code review standards</li>
+        <li>Designed and implemented CI/CD pipelines using GitHub Actions and Docker</li>
+      </ul>
+    </div>
+
+    <div class="mb-8">
+      <div class="flex justify-between items-start mb-2">
+        <h3 class="text-xl font-semibold">Software Engineer</h3>
+        <span class="text-gray-600 text-sm">Jun 2019 – Dec 2021</span>
+      </div>
+      <p class="font-medium text-gray-700 mb-3">StartupXYZ – Austin, TX</p>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Developed full-stack features using React, Node.js, and PostgreSQL</li>
+        <li>Collaborated with cross-functional teams to deliver MVPs ahead of schedule</li>
+        <li>Implemented automated testing suites, increasing code coverage to 85%</li>
+        <li>Contributed to system architecture decisions and technical documentation</li>
+      </ul>
+    </div>
+
+    <!-- Add more experience blocks as needed -->
+
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-1">Education</h2>
+    <div class="flex justify-between items-start mb-2">
+      <h3 class="text-xl font-semibold">Bachelor of Science in Computer Science</h3>
+      <span class="text-gray-600 text-sm">2015 – 2019</span>
+    </div>
+    <p class="font-medium text-gray-700">University of Technology – College Station, TX</p>
+    <p class="mt-1 text-sm">Relevant Coursework: Data Structures, Algorithms, Operating Systems, Database Systems</p>
+    <p class="mt-1 text-sm">GPA: 3.8/4.0 • Magna Cum Laude</p>
+  </section>
+
+  <!-- TECHNICAL SKILLS -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-1">Technical Skills</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <p class="font-semibold mb-2">Programming Languages</p>
+        <p class="text-sm">JavaScript, TypeScript, Python, Go, SQL</p>
+      </div>
+      <div>
+        <p class="font-semibold mb-2">Frontend Technologies</p>
+        <p class="text-sm">React, Next.js, HTML5, CSS3, Tailwind CSS</p>
+      </div>
+      <div>
+        <p class="font-semibold mb-2">Backend Technologies</p>
+        <p class="text-sm">Node.js, Express, Django, PostgreSQL, Redis</p>
+      </div>
+      <div>
+        <p class="font-semibold mb-2">Tools & Platforms</p>
+        <p class="text-sm">Docker, Kubernetes, AWS, Git, GitHub Actions, Linux</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-1">Notable Projects</h2>
+
+    <div class="mb-6">
+      <h3 class="text-xl font-semibold mb-1">Real-Time Analytics Dashboard</h3>
+      <p class="text-gray-600 text-sm mb-2">github.com/yourname/analytics-dashboard</p>
+      <ul class="list-disc ml-6 space-y-1 text-sm">
+        <li>Full-stack application built with React, Node.js, and PostgreSQL</li>
+        <li>Real-time data visualization with WebSocket integration</li>
+        <li>Deployed on Vercel with Railway database, serving 10k+ monthly users</li>
+        <li>Open-source project with 1.2k GitHub stars</li>
+      </ul>
+    </div>
+
+    <div class="mb-6">
+      <h3 class="text-xl font-semibold mb-1">E-commerce Microservices</h3>
+      <p class="text-gray-600 text-sm mb-2">github.com/yourname/ecommerce-microservices</p>
+      <ul class="list-disc ml-6 space-y-1 text-sm">
+        <li>Microservices architecture using Go and gRPC</li>
+        <li>Docker containerization with Kubernetes orchestration</li>
+        <li>Implemented event-driven architecture with RabbitMQ</li>
+        <li>Reduced deployment time by 70% through automated CI/CD</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS (optional) -->
+  <section>
+    <h2 class="text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-1">Certifications</h2>
+    <ul class="space-y-2">
+      <li class="flex justify-between">
+        <span class="font-medium">AWS Certified Solutions Architect</span>
+        <span class="text-gray-600 text-sm">2023</span>
+      </li>
+      <li class="flex justify-between">
+        <span class="font-medium">Certified Kubernetes Administrator (CKA)</span>
+        <span class="text-gray-600 text-sm">2022</span>
+      </li>
+    </ul>
+  </section>
+
+</body>
+</html>
