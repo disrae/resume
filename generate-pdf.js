@@ -6,7 +6,7 @@ async function generateResumePDF() {
   console.log('🚀 Starting PDF generation...');
 
   const htmlPath = path.join(__dirname, 'index.html');
-  const pdfPath = path.join(__dirname, 'Daniel Israel - PolicyMe AI Engineer.pdf');
+  const pdfPath = path.join(__dirname, 'Daniel Israel Resume.pdf');
 
   let browser;
   try {
