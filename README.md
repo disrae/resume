@@ -1,6 +1,6 @@
 # AI Resume Builder
 
-Create resumes that pass ATS systems by chatting with your AI assistant. Open `index.html` in Cursor, tell your AI what to change, and export a clean PDF.
+Use your AI powered IDE to paste in relevant data and update the resume in index.html. Run `npm run gen` to output the pdf.
 
 ## Features
 
