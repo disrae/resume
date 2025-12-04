@@ -21,6 +21,7 @@ npm run dev # to iterate just on the content of the pdf, but won't show true lay
 ---
 
 **Ideas**
+- Resume follows an ATS friendly template.
 - Copy-paste your current resume to the LLM to turn my resume and into yours.
 - Copy-paste a job description: *"Optimize the resume for this job posting"*
 - Add work experience: *"Use my exported jira tickets to populate my work"*
