@@ -1,6 +1,8 @@
 # AI Resume Builder
 
-Use your AI powered IDE to paste in relevant data and update the resume in index.html. Run `npm run gen` to output the pdf.
+Use your AI powered IDE to paste in relevant data and update the resume in index.html. 
+
+Run `npm run gen` to output the pdf.
 
 ## Overview
 - Resume follows an ATS friendly template (Single column, simple, etc).
