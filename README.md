@@ -6,7 +6,7 @@ Use your AI powered IDE to paste in relevant data and update the resume in index
 
 ## Quick Start
 
-You'll need [Cursor](https://cursor.sh) (or another AI editor), Node.js, and Git.
+You'll need [Cursor](https://cursor.sh) (or another AI editor) and Node.js.
 
 ```bash
 git clone https://github.com/disrae/resume.git
@@ -20,16 +20,10 @@ npm run dev # to iterate just on the content of the pdf, but won't show true lay
 
 ---
 
-**Examples:**
-- Copy-paste your current resume to the LLM to update my resume and turn it into yours.
-- Copy-paste a job description: *"Optimize this resume for this job posting"*
+**Ideas**
+- Copy-paste your current resume to the LLM to turn my resume and into yours.
+- Copy-paste a job description: *"Optimize the resume for this job posting"*
 - Add work experience: *"Use my exported jira tickets to populate my work"*
 - Generate from notes: *"Turn these work notes into resume bullets"*
-
-**Commands:**
-- `npm run gen` - Generate PDF version of resume
-- `npm run dev` - Render in browser (faster preview, not letter-sized)
-
-## Notes
-You can run your resume through an ATS system like [Jobscan](https://www.jobscan.co) to iterate.
-
+- Change the name of the output file to create bespoke resumes for the company.
+- Run your resume through an ATS system like [Jobscan](https://www.jobscan.co) to iterate.
