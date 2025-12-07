@@ -20,16 +20,14 @@
      - Emphasizing specific skills for an application
   
   🎯 FOR COMPANY-SPECIFIC CUSTOMIZATION:
-     1. AI assistant, copy this file to: versions/index-{CompanyName}.html
-        Example: versions/index-PolicyMe.html, versions/index-Google.html
-     2. Modify the copy with company-specific tailoring using ONLY existing experience and skills from this baseline resume
-        ❌ NEVER invent, fabricate, or exaggerate experience, technologies, or achievements
-        ✅ Only emphasize and rephrase existing content to match job requirements
+     1. AI assistant, copy this file to: index-{CompanyName}.html
+        Example: index-PolicyMe.html, index-Google.html
+     2. Modify the copy with company-specific tailoring
      3. Generate PDF: node generate-pdf.js PolicyMe
   
   📁 NAMING CONVENTION:
      - Baseline: index.html → "Daniel Israel Resume.pdf"
-     - Custom: versions/index-PolicyMe.html → "Daniel Israel - PolicyMe Resume.pdf"
+     - Custom: index-PolicyMe.html → "Daniel Israel - PolicyMe Resume.pdf"
   
   This keeps the baseline clean and prevents version drift.
 -->
@@ -72,7 +70,7 @@
   <!-- HEADER -->
   <header class="text-center mb-2 border-b-2 border-gray-800 pb-2">
     <h1 class="text-3xl font-bold">Daniel Israel</h1>
-    <p class="text-base mt-1">Software Developer</p>
+    <p class="text-base mt-1">Frontend Developer</p>
     <p class="mt-0.5 text-sm">
       danny.israel@gmail.com | linkedin.com/in/daniel-israel-software-dev | Vancouver, BC, Canada
     </p>
@@ -82,14 +80,14 @@
   <section class="mb-2">
     <h2 class="text-lg font-bold mb-1 border-b-2 border-gray-300 pb-1">Professional Summary</h2>
     <p class="text-xs leading-snug">
-      Full-stack engineer with expertise in Python, React, Redux, and AI/ML integration. Proven experience building AI-powered
-      applications with scalable cloud architectures, data pipelines, and LLM-driven features. Passionate about leveraging
-      machine learning to transform user experiences and automate complex workflows in production environments.
+      Frontend engineer with 5+ years building SaaS applications using React, Redux, and modern JavaScript frameworks. Expertise in
+      state management, component architecture, and responsive design. Experience delivering scalable solutions
+      in fast-paced environments.
     </p>
   </section>
 
   <!-- EXPERIENCE -->
-  <section class="mb-4">
+  <section class="mb-3">
     <h2 class="text-lg font-bold mb-2 border-b-2 border-gray-300 pb-1">Professional Experience</h2>
 
     <div class="mb-3">
@@ -99,11 +97,10 @@
       </div>
       <p class="font-medium text-gray-700 mb-1 text-xs">InsightLabs</p>
       <ul class="list-disc ml-3 space-y-0.5 text-xs leading-tight">
-        <li>Customers can connect their zendesk support platform to dynamically import support tickets into the app as they are resolved.</li>
-        <li>Built a customer facing automation framework for customers to run specified anlyses on dynamic data on a schedule of their choosing.</li>
-        <li>Implemented multi-format file upload system with drag-and-drop UI, real-time progress tracking, and document parsing</li>
-        <li>Optimized cloud infrastructure using Firebase/Cloud Functions, resolved storage leaks, and improved system reliability</li>
-        <li>Enhanced dashboard with standardized UI components, modal navigation, and comprehensive design system</li>
+        <li>Leading full stack development for SaaS analytics platform, building customer-facing automation interfaces</li>
+        <li>Implemented multi-format file upload system with drag-and-drop UI and real-time progress tracking</li>
+        <li>Enhanced dashboard with standardized React components, modal navigation, and responsive design system</li>
+        <li>Optimized cloud infrastructure using Firebase/Cloud Functions, resolving storage leaks and improving system reliability</li>
       </ul>
     </div>
 
@@ -137,7 +134,7 @@
   </section>
 
   <!-- ADDITIONAL EXPERIENCE -->
-  <section class="mb-4">
+  <section class="mb-3">
     <div class="mb-3">
       <div class="flex justify-between items-start mb-0.5">
         <h3 class="text-base font-semibold">Full Stack Developer</h3>
@@ -184,16 +181,16 @@
         <p class="text-xs leading-tight">TypeScript, JavaScript, Python, Java, C/C++</p>
       </div>
       <div>
-        <p class="font-semibold mb-0.5 text-xs">Mobile & Frontend</p>
+        <p class="font-semibold mb-0.5 text-xs">Frontend & Mobile</p>
         <p class="text-xs leading-tight">React Native, Expo, Next.js, Tailwind, Redux, AstroJS</p>
       </div>
       <div>
-        <p class="font-semibold mb-0.5 text-xs">Backend & Tools</p>
+        <p class="font-semibold mb-0.5 text-xs">Backend & Cloud</p>
         <p class="text-xs leading-tight">Firebase, GCP, Flask, Node.js, Git, ML</p>
       </div>
       <div>
-        <p class="font-semibold mb-0.5 text-xs">Platforms</p>
-        <p class="text-xs leading-tight">EAS, Convex, Push Notifications, In-App Purchases, AppStore, PlayStore</p>
+        <p class="font-semibold mb-0.5 text-xs">Platforms & Tools</p>
+        <p class="text-xs leading-tight">EAS, Convex, Push Notifications, In-App Purchases</p>
       </div>
     </div>
   </section>
@@ -202,13 +199,10 @@
   <section class="mb-2">
     <h2 class="text-lg font-bold mb-1 border-b-2 border-gray-300 pb-1">Projects</h2>
     <div class="text-xs space-y-0.5 leading-tight">
-      <p><strong><a href="https://github.com/disrae/resume" class="text-blue-600 hover:text-blue-800">AI Resume Generator</a>:</strong> Open-source tool for creating ATS-optimized resumes using AI-powered natural language editing and automated PDF generation</p>
-      <p><strong><a href="https://apps.apple.com/us/app/wepickle/id6754783496?platform=vision" class="text-blue-600 hover:text-blue-800">WePickle</a>:</strong> Mobile/web app for pickleball community with court check-ins, scheduling, skills tracking</p>
-      <p><strong><a href="https://falcontopo.com" class="text-blue-600 hover:text-blue-800">FalconTopo</a>:</strong> 3D climbing cliff visualization to replace traditional guidebooks</p>
+      <p><strong><a href="https://github.com/disrae/resume" class="text-blue-600 hover:text-blue-800">AI Resume Generator</a>:</strong> Open-source tool for ATS-optimized resumes with AI-powered editing and automated PDF generation</p>
       <p><strong><a href="https://chat-plan-ai.vercel.app/en-ca" class="text-blue-600 hover:text-blue-800">ChatPlanAI</a>:</strong> LLM-integrated chat application for document generation and editing</p>
-      <p><strong><a href="https://www.gooseinsurance.com/en-ca/" class="text-blue-600 hover:text-blue-800">Goose Insurance</a>:</strong> High-performance insurance website rebuilt with Astro JS, reducing load times by 99%</p>
-      <p><strong><a href="https://perrilo.com" class="text-blue-600 hover:text-blue-800">Perrilo</a>:</strong> Professional portfolio website for concert pianist showcasing performances and media</p>
-      <p><strong>SOS Alert System:</strong> Reverse-engineered expensive medical alert device network protocol using Python, created free alternative with Twilio SMS notifications</p>
+      <p><strong><a href="https://www.gooseinsurance.com/en-ca/" class="text-blue-600 hover:text-blue-800">Goose Insurance</a>:</strong> High-performance website rebuilt with Astro JS, reducing load times by 99%</p>
+      <p><strong><a href="https://apps.apple.com/us/app/wepickle/id6754783496?platform=vision" class="text-blue-600 hover:text-blue-800">WePickle</a>:</strong> React Native app for pickleball community with court check-ins and scheduling</p>
     </div>
   </section>
 

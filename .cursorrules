@@ -94,6 +94,7 @@ AI: cp index.html index-PolicyMe.html (overwrites)
 ❌ Creating `index-CompanyA-CompanyB.html` (one company per file)
 ❌ Keeping only company versions without a clean baseline
 ❌ Forgetting to copy from baseline when creating new version
+❌ **FABRICATING EXPERIENCE OR TECHNOLOGIES** - If user doesn't have experience with a technology mentioned in a job posting, DO NOT add it to the resume. It's okay if some requirements are missing - just emphasize what they DO know and use variety in experience as evidence of capability if they lack something in particular.
 
 ## Implementation Checklist
 
