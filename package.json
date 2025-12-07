@@ -7,7 +7,10 @@
     "gen": "node generate-pdf.js",
     "gen:custom": "node generate-pdf.js",
     "dev": "npx http-server -p 3001",
-    "preview": "open index.html"
+    "preview": "open index.html",
+    "clean:pdfs": "rm -rf pdfs/*.pdf",
+    "list:versions": "ls -la versions/",
+    "list:pdfs": "ls -la pdfs/"
   },
   "//": "Generate baseline: npm run gen | Generate custom: node generate-pdf.js CompanyName",
   "dependencies": {

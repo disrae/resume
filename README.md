@@ -14,10 +14,26 @@ Run `npm run gen` to output the pdf.
 
 ## Version Management
 
-Keep your baseline resume clean with **company-specific versions**:
+Keep your baseline resume clean with **company-specific versions** organized in dedicated directories:
+
+### Directory Structure
+```
+resume/
+├── index.html                    # Baseline/master resume (never modify for companies)
+├── versions/                     # Company-specific HTML files
+│   ├── index-CompanyA.html
+│   └── index-CompanyB.html
+├── pdfs/                         # Generated PDF files
+│   ├── Daniel Israel Resume.pdf           # Baseline PDF
+│   ├── Daniel Israel - CompanyA Resume.pdf
+│   └── Daniel Israel - CompanyB Resume.pdf
+└── generate-pdf.js               # PDF generator script
+```
+
+### Workflow
 - **Baseline**: `index.html` stays general-purpose (your master resume)
-- **Custom versions**: When applying to companies, the AI creates `index-CompanyName.html` files
-- Generate custom PDFs: `node generate-pdf.js CompanyName` → `Daniel Israel - CompanyName Resume.pdf`
+- **Custom versions**: When applying to companies, the AI creates `versions/index-CompanyName.html` files
+- **Generate PDFs**: `node generate-pdf.js CompanyName` → saves to `pdfs/Daniel Israel - CompanyName Resume.pdf`
 
 This prevents version drift and keeps your baseline resume pristine while allowing unlimited company-specific customizations!
 
@@ -30,8 +46,15 @@ git clone https://github.com/disrae/resume.git
 cd resume
 npm install
 cursor .
-# Edit your resume using pasted Job Descriptions into cursor, and natural language about your work... 
-npm run generate # to generate the pdf
+# Edit your resume using pasted Job Descriptions into cursor, and natural language about your work...
+
+# Generate baseline PDF
+npm run generate # or: node generate-pdf.js
+
+# Generate company-specific PDFs
+node generate-pdf.js CompanyName
+
+# PDFs are saved to the pdfs/ directory
 npm run dev # to iterate just on the content of the pdf, but won't show true layout on letter sized sheet.
 ```
 
