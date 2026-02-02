@@ -32,12 +32,12 @@ const fs = require('fs');
 async function generateResumePDF() {
   // Get company name from command line argument
   const companyName = process.argv[2];
-  
+
   console.log('🚀 Starting PDF generation...');
-  
+
   // Determine which HTML file to use
   let htmlFile, pdfFile;
-  
+
   if (companyName) {
     htmlFile = `versions/index-${companyName}.html`;
     pdfFile = `pdfs/Daniel Israel - ${companyName} Resume.pdf`;
