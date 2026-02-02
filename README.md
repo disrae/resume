@@ -42,7 +42,7 @@ resume/
 
 This prevents version drift and keeps your baseline resume pristine while allowing unlimited company-specific customizations!
 
-## Cover Letter System (Simplified)
+## Cover Letter System
 
 Direct generation of tailored cover letters as text files:
 
