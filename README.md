@@ -27,7 +27,12 @@ resume/
 │   ├── Daniel Israel Resume.pdf           # Baseline PDF
 │   ├── Daniel Israel - CompanyA Resume.pdf
 │   └── Daniel Israel - CompanyB Resume.pdf
-└── generate-pdf.js               # PDF generator script
+├── cover-letters/                # Cover letter system (simplified)
+│   ├── instructions.md           # Writing guidelines & style preferences
+│   ├── Daniel Israel - CompanyA Cover Letter.txt
+│   ├── Daniel Israel - CompanyB Cover Letter.txt
+│   └── [additional cover letters...]
+├── generate-pdf.js               # PDF generator script
 ```
 
 ### Workflow
@@ -36,6 +41,18 @@ resume/
 - **Generate PDFs**: `node generate-pdf.js CompanyName` → saves to `pdfs/Daniel Israel - CompanyName Resume.pdf`
 
 This prevents version drift and keeps your baseline resume pristine while allowing unlimited company-specific customizations!
+
+## Cover Letter System (Simplified)
+
+Direct generation of tailored cover letters as text files:
+
+### Cover Letter Workflow
+- **Instructions**: `cover-letters/instructions.md` contains writing guidelines, tone preferences, and structure
+- **Direct Generation**: AI creates company-specific cover letters directly as `.txt` files
+- **File Naming**: `Daniel Israel - Company Name Cover Letter.txt`
+- **Iteration**: Update `instructions.md` as you learn what works best
+
+This streamlined approach focuses on content quality over complex tooling!
 
 ## Quick Start
 

@@ -10,7 +10,8 @@
     "preview": "open index.html",
     "clean:pdfs": "rm -rf pdfs/*.pdf",
     "list:versions": "ls -la versions/",
-    "list:pdfs": "ls -la pdfs/"
+    "list:pdfs": "ls -la pdfs/",
+    "list:letters": "ls -la cover-letters/"
   },
   "//": "Generate baseline: npm run gen | Generate custom: node generate-pdf.js CompanyName",
   "dependencies": {
