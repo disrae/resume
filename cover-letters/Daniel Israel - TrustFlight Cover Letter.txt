@@ -1,0 +1,21 @@
+Daniel Israel
+[Your Contact Information]
+[Date]
+
+TrustFlight Hiring Team
+[Company Address]
+
+Dear TrustFlight Hiring Team,
+
+When aviation professionals perform life-critical work every day, pilots, maintenance crews, air traffic controllers, and operations teams, they deserve software that evolves as rapidly as their safety and efficiency needs demand. Since 2020, I've been building highly interactive applications with React, TypeScript, and global state management libraries like Redux, creating intuitive and refined user experiences. TrustFlight's mission to modernize aviation operations through innovative AI, digital workflow, and analytics applications perfectly aligns with my aspiration to apply these skills to mission-critical software that enhances safety and efficiency.
+
+My recent work at InsightLabs demonstrates exactly this approach to rapid software evolution. I architected a Zendesk integration system that dynamically imports support tickets, streamlining customer service workflows clients. More importantly, I built an automation pipeline that enables scheduled analyses on various document types, generating comparative reports over time with charts and PDF delivery—features that get added frequently based on user feedback, much like the iterative development TrustFlight likely practices for healthcare and aviation tools.
+
+At Secrets AI, I developed a React Native companion app from scratch, implementing in-app purchases and backend monetization systems while maintaining pixel-perfect user experiences across platforms with lots of animations. The key was my AI-augmented development approach: structured TypeScript architectures and modular systems that allow me to prototype and deploy features rapidly, reducing development cycles and ensuring users get the functionality they need when they need it.
+
+What genuinely excites me about TrustFlight is your commitment to serving aviation professionals whose work impacts lives daily. Pilots, maintenance crews, and operations teams don't have time for clunky software, they need tools that anticipate their needs, adapt quickly, and make their important work more efficient and effective. Your focus on bringing aviation into the future with modern AI, digital workflow, and analytics capabilities resonates deeply with my experience building systems that professionals actually love to use.
+
+I'm enthusiastic about the opportunity to contribute to TrustFlight's mission of enhancing aviation operations through software innovation. I'd welcome the chance to discuss how my background in rapid feature development and user-centric design could help advance your SmartDoc platform for aviation professionals. Thank you for considering my application, I'm excited about the possibility of joining your team.
+
+Best regards,
+Daniel Israel

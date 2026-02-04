@@ -1,44 +1,20 @@
 # Cover Letter Generation Instructions
 
-## My Writing Style & Preferences
-- **Tone**: Professional yet approachable, confident and enthusiastic
-- **Voice**: First-person, authentic, passionate about technology and problem-solving
-- **Length**: 3-4 paragraphs, 300-450 words total
-- **Structure**: Hook → Experience highlights → Company fit → Call to action
+## Tone & Voice
+Professional yet approachable, confident and enthusiastic. First-person, authentic, passionate about technology and problem-solving. 3-4 paragraphs, 300-450 words total.
 
-## Key Elements to Include
-- **Header**: Name, contact info, date, company details
-- **Opening**: Connect my background to the role/company mission
-- **Body**: 2-3 specific achievements with metrics/impact
-- **Technical Fit**: Show how my skills match their requirements
-- **Closing**: Enthusiasm + next steps
+## The Recipe (Cover Letter Ingredients Formula)
+1. **Strong Hook/Opening**: Grab attention in 2–3 sentences
+2. **2–3 Targeted Proof Points**: Your best matches to their needs (pull from experience-tracker.md)
+3. **Genuine "Why Us" Paragraph**: Show you've done homework on the company
+4. **Confident Close**: Call to action + thanks
 
-## Content Guidelines
-- **Focus on Impact**: Show results, not just responsibilities
-- **Quantify Achievements**: Include metrics where possible (5x speedup, etc.)
-- **Tailor to Company**: Research their mission and connect my experience
-- **Show Enthusiasm**: Genuine interest in their work and culture
-- **Be Concise**: Every sentence adds value
+## Experience Source
+Pull specific examples and achievements from experience-tracker.md. Focus on:
+- Quantifiable results and impact
+- Technical skills relevant to the role
+- Problem-solving and innovation
+- AI-assisted development experience where relevant
 
-## Company-Specific Customization
-- **Versaterm**: Emphasize public safety impact, AI services, real-time systems
-- **Picovoice**: Focus on AI tooling, on-device AI, developer experience
-- **General Tech**: Highlight innovation, scalability, user experience
-
-## Technical Focus Areas
-- **AI/ML**: Experience with AI tools, real-time processing, intelligent systems
-- **Full-Stack**: React/TypeScript, Node.js, databases, APIs
-- **Testing**: Automation, real-time systems, performance optimization
-- **Architecture**: Scalable solutions, cloud services, developer tooling
-
-## Iteration Guidelines
-- **Feedback Loop**: Update these instructions based on what works
-- **A/B Testing**: Try different approaches and refine
-- **Company Research**: Adapt tone/style to company culture
-- **Personalization**: Make each letter unique and specific
-
-## Output Format
-- Clean text file (.txt)
-- Professional formatting with line breaks
-- Ready for copy-paste into applications
-- File naming: `Daniel Israel - Company Name Cover Letter.txt`
+## Output Requirements
+Clean text file (.txt) with professional formatting. File naming: `Daniel Israel - Company Name Cover Letter.txt`

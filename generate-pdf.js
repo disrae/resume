@@ -40,7 +40,7 @@ async function generateResumePDF() {
 
   if (companyName) {
     htmlFile = `versions/index-${companyName}.html`;
-    pdfFile = `pdfs/Daniel Israel - ${companyName} Resume.pdf`;
+    pdfFile = `versions/pdfs/Daniel Israel - ${companyName} Resume.pdf`;
 
     // Check if the company-specific file exists
     const htmlPath = path.join(__dirname, htmlFile);
@@ -53,7 +53,7 @@ async function generateResumePDF() {
     console.log(`📄 Generating custom resume for: ${companyName}`);
   } else {
     htmlFile = 'index.html';
-    pdfFile = 'pdfs/Daniel Israel Resume.pdf';
+    pdfFile = 'versions/pdfs/Daniel Israel Resume.pdf';
     console.log('📄 Generating baseline resume');
   }
 
