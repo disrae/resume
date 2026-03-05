@@ -1,0 +1,23 @@
+Daniel Israel
+Vancouver, BC | danny.israel@gmail.com | linkedin.com/in/daniel-israel-software-dev
+
+[Date]
+
+Hiring Manager
+Policy Reporter by Valeris
+Canada
+
+Dear Hiring Manager,
+
+I'm excited to apply for the Full Stack Engineer position at Policy Reporter. With expertise in React, TypeScript, and Python development, I bring four years of experience building scalable web applications and a passion for healthcare technology solutions that drive real patient impact.
+
+My recent work at InsightLabs demonstrates my full-stack capabilities, where I architected multi-format file upload systems and implemented comprehensive type systems across Python backends and TypeScript frontends. At Secrets AI, I built production-ready React Native applications with complex state management and real-time features. I've consistently delivered maintainable, decoupled code architectures that support long-term scalability—exactly what's needed for Policy Reporter's payer policy data tracking systems.
+
+What draws me to Policy Reporter is your mission to enhance market access strategies through real-time policy tracking. I'm particularly impressed by your focus on continuous learning and modernizing tech stacks to solve complex healthcare challenges. The opportunity to work on systems that directly impact patient access to therapies aligns perfectly with my interest in meaningful, outcome-driven development.
+
+I'm eager to bring my technical leadership experience and enthusiasm for healthcare innovation to your team. I'd welcome the opportunity to discuss how my background in AI-assisted development and full-stack engineering can contribute to Policy Reporter's important work.
+
+Thank you for considering my application.
+
+Best regards,
+Daniel Israel

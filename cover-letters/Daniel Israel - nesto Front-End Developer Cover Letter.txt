@@ -1,0 +1,23 @@
+Daniel Israel
+[Your Contact Information]
+[Date]
+
+nesto Hiring Team
+nesto
+[Company Address]
+Vancouver, BC
+
+Dear nesto Hiring Team,
+
+When mortgage professionals need technology that can reshape an entire industry while maintaining trust and speed, they need developers who understand both the technical complexity and business impact. With 4+ years of React and TypeScript experience building scalable frontend applications, I've specialized in creating high-performance user interfaces that drive real business outcomes. nesto's mission to disrupt the $2.1 trillion mortgage industry through cloud technology perfectly aligns with my passion for building technology that transforms traditional sectors.
+
+My experience demonstrates the frontend expertise and problem-solving needed for mortgage technology innovation. At Goose Insurance, I proactively identified performance bottlenecks and rebuilt their website with Astro JS, reducing load times from 8 seconds to milliseconds while cutting costs 90%. I designed Redux-controlled UI components where backend payloads could directly update application state, enabling seamless integration between frontend and backend systems. At Secrets AI, I built a comprehensive React Native app with complex state management for real-time messaging and user preferences, utilizing AI-powered development tools to accelerate feature development while maintaining code quality.
+
+These experiences, combined with my expertise in Jest testing, REST API integration, and responsive design, directly translate to nesto's requirements for modern web applications. My structured TypeScript architectures and AI-assisted development approach enable rapid prototyping and deployment, supporting the fast-paced innovation cycles that mortgage technology demands.
+
+What excites me about nesto is your entrepreneurial culture built on trust, speed, and relentless client focus. Working alongside high-performing talent in Canada's mortgage ecosystem, touching production systems that impact millions of Canadians, aligns perfectly with my desire to build technology that matters.
+
+I'm enthusiastic about contributing to nesto's mission of disrupting the mortgage industry. I'd welcome the opportunity to discuss how my React expertise, performance optimization skills, and collaborative approach could advance your cloud platform. Thank you for considering my application.
+
+Best regards,
+Daniel Israel

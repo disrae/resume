@@ -1,0 +1,22 @@
+Daniel Israel
+Vancouver, BC, Canada
+danny.israel@gmail.com
+linkedin.com/in/daniel-israel-software-dev
+
+[Date]
+
+Hiring Manager
+SafelyYou
+
+Dear SafelyYou Hiring Team,
+
+I'm excited by SafelyYou's mission to revolutionize senior care through AI and edge devices. Your recognition as an innovative fall prevention technology and Fortune Impact 20 company aligns perfectly with my passion for building technology that improves lives.
+
+My experience in backend systems and device management matches your Fleet team's needs. At InsightLabs, I architected automation pipelines and migrated to dedicated backend services, improving reliability and reducing costs. I leveraged AI tools to rapidly implement file upload systems and created shared type definitions for runtime safety across distributed systems. In mobile development, I built offline-capable applications with intelligent caching and complex device state management.
+
+I'm eager to contribute my cloud infrastructure skills and learn Go/Python while helping scale your edge device ecosystem for better resident safety and care.
+
+I'd welcome the opportunity to discuss how I can support your mission. Thank you for considering my application.
+
+Best regards,
+Daniel Israel

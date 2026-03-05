@@ -1,0 +1,22 @@
+Daniel Israel
+Vancouver, BC, Canada
+danny.israel@gmail.com
+linkedin.com/in/daniel-israel-software-dev
+
+[Date]
+
+Hiring Manager
+Total Life
+
+Dear Total Life Hiring Team,
+
+I'm inspired by your mission to make mental healthcare accessible to older adults through innovative telehealth solutions. Your work resonates with my passion for building technology that improves lives.
+
+My experience in AI-assisted development and modern web technologies fits your full-stack role perfectly. I've used AI tools like Cursor and GitHub Copilot to rapidly prototype features and build automation systems. In frontend development, I've created responsive, mobile-first interfaces using HTML, CSS, ES6, and React, focusing on performance and user-centered design.
+
+I'm eager to learn Go while contributing to your platform. My background scaling backend systems and collaborating across teams positions me to help deliver accessible solutions for older adults.
+
+I'd welcome discussing how my skills can support your mission. Thank you for considering my application.
+
+Best regards,
+Daniel Israel

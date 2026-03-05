@@ -1,0 +1,24 @@
+Daniel Israel
+Vancouver, BC, Canada
+danny.israel@gmail.com
+linkedin.com/in/daniel-israel-software-dev
+
+[Date]
+
+Hiring Manager
+Orbis Investments
+
+Dear Orbis Investments Hiring Team,
+
+I'm excited to apply for the Software Developer position on your Vancouver Operations Technology team. Your contrarian approach to investing and commitment to thinking differently resonates with my passion for innovative problem-solving and continuous learning. The opportunity to build operations systems that create meaningful impact for clients managing $50B+ in assets is particularly compelling.
+
+My full-stack development experience and AI-assisted approach align well with your technology needs. At InsightLabs, I partnered with business teams to architect Zendesk integrations and automation platforms, delivering real value through technical solutions. I leveraged AI tools extensively to accelerate development while maintaining code quality, and collaborated on system architecture decisions to improve workflow efficiency and reduce costs.
+
+I bring strong React expertise and experience designing user interfaces that business teams can easily adopt, as demonstrated by my work creating flexible UI components and dashboards at Goose Insurance. My computer science background includes object-oriented programming in Java and C/C++, complemented by professional experience building scalable TypeScript/JavaScript applications with comprehensive type systems.
+
+I'm eager to contribute to your Operations Technology team, learn financial industry concepts, and grow into broader responsibilities while helping unlock efficiency for your global operations.
+
+I'd welcome the opportunity to discuss how my technical skills and collaborative approach can support Orbis's mission. Thank you for considering my application.
+
+Best regards,
+Daniel Israel

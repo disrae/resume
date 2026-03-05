@@ -1,0 +1,23 @@
+Daniel Israel
+Vancouver, BC | danny.israel@gmail.com | linkedin.com/in/daniel-israel-software-dev
+
+[Date]
+
+Hiring Manager
+Crossing Hurdles
+Canada
+
+Dear Hiring Manager,
+
+I'm excited to apply for the Fullstack Developer position at Crossing Hurdles. With strong experience in React, Next.js, TypeScript, and Python development, I bring comprehensive full-stack expertise and a proven track record of building scalable web applications that perform reliably in production environments.
+
+My recent work demonstrates the technical skills you're seeking. At InsightLabs, I architected and implemented REST APIs using Python frameworks while optimizing database queries and backend performance. I migrated infrastructure to improve deployment workflows and system reliability, directly transferable to AWS environments. At Secrets AI, I built complex React applications with TypeScript, integrating backend services and managing production deployments across platforms.
+
+What particularly interests me about Crossing Hurdles is the opportunity to work on modern full-stack systems that solve real business challenges. Your focus on PostgreSQL data modeling, high-performance APIs, and AWS infrastructure aligns perfectly with my experience in database optimization and cloud deployment. I'm eager to contribute to teams that maintain high standards for code quality and operate efficiently in remote, async environments.
+
+I'm excited about the possibility of bringing my full-stack development expertise and collaborative approach to Crossing Hurdles. I'd welcome the opportunity to discuss how my background in React/Next.js frontend development, Python backend services, and production deployment can support your team's mission.
+
+Thank you for considering my application.
+
+Best regards,
+Daniel Israel

@@ -1,0 +1,23 @@
+Daniel Israel
+[Your Contact Information]
+[Date]
+
+EviSmart Hiring Team
+EviSmart (by Evident)
+675 W Hastings St
+Vancouver, BC
+
+Dear EviSmart Hiring Team,
+
+When dental professionals collaborate across clinics, labs, and manufacturers, they need software that seamlessly connects workflows and adapts to evolving needs. With 4+ years building scalable web applications with integrations, I've specialized in creating reliable systems for specialized industries. EviSmart's mission to revolutionize dental care through AI-powered automation perfectly aligns with my passion for technical solutions that enhance collaboration and efficiency.
+
+My experience demonstrates the technical leadership needed for fast-paced development environments. At InsightLabs, I identified and architected solutions to eliminate waste and improve ease and speed of development. I built a Zendesk integration system for automatic ticket imports and implemented Google Cloud Scheduler for user-scheduled analyses. I advocated for migrating from Cloud Functions to dedicated backend services, improving development speed and system reliability while bringing the application to production-ready status. At Goose Insurance, I achieved a 90% cost improvement while vastly improving the performance by rebuilding their website with Astro JS, reducing load times from 8 seconds to milliseconds.
+
+These experiences, combined with my React, Node.js, and AI-assisted development expertise, directly translate to the demands of dental technology systems. My structured TypeScript architectures enable rapid feature prototyping and deployment, supporting iterative development cycles.
+
+Medical fields often lag in software and their time is very valuable, it excites me to bring them up to speed with the latest that software has to offer.
+
+I'm enthusiastic about contributing to EviSmart's mission. I'd welcome the opportunity to discuss how my full-stack development, performance optimization, and integration expertise could advance your dental technology platform. Thank you for considering my application.
+
+Best regards,
+Daniel Israel
