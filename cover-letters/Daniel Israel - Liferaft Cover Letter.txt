@@ -1,0 +1,20 @@
+Daniel Israel
+danny.israel@gmail.com
+Vancouver, BC, Canada
+[Date]
+
+Liferaft Hiring Team
+Halifax, NS
+
+Dear Liferaft Hiring Team,
+
+I build React applications that make complex data analysis feel simple and intuitive. At InsightLabs, I created an automation pipeline that runs scheduled analyses on document types, generating comparative reports with charts and PDF delivery—tools that feel right at home in intelligence gathering workflows.
+
+At Secrets AI, I built a React Native companion app from scratch with real-time chat, image sharing, and cross-platform state management. The focus was always on creating interfaces that just work, no matter the device or user.
+
+Liferaft's mission to empower security teams with OSINT tools resonates deeply with me. I've spent years building user interfaces that professionals actually want to use for their critical work. I'm excited to bring that same focus to cybersecurity applications.
+
+I'd love to discuss how my React expertise could contribute to your intelligence platform.
+
+Best,
+Daniel Israel

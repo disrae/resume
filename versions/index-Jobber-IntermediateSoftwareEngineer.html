@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  ╔════════════════════════════════════════════════════════════════════════╗
+  ║  BASELINE MASTER RESUME - DO NOT MODIFY FOR COMPANY-SPECIFIC VERSIONS  ║
+  ╚════════════════════════════════════════════════════════════════════════╝
+  
+  📋 VERSION MANAGEMENT INSTRUCTIONS (for AI assistants):
+  
+  This file (index.html) is the BASELINE/MASTER resume.
+  
+  ✅ DO modify this file when:
+     - Improving the general resume (skills, experience, formatting)
+     - Adding new accomplishments that apply broadly
+     - Updating contact info or core content
+  
+  ❌ DO NOT modify this file when:
+     - Customizing for a specific company or job posting
+     - Tailoring the professional summary for a role
+     - Emphasizing specific skills for an application
+  
+  🎯 FOR COMPANY-SPECIFIC CUSTOMIZATION:
+     1. AI assistant, copy this file to: versions/index-{CompanyName}.html
+        Example: versions/index-PolicyMe.html, versions/index-Google.html
+     2. Modify the copy with company-specific tailoring using ONLY existing experience and skills from this baseline resume
+        ❌ NEVER invent, fabricate, or exaggerate experience, technologies, or achievements
+        ✅ Only emphasize and rephrase existing content to match job requirements
+     3. Generate PDF: node generate-pdf.js PolicyMe
+  
+  📁 NAMING CONVENTION:
+     - Baseline: index.html → "Daniel Israel Resume.pdf"
+     - Custom: versions/index-PolicyMe.html → "Daniel Israel - PolicyMe Resume.pdf"
+  
+  This keeps the baseline clean and prevents version drift.
+-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Résumé</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        font-size: 11px !important;
+        line-height: 1.2 !important;
+      }
+
+      .page-break {
+        page-break-before: always;
+      }
+
+      h1 {
+        font-size: 22px !important;
+      }
+
+      h2 {
+        font-size: 15px !important;
+      }
+
+      h3 {
+        font-size: 12px !important;
+      }
+
+      p,
+      li {
+        font-size: 10px !important;
+        line-height: 1.1 !important;
+      }
+
+      .text-xs {
+        font-size: 8px !important;
+      }
+
+      .text-sm {
+        font-size: 9px !important;
+      }
+
+      .text-base {
+        font-size: 12px !important;
+      }
+
+      .text-lg {
+        font-size: 14px !important;
+      }
+
+      .mb-4 {
+        margin-bottom: 0.75rem !important;
+      }
+
+      .mb-3 {
+        margin-bottom: 0.5rem !important;
+      }
+
+      .mb-2 {
+        margin-bottom: 0.375rem !important;
+      }
+
+      .mb-1 {
+        margin-bottom: 0.25rem !important;
+      }
+    }
+  </style>
+</head>
+
+<script type="application/json" id="job-application-data">
+  {
+    "company": "Jobber",
+    "jobTitle": "Intermediate Software Engineer",
+    "appliedDate": "2026-03-10",
+    "status": "Applied",
+    "salaryRange": "$106,600 - $144,200 CAD",
+    "location": "Vancouver, BC · Hybrid",
+    "workType": "Full-time",
+    "companyDescription": "Jobber is a leading software platform that helps small businesses and their service providers succeed. They provide comprehensive business management solutions including job management, invoicing, customer communication, and scheduling tools. Their platform serves millions of entrepreneurs across North America, transforming how service-based businesses operate.",
+    "mission": "To help small businesses become successful by providing them with the tools and technology they need to grow and thrive.",
+    "impact": "Jobber serves tens of thousands of businesses, helping them deliver billions of dollars in services annually to happy customers across North America.",
+    "coreValues": ["Be humble", "Be supportive", "Give a sh*t"],
+    "team": "Software Engineering team - building industry-leading products for small business success",
+    "roleType": "Full-stack development with focus on backend technologies and scalable systems",
+    "responsibilities": [
+      "Contribute to the design, development, and delivery of features that address customer needs, collaborating with cross-functional teams",
+      "Work closely with senior engineers to refine requirements and scope technical solutions",
+      "Write, review, and maintain clean, scalable, and well-documented code",
+      "Participate in code reviews to ensure code quality and maintainability",
+      "Collaborate with your team to identify and solve technical challenges",
+      "Share knowledge and learn from others through paired programming, team discussions, and technical documentation",
+      "Stay curious and keep up to date with the latest tools, technologies, and best practices in software development",
+      "Utilize AI tools to enhance development practice"
+    ],
+    "requirements": [
+      "Proficiency in writing clean, maintainable, and testable code",
+      "Familiarity with Agile/Scrum development methodologies",
+      "A structured understanding of common backend frameworks, technologies, and patterns",
+      "Familiarity working with observability tools such as DataDog",
+      "Strong problem-solving skills and a collaborative mindset",
+      "A willingness to learn, adapt, and grow as part of a team",
+      "Experience using developer AI tools like Copilot or Cursor"
+    ],
+    "niceToHave": [
+      "Experience with React, React Native, TypeScript, Ruby on Rails",
+      "Familiarity with GraphQL API Layer and its optimization",
+      "Prior experience working on scalable distributed systems",
+      "Exposure to background processing frameworks (e.g., Sidekiq, Active Jobs)"
+    ],
+    "benefits": [
+      "Extended health benefits package with fully paid premiums for body and mind",
+      "Matching in RRSP, TFSA or FHSA",
+      "Stock options",
+      "Annual stipends for health and wellness",
+      "Retirement savings matching",
+      "Dedicated Talent Development program with coaching and learning opportunities",
+      "Professional growth and career advancement opportunities"
+    ],
+    "whyJoin": [
+      "Work on real problems that help small businesses succeed",
+      "Collaborative environment with autonomy and direct impact on company future",
+      "Early and often release cycles with direct customer feedback",
+      "Strong emphasis on professional growth and work-life harmony",
+      "Opportunity to work with diverse teams and mentor/mentee relationships",
+      "Unique opportunity to build and leave impact on a $400-billion industry"
+    ],
+    "customizationNotes": [
+      "Emphasized collaborative development practices and code quality focus",
+      "Highlighted Agile/Scrum experience through team collaboration",
+      "Focused on backend development experience and scalable systems",
+      "Emphasized AI tooling experience and modern development practices",
+      "Highlighted problem-solving skills and willingness to learn",
+      "Removed any non-backend focused experience to match role requirements"
+    ],
+    "interviewPrep": [
+      "Prepare examples of clean, maintainable code and code review participation",
+      "Discuss experience with Agile/Scrum methodologies and team collaboration",
+      "Highlight backend development experience and scalable system design",
+      "Demonstrate familiarity with observability tools and monitoring",
+      "Show examples of AI tool usage in development workflow",
+      "Prepare technical challenges focusing on backend patterns and scalability"
+    ],
+    "jobPostingUrl": "",
+    "applicationSource": "LinkedIn",
+    "contactInfo": "",
+    "hiringProcess": [
+      "Talent team interview (45 mins)",
+      "Hiring Manager interview (60 mins)",
+      "Take-home challenge with follow-up Functional interview (90 mins)",
+      "Senior Leadership interview (30 mins)"
+    ]
+  }
+</script>
+
+<body class="max-w-3xl mx-auto p-4 bg-white text-gray-900 leading-tight">
+
+  <!-- HEADER -->
+  <header class="text-center mb-2 border-b-2 border-gray-800 pb-2">
+    <h1 class="text-3xl font-bold">Daniel Israel</h1>
+    <p class="text-base mt-1">Software Developer</p>
+    <p class="mt-0.5 text-sm">
+      danny.israel@gmail.com | linkedin.com/in/daniel-israel-software-dev | Vancouver, BC, Canada
+    </p>
+  </header>
+
+  <!-- PROFESSIONAL SUMMARY (ATS-friendly) -->
+  <section class="mb-2">
+    <h2 class="text-lg font-bold mb-1 border-b-2 border-gray-300 pb-1">Professional Summary</h2>
+    <p class="text-xs leading-snug">
+      Full-Stack Engineer with strong backend development expertise, specializing in scalable systems, serverless
+      architectures, and collaborative software development. Experienced in Agile/Scrum methodologies with a focus on
+      writing clean, maintainable, and well-tested code. Proven track record optimizing cloud infrastructure, building
+      automation frameworks, and leveraging AI tools to enhance development productivity while ensuring code quality
+      and system reliability.
+    </p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="mb-4">
+    <h2 class="text-lg font-bold mb-2 border-b-2 border-gray-300 pb-1">Professional Experience</h2>
+
+    <div class="mb-3">
+      <div class="flex justify-between items-start mb-0.5">
+        <p class="text-base font-semibold">Senior Full Stack Developer</p>
+        <span class="text-gray-600 text-xs">Nov 2025 – Present</span>
+      </div>
+      <p class="font-medium text-gray-700 mb-1 text-xs">InsightLabs</p>
+      <ul class="list-disc ml-3 space-y-0.5 text-xs leading-tight">
+        <li>Built scalable backend automation framework enabling customers to run scheduled analyses on dynamic data, collaborating with cross-functional teams on requirements and technical solutions</li>
+        <li>Optimized cloud infrastructure using Firebase/Cloud Functions, resolving storage leaks and improving system reliability through proactive monitoring and performance tuning</li>
+        <li>Implemented multi-format file upload system with robust backend processing, real-time progress tracking, and comprehensive error handling</li>
+        <li>Participated in Agile development cycles with code reviews, paired programming sessions, and knowledge sharing to ensure code quality and maintainability</li>
+        <li>Integrated third-party APIs including Zendesk support platform for dynamic ticket imports, ensuring scalable and well-documented backend services</li>
+      </ul>
+    </div>
+
+    <div class="mb-3">
+      <div class="flex justify-between items-start mb-0.5">
+        <h3 class="text-base font-semibold">Mobile Developer</h3>
+        <span class="text-gray-600 text-xs">Jan 2025 – Oct 2025</span>
+      </div>
+      <p class="font-medium text-gray-700 mb-1 text-xs">Secrets AI</p>
+      <ul class="list-disc ml-3 space-y-0.5 text-xs leading-tight">
+        <li>Designed and implemented scalable backend architecture using Node.js and SQL databases to support real-time messaging and image processing features</li>
+        <li>Built comprehensive API endpoints for chat interfaces, ensuring clean, well-documented, and testable backend code following established patterns</li>
+        <li>Integrated in-app purchase systems with backend monetization logic, implementing secure payment processing and transaction management</li>
+        <li>Collaborated with team members on backend optimization, participating in code reviews and technical discussions to solve complex integration challenges</li>
+        <li>Implemented automated testing for backend services, ensuring reliability and maintainability of scalable distributed systems</li>
+      </ul>
+    </div>
+
+    <div class="mb-3">
+      <div class="flex justify-between items-start mb-0.5">
+        <h3 class="text-base font-semibold">Mobile Front End Developer</h3>
+        <span class="text-gray-600 text-xs">Jul 2023 – Dec 2024</span>
+      </div>
+      <p class="font-medium text-gray-700 mb-1 text-xs">Goose Insurance Services</p>
+      <ul class="list-disc ml-3 space-y-0.5 text-xs leading-tight">
+        <li>Rewrote React Native components following senior engineering patterns, ensuring maintainable and well-tested code that adheres to established standards</li>
+        <li>Designed Redux-controlled architecture with flexible backend solutions, implementing clean separation of concerns and scalable state management</li>
+        <li>Optimized backend performance by rebuilding website with Astro JS, reducing load times from 8 seconds to milliseconds and cutting infrastructure costs by 90%</li>
+        <li>Fixed push notification systems and contributed improvements to open-source packages, demonstrating collaborative development and code quality commitment</li>
+        <li>Participated in Agile development cycles, conducting code reviews and collaborating with team members to solve technical challenges</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- ADDITIONAL EXPERIENCE -->
+  <section class="mb-4">
+    <div class="mb-3">
+      <div class="flex justify-between items-start mb-0.5">
+        <h3 class="text-base font-semibold">Full Stack Developer</h3>
+        <span class="text-gray-600 text-xs">May 2020 – Sep 2023</span>
+      </div>
+      <p class="font-medium text-gray-700 mb-1 text-xs">PhoneMe Project UBC</p>
+      <ul class="list-disc ml-3 space-y-0.5 text-xs leading-tight">
+        <li>Led migration to Firebase serverless architecture, reducing operational costs by 97% through strategic infrastructure optimization and performance monitoring</li>
+        <li>Designed and implemented scalable backend services for offline-capable applications with robust media upload and advanced search functionality</li>
+        <li>Built well-documented API endpoints and database schemas, ensuring clean, maintainable code that supports distributed system requirements</li>
+        <li>Collaborated with team members on technical challenges, participating in code reviews and implementing best practices for scalable web applications</li>
+        <li>Applied Agile development methodologies to deliver features iteratively, focusing on code quality and user experience improvements</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="mb-3">
+    <h2 class="text-lg font-bold mb-2 border-b-2 border-gray-300 pb-1">Education</h2>
+
+    <div class="mb-2">
+      <div class="flex justify-between items-start mb-0.5">
+        <h3 class="text-sm font-semibold">Bachelor of Computer Science</h3>
+        <span class="text-gray-600 text-xs">2018 – 2022</span>
+      </div>
+      <p class="font-medium text-gray-700 text-xs">University of British Columbia</p>
+      <p class="text-xs leading-tight">Algorithms, ML, computer vision. Java, C/C++, Python, Haskell, TypeScript. 3rd
+        place hackathon 2019.</p>
+    </div>
+
+    <div class="mb-2">
+      <div class="flex justify-between items-start mb-0.5">
+        <h3 class="text-sm font-semibold">Bachelor of Applied Human Sciences</h3>
+        <span class="text-gray-600 text-xs">2009 – 2014</span>
+      </div>
+      <p class="font-medium text-gray-700 text-xs">Concordia University – Montreal, QC</p>
+      <p class="text-xs leading-tight">Dean's List. Research Assistant, Teaching Assistant. Presented at SSHRC
+        conference.</p>
+    </div>
+  </section>
+
+  <!-- TECHNICAL SKILLS -->
+  <section class="mb-2">
+    <h2 class="text-lg font-bold mb-1 border-b-2 border-gray-300 pb-1">Technical Skills</h2>
+    <div class="grid grid-cols-2 gap-1">
+      <div>
+        <p class="font-semibold mb-0.5 text-xs">Languages</p>
+        <p class="text-xs leading-tight">TypeScript, JavaScript, Python, Ruby, Java, C/C++</p>
+      </div>
+      <div>
+        <p class="font-semibold mb-0.5 text-xs">Frontend & Mobile</p>
+        <p class="text-xs leading-tight">React, React Native, Next.js, Redux, Tailwind, Expo</p>
+      </div>
+      <div>
+        <p class="font-semibold mb-0.5 text-xs">Backend & Frameworks</p>
+        <p class="text-xs leading-tight">Node.js, Firebase, GCP, Flask, Ruby on Rails, GraphQL</p>
+      </div>
+      <div>
+        <p class="font-semibold mb-0.5 text-xs">Tools & Platforms</p>
+        <p class="text-xs leading-tight">Git, Docker, DataDog, Agile/Scrum, AI Tools (Copilot, Cursor)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="mb-2">
+    <h2 class="text-lg font-bold mb-1 border-b-2 border-gray-300 pb-1">Projects & Demos</h2>
+    <div class="text-xs space-y-0.5 leading-tight">
+      <p><strong><a href="https://github.com/disrae/resume" class="text-blue-600 hover:text-blue-800">AI Resume
+            Generator</a>:</strong> Open-source tool using AI-assisted development for automated PDF generation and ATS optimization</p>
+      <p><strong><a href="https://chat-plan-ai.vercel.app/en-ca"
+            class="text-blue-600 hover:text-blue-800">ChatPlanAI</a>:</strong> Scalable backend system with LLM integration for document processing and real-time collaboration</p>
+      <p><strong><a href="https://www.gooseinsurance.com/en-ca/" class="text-blue-600 hover:text-blue-800">Goose
+            Insurance</a>:</strong> High-performance backend optimization reducing infrastructure costs by 90% through strategic architecture improvements</p>
+      <p><strong>SOS Alert System:</strong> Built scalable notification system using Python backend with Twilio integration, reverse-engineering protocols for cost-effective distributed messaging</p>
+      <p><strong>PhoneMe UBC:</strong> Firebase serverless backend migration reducing costs by 97% with offline-capable architecture and robust API design</p>
+    </div>
+  </section>
+
+
+</body>
+
+</html>

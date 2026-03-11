@@ -1,0 +1,24 @@
+Daniel Israel
+Vancouver, BC
+[Your Phone Number]
+[Your Email]
+[Date]
+
+Hiring Manager
+Nutanix
+Vancouver, BC
+
+Dear Hiring Manager,
+
+As a recent computer science graduate eager to build software that runs at real-world scale, I'm excited by Nutanix's mission to power hybrid multicloud environments worldwide. Your Vancouver engineering site's focus on Kubernetes, distributed systems, and AI capabilities perfectly aligns with my technical background and passion for scalable infrastructure.
+
+My experience building production systems with Google Cloud Platform and Firebase demonstrates the cloud expertise you seek. At InsightLabs, I architected a Zendesk integration system and automated pipeline that processes customer data at scale, optimizing cloud infrastructure to reduce deployment costs by 20%. I implemented comprehensive error handling and type safety across frontend and backend systems, ensuring reliable distributed operations.
+
+Quality engineering and testing are core to my approach. During my ehsAI co-op, I developed table-building functionality using Test-Driven Development, mapping out all edge cases and achieving 100% test coverage. At Secrets AI, I integrated thorough testing strategies across functional and performance dimensions while collaborating with backend engineers on API contracts and real-time messaging systems.
+
+What draws me to Nutanix is your commitment to mentorship and growth in a collaborative environment. Your "Hungry, Humble, Honest, with Heart" values resonate with my own approach to engineering—continuously learning while contributing to systems that impact organizations globally. The opportunity to join your new Vancouver R&D site and help shape its culture as you expand into emerging AI capabilities is exactly the kind of hands-on learning experience I'm seeking.
+
+I'd welcome the opportunity to discuss how my programming fundamentals, cloud experience, and eagerness to grow through mentorship can contribute to Nutanix's hybrid multicloud solutions. Thank you for considering my application.
+
+Sincerely,
+Daniel Israel

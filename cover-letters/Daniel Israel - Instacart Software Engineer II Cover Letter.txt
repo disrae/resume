@@ -1,0 +1,23 @@
+Daniel Israel
+Vancouver, BC, Canada
+danny.israel@gmail.com
+linkedin.com/in/daniel-israel-software-dev
+
+[Date]
+
+Hiring Manager
+Instacart
+Canada
+
+Dear Hiring Manager,
+
+I'm excited to apply for the Software Engineer II position at Instacart. With experience building data pipelines and real-time systems that serve thousands of users, I'm drawn to Instacart's mission of transforming grocery delivery through innovative distributed systems.
+
+At InsightLabs, I designed customer-facing automation frameworks for scheduled data analysis, processing dynamic datasets and generating automated reports—directly relevant to Instacart's data pipeline and optimization challenges. I've also built full-stack applications with React, Python, and Firebase, including real-time chat systems and offline-capable data processing that handles complex state management across distributed users.
+
+What attracts me to Instacart is your Flex First approach and the opportunity to work on systems that literally feed millions while tackling distributed computing problems at scale. I thrive in collaborative environments and have a track record of delivering scalable solutions that improve user experience and system reliability.
+
+I'd welcome the chance to discuss how my experience in data engineering and full-stack development could contribute to Instacart's continued innovation.
+
+Best regards,
+Daniel Israel

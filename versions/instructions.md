@@ -155,4 +155,6 @@ experience-tracker file and regenerate the new resume.
 
 - **TrustFlight**: Emphasize document editing, React/TypeScript, aviation
   software
+- **TELUS Digital**: Emphasize React Native, Redux, push notifications, mobile
+  development, TypeScript, Expo/EAS deployment
 - **Default**: Full-stack development, AI tooling, performance optimization
