@@ -17,3 +17,8 @@ Pull specific examples and achievements from experience-tracker.md. Focus on:
 
 Clean text file (.txt) with professional formatting. File naming:
 `Daniel Israel - Company Name Cover Letter.txt`
+
+## Formatting
+
+Use line breaks liberally to keep lines under 80-100 chars for IDE readability.
+Break paragraphs across multiple lines.

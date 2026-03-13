@@ -1,0 +1,25 @@
+Daniel Israel
+danny.israel@gmail.com
+Vancouver, BC, Canada
+March 11, 2026
+
+ANVIL Hiring Team
+Ottawa, ON
+
+Dear ANVIL Hiring Team,
+
+At Goose Insurance, I noticed our marketing site was slow and expensive to run, so I rebuilt it with Astro JS 
+and Tailwind—load times went from 8 seconds to milliseconds and hosting costs dropped by 10x. At InsightLabs, 
+I built reusable component patterns and added TypeScript types across the system so we could build faster and safer.
+
+I've done TDD at previous roles and understand the value of slowing down to map out edge cases properly. For 
+the kind of work ANVIL does, that trade-off makes complete sense, and it's one I'm happy to make.
+
+What appeals to me about ANVIL is that the work matters. I want to build interfaces for teams making real 
+decisions about security—not just optimizing conversion funnels. I'm a React developer who adapts to what the 
+project needs, whether that's moving fast or being thorough.
+
+I'd love to chat about how I could contribute.
+
+Best,
+Daniel Israel
