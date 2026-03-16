@@ -1,0 +1,24 @@
+Daniel Israel
+danny.israel@gmail.com
+Vancouver, BC, Canada
+March 13, 2026
+
+Constructor Hiring Team
+Vancouver, BC
+
+Dear Constructor Hiring Team,
+
+I'm applying for the JavaScript Integration Engineer: Customer Data role.
+I build integration-heavy products with React, TypeScript, and Node.js,
+and I enjoy working directly with customers to solve real implementation
+problems.
+
+At InsightLabs, I architected a Zendesk integration that imported customer
+support data into dashboards and built automation workflows for reporting.
+
+Constructor's focus on measurable impact, technical depth, and customer
+outcomes really stands out to me. I'd love to help your team deliver
+reliable customer data integrations that power better ecommerce results.
+
+Best,
+Daniel Israel

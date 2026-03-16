@@ -1,0 +1,29 @@
+Daniel Israel
+danny.israel@gmail.com
+Vancouver, BC, Canada
+March 13, 2026
+
+Brex Hiring Team
+Vancouver, BC
+
+Dear Brex Hiring Team,
+
+I'm applying for the Intermediate Frontend Engineer role. I build client-facing
+products with React, React Native, and TypeScript, and I care a lot about
+shipping polished experiences.
+
+At Goose Insurance, I rebuilt the marketing site with Astro JS and reduced load
+times from 8 seconds to milliseconds while cutting infrastructure costs by 10x.
+I also built a real-time testing dashboard that helped speed QA by 5x through
+parallel test workflows.
+
+More recently at InsightLabs, I improved dashboard UX with standardized UI
+components and built shared TypeScript types across frontend and backend to
+increase delivery speed and reliability.
+
+Brex stands out to me because of the product quality bar and direct business
+impact. I'd love to contribute to experiments, product improvements, and the
+engineering craft your team emphasizes.
+
+Best,
+Daniel Israel

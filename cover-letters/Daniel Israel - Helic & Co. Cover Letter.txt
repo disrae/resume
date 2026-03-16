@@ -1,0 +1,27 @@
+Daniel Israel
+danny.israel@gmail.com
+Vancouver, BC, Canada
+March 16, 2026
+
+Helic & Co. Hiring Team
+Canada (Remote)
+
+Dear Helic & Co. Hiring Team,
+
+I'm applying for the Junior Software Engineer role. I enjoy writing clean,
+maintainable code and learning quickly in collaborative teams where strong
+engineering habits are part of day-to-day work.
+
+In recent roles, I shipped production features across JavaScript/TypeScript and
+Python codebases, including customer-facing automations, real-time dashboards,
+and mobile/web app improvements. I regularly debugged and optimized application
+behavior, worked through code reviews, and partnered with teammates to deliver
+reliable releases.
+
+Your focus on mentorship, agile collaboration, and practical product development
+is exactly what I'm looking for at this stage. I'd be excited to contribute to
+coding, testing, and maintenance work while continuing to grow into a stronger
+software engineer on your team.
+
+Best,
+Daniel Israel
