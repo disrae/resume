@@ -1,0 +1,27 @@
+Daniel Israel
+danny.israel@gmail.com
+Vancouver, BC, Canada
+March 16, 2026
+
+Cover Genius Hiring Team
+Vancouver, BC
+
+Dear Cover Genius Hiring Team,
+
+I'm applying for the Software Engineer III - Travel Cover role. I'm drawn to
+the idea of being the first engineer on a D2C product—owning the technical
+foundation and shaping what ships. I've worked across the stack with
+TypeScript, Node.js, and React, and I use AI tools (Cursor, Claude, Copilot)
+as part of my daily workflow, not as a novelty.
+
+At Goose Insurance I rebuilt the marketing site with Astro JS, cutting load
+times from 8 seconds to milliseconds and infrastructure costs by 10x. I also
+built a real-time testing dashboard that sped up QA by 5x. That insurance
+context plus building automation pipelines and shared type systems at
+InsightLabs is the kind of ownership and delivery I'd bring to TravelCover.
+
+I'd love to help define what AI-augmented development looks like for your
+team and ship a product that lets travelers buy protection directly.
+
+Best,
+Daniel Israel

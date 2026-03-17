@@ -1,0 +1,29 @@
+Daniel Israel
+danny.israel@gmail.com
+Vancouver, BC, Canada
+March 16, 2026
+
+Push Operations Hiring Team
+Vancouver, BC
+
+Dear Push Operations Hiring Team,
+
+I build across web, backend, and mobile with React, React Native, TypeScript,
+and Node.js, and I really enjoy building practical tools that make day-to-day
+work easier for people.
+
+At Secrets AI, I built a React Native app from scratch and implemented a
+full-stack in-app purchase system with a Node.js backend and SQL integration.
+At Goose Insurance, I fixed push notification issues and built a real-time
+testing dashboard that improved QA speed by 5x.
+
+More recently at InsightLabs, I built customer-facing automation features and
+shared TypeScript/Python types across frontend and backend to improve delivery
+speed and reliability.
+
+Push's mission to make people management "ridiculously easy" resonates with me.
+I'd love to contribute to your web and mobile product experience as the platform
+continues to scale.
+
+Best,
+Daniel Israel

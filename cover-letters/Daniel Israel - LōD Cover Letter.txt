@@ -1,0 +1,27 @@
+Daniel Israel
+danny.israel@gmail.com
+Vancouver, BC, Canada
+March 16, 2026
+
+LōD Hiring Team
+Vancouver, BC
+
+Dear LōD Hiring Team,
+
+I'm applying for the Full Stack Developer role. I build full-stack products
+with TypeScript, React, and Node.js, and I enjoy solving practical production
+problems with clean architecture and maintainable code.
+
+At InsightLabs, I built customer-facing automation pipelines, improved dashboard
+UX, and created shared TypeScript definitions across frontend and backend to
+increase delivery speed and reliability.
+
+At Goose Insurance, I built real-time internal tooling and a Firebase dashboard
+that helped speed QA by 5x through parallel workflows.
+
+LōD's focus on modern web applications at the intersection of energy and
+compute is exactly the kind of mission I want to contribute to. I'd love to
+help your team build reliable services and intuitive product experiences.
+
+Best,
+Daniel Israel

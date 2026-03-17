@@ -10,6 +10,7 @@ Compare job reqs against `experience-tracker.md`. STOP if:
   development)
 - Requires 5+ yrs exp or "Staff/Principal" level
 - Domain requires certs/clearance we don't have
+- Is not based in Vancouver or remote (I am based in Vancouver)/
 
 Confirmed stack: React, React Native, TypeScript, JS, Python, Next.js, Expo,
 Redux, Tailwind, AstroJS, Firebase, GCP, Node.js, Flask, SQL, Firestore, REST
