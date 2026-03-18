@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--
+  BASE TEMPLATE: FRONTEND
+  Bullet points are LOCKED. Do NOT rewrite them per application.
+  Only customize sections marked CUSTOMIZE.
+-->
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name - Résumé</title>
+  <title>Daniel Israel - Resume</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,29 +83,59 @@
     }
   </style>
 </head>
+<script type="application/json" id="job-application-data">
+{
+  "company": "Microsoft AI",
+  "jobTitle": "Senior Software Engineer",
+  "appliedDate": "2026-03-18",
+  "status": "Applied",
+  "salaryRange": "CAD $114,400 - CAD $203,900 per year",
+  "location": "Vancouver, BC",
+  "workType": "Full-time (Hybrid)",
+  "companyDescription": "MSN powers personalized content experiences for over 500 million users, with growing AI and ML-driven personalization and moderation systems.",
+  "requirements": [
+    "4+ years engineering experience with JavaScript/TypeScript, Python, or similar languages",
+    "2+ years experience with web front-end technologies such as JavaScript/TypeScript and React",
+    "Ability to pass Microsoft Cloud background screening requirements"
+  ],
+  "niceToHave": [
+    "Experience architecting and delivering CI/CD pipelines and automation workflows",
+    "Experience with cloud/web technologies such as Kubernetes and Azure",
+    "Power BI data modeling and visualization experience",
+    "Strong system design and architecture problem-solving skills"
+  ],
+  "jobPostingUrl": "",
+  "applicationSource": "LinkedIn",
+  "templateUsed": "frontend"
+}
+</script>
 
 <body class="max-w-3xl mx-auto p-4 bg-white text-gray-900 leading-tight">
 
   <!-- HEADER -->
   <header class="text-center mb-2 border-b-2 border-gray-800 pb-2">
     <h1 class="text-3xl font-bold">Daniel Israel</h1>
-    <p class="text-base mt-1">Software Developer</p>
+    <!-- CUSTOMIZE:TITLE - match job posting title exactly -->
+    <p class="text-base mt-1">Senior Software Engineer</p>
     <p class="mt-0.5 text-sm">
       danny.israel@gmail.com | linkedin.com/in/daniel-israel-software-dev | Vancouver, BC, Canada
     </p>
   </header>
 
-  <!-- PROFESSIONAL SUMMARY (ATS-friendly) -->
+  <!-- CUSTOMIZE:SUMMARY - rewrite 2-3 sentences echoing job keywords, source from experience-tracker.md -->
   <section class="mb-2">
     <h2 class="text-lg font-bold mb-1 border-b-2 border-gray-300 pb-1">Professional Summary</h2>
-    <p class="text-sm leading-tight">
-      Full-Stack Engineer specializing in React, TypeScript, and modern frontend tooling with extensive experience
-      building end-to-end web and mobile applications. Expert in AI-assisted development, responsive UI/UX
-      design, and serverless architectures.
+    <p class="text-xs leading-snug">
+      Software Engineer with ~4 years of development experience specializing in React, React Native, and
+      TypeScript across production web and mobile applications. Built high-performance front-end systems,
+      real-time interfaces, and automation pipelines with measurable impact, including reducing web load
+      times from 8 seconds to milliseconds and enabling 5x faster test workflows. Brings a type-safe,
+      AI-assisted development approach across TypeScript/Python stacks to accelerate delivery while
+      maintaining quality and scalability.
     </p>
   </section>
 
-  <!-- EXPERIENCE -->
+  <!-- EXPERIENCE — LOCKED. Do NOT rewrite bullets. -->
   <section class="mb-4">
     <h2 class="text-lg font-bold mb-2 border-b-2 border-gray-300 pb-1">Professional Experience</h2>
 
@@ -111,11 +146,9 @@
       </div>
       <p class="font-medium text-gray-700 mb-1 text-xs">InsightLabs</p>
       <ul class="list-disc ml-3 space-y-0.5 text-xs leading-tight">
-        <li>Architected and implemented Zendesk integration for automatic and dynamic customer data integration into the
-          application</li>
-        <li>Built customer-facing automation framework for scheduled analyses on dynamic data</li>
-        <li>Elevated UI to production quality with standardized UI components, modal navigation, and a design language
-        </li>
+        <li>Enhanced dashboard with standardized UI components, modal navigation, and comprehensive design language</li>
+        <li>Built customer-facing automation pipeline with scheduled analyses, generating real-time charts and PDF reports</li>
+        <li>Created shared type definitions in TypeScript and Python ensuring runtime type safety across frontend and backend</li>
       </ul>
     </div>
 
@@ -126,15 +159,10 @@
       </div>
       <p class="font-medium text-gray-700 mb-1 text-xs">Secrets AI</p>
       <ul class="list-disc ml-3 space-y-0.5 text-xs leading-tight">
-        <li>Built AI companion app from scratch with React Native (Expo), featuring comprehensive chat interfaces with
-          animations, shared element transitions, and a pixel-perfect implementation of the Figma designs</li>
-        <li>Implemented and architected an image caching system to improve speed and reduce redundant downloads by 100%
-        </li>
-        <li>Designed and implemented a full-stack implementation of in-app purchases for monetization with Node.js
-          backend
-          using a SQL database</li>
-        <li>Used over the air updates to deploy new features and bug fixes to the app without requiring users to update
-          the app</li>
+        <li>Built AI companion app from scratch with React Native and Expo, featuring comprehensive chat interfaces with real-time messaging and image sharing</li>
+        <li>Implemented pixel-perfect Figma designs with shared element transitions, interactive image carousels, and smooth animations throughout the app</li>
+        <li>Built image caching system using hash-based lookups, eliminating redundant downloads and improving load performance</li>
+        <li>Managed complex application state with Redux for unread messages, user preferences, and real-time chat status across screens</li>
       </ul>
     </div>
 
@@ -145,19 +173,16 @@
       </div>
       <p class="font-medium text-gray-700 mb-1 text-xs">Goose Insurance Services</p>
       <ul class="list-disc ml-3 space-y-0.5 text-xs leading-tight">
-        <li>Rebuilt marketing website with Astro JS, reducing load times from 8s to milliseconds, and cutting costs by
-          10x</li>
-        <li>Set up headless CMS for marketing team to create and edit blogs via the Storyblok UI, providing independent
-          content management for the marketing team</li>
-        <li>Rewrote React Native components following patterns for maintainable code and created data driven UI
-          components
-          that can be driven by the backend</li>
+        <li>Rebuilt marketing website with Astro JS, reducing load times from 8s to milliseconds and cutting infrastructure costs by 10x</li>
+        <li>Set up headless CMS with StoryBlok enabling marketing team to independently create and manage blog content</li>
+        <li>Rewrote React Native components for increased reusability and created Redux-controlled UI components (modals, popups) reusable across the team</li>
+        <li>Built real-time testing dashboard subscribing to Firestore updates, enabling parallel test workflows and 5x QA speed improvement</li>
       </ul>
     </div>
 
   </section>
 
-  <!-- ADDITIONAL EXPERIENCE -->
+  <!-- ADDITIONAL EXPERIENCE — LOCKED -->
   <section class="mb-4">
     <div class="mb-3">
       <div class="flex justify-between items-start mb-0.5">
@@ -166,16 +191,14 @@
       </div>
       <p class="font-medium text-gray-700 mb-1 text-xs">PhoneMe Project UBC</p>
       <ul class="list-disc ml-3 space-y-0.5 text-xs leading-tight">
-        <li>Migrated to Firebase serverless architecture, reducing costs by 97% and enabling performance during spiky
-          usage while reducing costs by nearly 100%</li>
-        <li>Implemented offline poem creation in mobile app</li>
-        <li>Created 3D search functionality</li>
-        <li>Developed responsive UI with Next.js and Tailwind for cross-device compatibility</li>
+        <li>Built responsive web interface with Next.js and Tailwind for cross-device compatibility</li>
+        <li>Implemented offline-capable poem creation in mobile app with media upload and 3D search functionality</li>
+        <li>Migrated to Firebase serverless architecture, reducing costs from $200/month to $0 while handling spiky usage</li>
       </ul>
     </div>
   </section>
 
-  <!-- EDUCATION -->
+  <!-- EDUCATION — LOCKED -->
   <section class="mb-3">
     <h2 class="text-lg font-bold mb-2 border-b-2 border-gray-300 pb-1">Education</h2>
 
@@ -200,7 +223,7 @@
     </div>
   </section>
 
-  <!-- TECHNICAL SKILLS -->
+  <!-- CUSTOMIZE:SKILLS_ORDER - reorder these 4 grid cells to put most relevant category first. Do NOT add/remove technologies. -->
   <section class="mb-2">
     <h2 class="text-lg font-bold mb-1 border-b-2 border-gray-300 pb-1">Technical Skills</h2>
     <div class="grid grid-cols-2 gap-1">
@@ -209,22 +232,22 @@
         <p class="text-xs leading-tight">TypeScript, JavaScript, Python, Java, C/C++</p>
       </div>
       <div>
-        <p class="font-semibold mb-0.5 text-xs">Mobile & Frontend</p>
-        <p class="text-xs leading-tight">React Native, Expo, Next.js, Tailwind, Redux, Astro JS</p>
+        <p class="font-semibold mb-0.5 text-xs">Frontend & Mobile</p>
+        <p class="text-xs leading-tight">React, React Native, Next.js, Expo, Redux, Tailwind, AstroJS</p>
       </div>
       <div>
         <p class="font-semibold mb-0.5 text-xs">Backend & Tools</p>
-        <p class="text-xs leading-tight">Firebase, GCP, Flask, Node.js, Git, ML</p>
+        <p class="text-xs leading-tight">Git, Node.js, Firebase, GCP, Flask, REST APIs</p>
       </div>
       <div>
         <p class="font-semibold mb-0.5 text-xs">Platforms</p>
-        <p class="text-xs leading-tight">EAS, Convex, Push Notifications, In-App Purchases, App Store, Play Store</p>
+        <p class="text-xs leading-tight">iOS/Android Deployment, Push Notifications, In-App Purchases, EAS</p>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section class="">
+  <!-- PROJECTS — LOCKED -->
+  <section class="mb-2">
     <h2 class="text-lg font-bold mb-1 border-b-2 border-gray-300 pb-1">Projects & Demos</h2>
     <div class="text-xs space-y-0.5 leading-tight">
       <p><strong><a href="https://github.com/disrae/resume" class="text-blue-600 hover:text-blue-800">AI Resume
@@ -240,10 +263,6 @@
       <p><strong><a href="https://www.gooseinsurance.com/en-ca/" class="text-blue-600 hover:text-blue-800">Goose
             Insurance</a>:</strong> High-performance insurance website rebuilt with Astro JS, reducing load times by 99%
       </p>
-      <p><strong><a href="https://perrilo.com" class="text-blue-600 hover:text-blue-800">Perrilo</a>:</strong>
-        Professional portfolio website for concert pianist showcasing performances and media</p>
-      <p><strong>SOS Alert System:</strong> Reverse-engineered expensive medical alert device network protocol using
-        Python, created free alternative with Twilio SMS notifications</p>
     </div>
   </section>
 

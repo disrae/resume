@@ -6,7 +6,7 @@
 ## File Structure
 
 - `index.html` - **BASELINE MASTER** resume (general, always keep clean)
-- `index-{CompanyName}.html` - Company-specific customizations
+- `versions/html/{CompanyName}-{JobTitle}.html` - Company-specific customizations
 - `generate-pdf.js` - PDF generator with version support
 
 ## Workflow for AI Assistants
@@ -20,7 +20,7 @@
 2. **Create company-specific version**
    ```bash
    # Copy baseline to new version
-   cp index.html index-CompanyName.html
+   cp index.html versions/html/CompanyName-JobTitle.html
    ```
 
 3. **Modify the copy** (NOT index.html)
@@ -31,9 +31,9 @@
 
 4. **Generate PDF**
    ```bash
-   node generate-pdf.js CompanyName
+   node generate-pdf.js CompanyName-JobTitle
    ```
-   This creates: `Daniel Israel - CompanyName Resume.pdf`
+   This creates: `versions/pdfs/Daniel Israel - CompanyName-JobTitle Resume.pdf`
 
 ### When User Says: "Update my resume" (general improvements)
 
@@ -51,9 +51,9 @@
 
 | File | PDF Output |
 |------|------------|
-| `index.html` | `Daniel Israel Resume.pdf` |
-| `index-Google.html` | `Daniel Israel - Google Resume.pdf` |
-| `index-PolicyMe.html` | `Daniel Israel - PolicyMe Resume.pdf` |
+| `index.html` | `versions/pdfs/Daniel Israel Resume.pdf` |
+| `versions/html/Google-FrontendEngineer.html` | `versions/pdfs/Daniel Israel - Google-FrontendEngineer Resume.pdf` |
+| `versions/html/PolicyMe-SoftwareEngineer.html` | `versions/pdfs/Daniel Israel - PolicyMe-SoftwareEngineer Resume.pdf` |
 
 ## Benefits
 
@@ -67,7 +67,7 @@
 **Scenario 1: First job application**
 ```
 User: "Customize this for a Google SWE role"
-AI: Creates index-Google.html, tailors it, generates PDF
+AI: Creates versions/html/Google-SoftwareEngineer.html, tailors it, generates PDF
 ```
 
 **Scenario 2: Update baseline with new skill**
@@ -79,19 +79,19 @@ AI: Updates index.html (baseline) directly
 **Scenario 3: Create second application**
 ```
 User: "Now customize for Meta"
-AI: Creates index-Meta.html from fresh index.html copy
+AI: Creates versions/html/Meta-SoftwareEngineer.html from fresh index.html copy
 ```
 
 **Scenario 4: Restore from baseline**
 ```
 User: "Reset my PolicyMe version"
-AI: cp index.html index-PolicyMe.html (overwrites)
+AI: cp index.html versions/html/PolicyMe-SoftwareEngineer.html (overwrites)
 ```
 
 ## Red Flags - DON'T DO THIS
 
 ❌ Modifying `index.html` with company-specific content
-❌ Creating `index-CompanyA-CompanyB.html` (one company per file)
+❌ Creating `CompanyA-CompanyB.html` (one company per file)
 ❌ Keeping only company versions without a clean baseline
 ❌ Forgetting to copy from baseline when creating new version
 ❌ **FABRICATING EXPERIENCE OR TECHNOLOGIES** - If user doesn't have experience with a technology mentioned in a job posting, DO NOT add it to the resume. It's okay if some requirements are missing - just emphasize what they DO know and use variety in experience as evidence of capability if they lack something in particular.
@@ -99,9 +99,9 @@ AI: cp index.html index-PolicyMe.html (overwrites)
 ## Implementation Checklist
 
 When user requests company customization:
-- [ ] Copy `index.html` → `index-{CompanyName}.html`
+- [ ] Copy `index.html` → `versions/html/{CompanyName}-{JobTitle}.html`
 - [ ] Only modify the copy, not the original
 - [ ] Use PascalCase or kebab-case for company names (no spaces)
-- [ ] Run `node generate-pdf.js CompanyName` to generate PDF
+- [ ] Run `node generate-pdf.js CompanyName-JobTitle` to generate PDF
 - [ ] Confirm PDF was created successfully
 

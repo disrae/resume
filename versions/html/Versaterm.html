@@ -20,14 +20,16 @@
      - Emphasizing specific skills for an application
   
   🎯 FOR COMPANY-SPECIFIC CUSTOMIZATION:
-     1. AI assistant, copy this file to: index-{CompanyName}.html
-        Example: index-PolicyMe.html, index-Google.html
-     2. Modify the copy with company-specific tailoring
+     1. AI assistant, copy this file to: versions/html/{CompanyName}-{JobTitle}.html
+        Example: versions/html/PolicyMe-SoftwareEngineer.html, versions/html/Google-SoftwareEngineer.html
+     2. Modify the copy with company-specific tailoring using ONLY existing experience and skills from this baseline resume
+        ❌ NEVER invent, fabricate, or exaggerate experience, technologies, or achievements
+        ✅ Only emphasize and rephrase existing content to match job requirements
      3. Generate PDF: node generate-pdf.js PolicyMe
   
   📁 NAMING CONVENTION:
      - Baseline: index.html → "Daniel Israel Resume.pdf"
-     - Custom: index-PolicyMe.html → "Daniel Israel - PolicyMe Resume.pdf"
+     - Custom: versions/html/PolicyMe-SoftwareEngineer.html → "Daniel Israel - PolicyMe-SoftwareEngineer Resume.pdf"
   
   This keeps the baseline clean and prevents version drift.
 -->
@@ -80,10 +82,10 @@
   <section class="mb-2">
     <h2 class="text-lg font-bold mb-1 border-b-2 border-gray-300 pb-1">Professional Summary</h2>
     <p class="text-xs leading-snug">
-      Senior Frontend Developer with 5+ years of expertise in Next.js, React.js, and TypeScript. Proven experience building
-      high-performance web applications with SSR, ISR, and SSG architectures. Skilled in state management (Redux, Zustand),
-      modern CSS frameworks (Tailwind, SCSS), and frontend performance optimization. Passionate about delivering exceptional
-      user experiences through clean, accessible, and scalable frontend solutions.
+      Full-stack software engineer with expertise in JavaScript, Python, and AI services development. Proven experience building
+      AI-powered applications, real-time systems, and scalable software solutions. Skilled in front-end and back-end development,
+      database design, testing practices, and agile methodologies. Passionate about leveraging AI, LLMs, and modern development
+      practices to deliver high-quality software that drives innovation and business value.
     </p>
   </section>
 
@@ -93,43 +95,43 @@
 
     <div class="mb-3">
       <div class="flex justify-between items-start mb-0.5">
-        <h3 class="text-base font-semibold">Frontend Developer</h3>
-        <span class="text-gray-600 text-xs">May 2020 – Sep 2023</span>
-      </div>
-      <p class="font-medium text-gray-700 mb-1 text-xs">PhoneMe Project UBC</p>
-      <ul class="list-disc ml-3 space-y-0.5 text-xs leading-tight">
-        <li>Developed responsive UI with Next.js and Tailwind CSS for cross-device compatibility</li>
-        <li>Built offline-capable web application with media upload and real-time search functionality</li>
-        <li>Implemented SSR and SSG patterns for optimal performance and SEO</li>
-        <li>Migrated to Firebase serverless architecture, reducing operational costs by 97%</li>
-      </ul>
-    </div>
-
-    <div class="mb-3">
-      <div class="flex justify-between items-start mb-0.5">
-        <h3 class="text-base font-semibold">Frontend Developer</h3>
-        <span class="text-gray-600 text-xs">Jul 2023 – Dec 2024</span>
-      </div>
-      <p class="font-medium text-gray-700 mb-1 text-xs">Goose Insurance Services</p>
-      <ul class="list-disc ml-3 space-y-0.5 text-xs leading-tight">
-        <li>Rebuilt high-performance website with Astro JS, reducing load times from 8s to milliseconds and cutting costs 90%</li>
-        <li>Designed Redux-controlled UI components with state management for complex user interactions</li>
-        <li>Rewrote React components following senior patterns for maintainable, scalable code</li>
-        <li>Implemented responsive design with modern CSS frameworks and accessibility best practices</li>
-      </ul>
-    </div>
-
-    <div class="mb-3">
-      <div class="flex justify-between items-start mb-0.5">
-        <h3 class="text-base font-semibold">Senior Frontend Developer</h3>
+        <p class="text-base font-semibold">Senior Full Stack Developer</p>
         <span class="text-gray-600 text-xs">Nov 2025 – Present</span>
       </div>
       <p class="font-medium text-gray-700 mb-1 text-xs">InsightLabs</p>
       <ul class="list-disc ml-3 space-y-0.5 text-xs leading-tight">
+        <li>Architected Zendesk integration system enabling customers to connect their support platform and automatically import tickets into the application.</li>
+        <li>Built customer-facing automation pipeline for scheduled document analyses, generating PDF reports with email delivery and theme analysis.</li>
+        <li>Implemented multi-format file upload system with drag-and-drop UI, real-time progress tracking, and document parsing</li>
+        <li>Optimized cloud infrastructure using Firebase/Cloud Functions, resolved storage leaks, and improved system reliability</li>
         <li>Enhanced dashboard with standardized UI components, modal navigation, and comprehensive design system</li>
-        <li>Implemented multi-format file upload system with drag-and-drop UI and real-time progress tracking</li>
-        <li>Built customer-facing automation framework with dynamic data visualization and scheduling</li>
-        <li>Optimized frontend performance and user experience for enterprise-scale applications</li>
+      </ul>
+    </div>
+
+    <div class="mb-3">
+      <div class="flex justify-between items-start mb-0.5">
+        <h3 class="text-base font-semibold">Mobile Developer</h3>
+        <span class="text-gray-600 text-xs">Jan 2025 – Oct 2025</span>
+      </div>
+      <p class="font-medium text-gray-700 mb-1 text-xs">Secrets AI</p>
+      <ul class="list-disc ml-3 space-y-0.5 text-xs leading-tight">
+        <li>Built AI companion app from scratch with React Native, Expo for pixel-perfect UX</li>
+        <li>Integrated in-app purchases and backend systems for monetization</li>
+        <li>Utilized Expo deployment tools for efficient version management</li>
+      </ul>
+    </div>
+
+    <div class="mb-3">
+      <div class="flex justify-between items-start mb-0.5">
+        <h3 class="text-base font-semibold">Mobile Front End Developer</h3>
+        <span class="text-gray-600 text-xs">Jul 2023 – Dec 2024</span>
+      </div>
+      <p class="font-medium text-gray-700 mb-1 text-xs">Goose Insurance Services</p>
+      <ul class="list-disc ml-3 space-y-0.5 text-xs leading-tight">
+        <li>Fixed push notifications and contributed to open-source package</li>
+        <li>Rebuilt website with Astro JS, reducing load times from 8s to milliseconds, cutting costs 90%</li>
+        <li>Rewrote React Native components following senior patterns for maintainable code</li>
+        <li>Designed Redux-controlled UI components and flexible backend solutions</li>
       </ul>
     </div>
 
@@ -179,20 +181,20 @@
     <h2 class="text-lg font-bold mb-1 border-b-2 border-gray-300 pb-1">Technical Skills</h2>
     <div class="grid grid-cols-2 gap-1">
       <div>
-        <p class="font-semibold mb-0.5 text-xs">Frontend Technologies</p>
-        <p class="text-xs leading-tight">Next.js, React.js, TypeScript, JavaScript</p>
+        <p class="font-semibold mb-0.5 text-xs">Languages</p>
+        <p class="text-xs leading-tight">JavaScript, Python, TypeScript</p>
       </div>
       <div>
-        <p class="font-semibold mb-0.5 text-xs">State & Styling</p>
-        <p class="text-xs leading-tight">Redux, Zustand, React Context, Tailwind CSS, SCSS, Styled Components</p>
+        <p class="font-semibold mb-0.5 text-xs">Frontend & Frameworks</p>
+        <p class="text-xs leading-tight">React, HTML, CSS, Node.js, Redux</p>
       </div>
       <div>
-        <p class="font-semibold mb-0.5 text-xs">Testing & Tools</p>
-        <p class="text-xs leading-tight">Jest, React Testing Library, Cypress, Git, Webpack, Vite</p>
+        <p class="font-semibold mb-0.5 text-xs">Databases & Cloud</p>
+        <p class="text-xs leading-tight">PostgreSQL, MongoDB, Firebase, GCP, REST APIs</p>
       </div>
       <div>
-        <p class="font-semibold mb-0.5 text-xs">APIs & Backend</p>
-        <p class="text-xs leading-tight">REST APIs, GraphQL, Firebase, Node.js, Headless CMS</p>
+        <p class="font-semibold mb-0.5 text-xs">Tools & Practices</p>
+        <p class="text-xs leading-tight">Git, Agile/Scrum, Unit Testing, CI/CD, AI Tooling (Cursor), CI/CD</p>
       </div>
     </div>
   </section>

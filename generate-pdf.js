@@ -11,15 +11,15 @@
  *   → Creates: pdfs/Daniel Israel Resume.pdf
  *
  * Generate company-specific resume:
- *   node generate-pdf.js PolicyMe
- *   → Reads: versions/index-PolicyMe.html
- *   → Creates: pdfs/Daniel Israel - PolicyMe Resume.pdf
+ *   node generate-pdf.js PolicyMe-FrontendDeveloper
+ *   → Reads: versions/html/PolicyMe-FrontendDeveloper.html
+ *   → Creates: versions/pdfs/Daniel Israel - PolicyMe-FrontendDeveloper Resume.pdf
  * 
  * 🎯 FOR AI ASSISTANTS:
  * When user asks to customize resume for a company:
- *   1. Copy index.html to versions/index-{CompanyName}.html
+ *   1. Copy index.html to versions/html/{CompanyName}-{JobTitle}.html
  *   2. Modify the copy (NOT index.html)
- *   3. User runs: node generate-pdf.js CompanyName
+ *   3. User runs: node generate-pdf.js CompanyName-JobTitle
  * 
  * This keeps the baseline resume (index.html) clean!
  */
@@ -39,14 +39,14 @@ async function generateResumePDF() {
   let htmlFile, pdfFile;
 
   if (companyName) {
-    htmlFile = `versions/index-${companyName}.html`;
+    htmlFile = `versions/html/${companyName}.html`;
     pdfFile = `versions/pdfs/Daniel Israel - ${companyName} Resume.pdf`;
 
     // Check if the company-specific file exists
     const htmlPath = path.join(__dirname, htmlFile);
     if (!fs.existsSync(htmlPath)) {
       console.error(`❌ Error: ${htmlFile} does not exist!`);
-      console.log(`💡 Tip: Create ${htmlFile} by copying index.html to versions/ first.`);
+      console.log('💡 Tip: Copy index.html into versions/html/ and rename it as {Company}-{JobTitle}.html.');
       process.exit(1);
     }
 

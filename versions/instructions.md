@@ -1,7 +1,5 @@
 # Resume Generation Playbook
 
-Read this file + `experience-tracker.md` before doing anything.
-
 ## 1. Fit Check
 
 Compare job reqs against `experience-tracker.md`. STOP if:
@@ -16,7 +14,8 @@ Confirmed stack: React, React Native, TypeScript, JS, Python, Next.js, Expo,
 Redux, Tailwind, AstroJS, Firebase, GCP, Node.js, Flask, SQL, Firestore, REST
 APIs, Git.
 
-If not a fit, say why and stop.
+If not a fit, say why and stop. If fit, say what parts of job I fit well and
+which parts are a stretch.
 
 ## 2. Pick Template
 
@@ -26,7 +25,7 @@ If not a fit, say why and stop.
 
 ## 3. Copy & Customize
 
-Copy chosen base to `generator/versions/index-{Company}-{Title}.html`.
+Copy chosen base to `generator/versions/html/{Company}-{Title}.html`.
 
 **Change ONLY these 3 things:**
 
@@ -86,5 +85,5 @@ node generate-pdf.js {Company}-{Title}
 
 ## 7. File Naming
 
-`index-{CompanyName}-{JobTitle}.html` — PascalCase, no spaces. Examples:
-`index-Shopify-FrontendDeveloper.html`, `index-Stripe-SoftwareEngineer.html`
+`{CompanyName}-{JobTitle}.html` — PascalCase, no spaces. Examples:
+`Shopify-FrontendDeveloper.html`, `Stripe-SoftwareEngineer.html`
